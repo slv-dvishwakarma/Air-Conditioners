@@ -11,7 +11,7 @@ interface CheckBoxProps {
     option: string[];
 }
 
-export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
+export const ColorCheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
     const [isToggled, setIsToggled] = useState(true);
     const [checkedValues, setCheckedValues] = useState<string[]>([]);
 
@@ -30,7 +30,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
 
     useEffect(() => {
         if (checkedValues.length > 0) {
-            console.log("Checked values:", checkedValues);
+            console.log("Color values:", checkedValues);
         }
     }, [checkedValues]);
 
@@ -46,12 +46,12 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
                     )}
                 </div>
                 <div className={`overflow-hidden transition-height duration-500 ease-in-out ${isToggled ? 'h-auto' : 'h-0'}`}>
-                    <div className='checkbox-options pt-[16px] gap-10 space-y-4'>
+                    <div className='checkbox-options pt-[16px] gap-4 flex items-center flex-wrap'>
                         {option.map((item, key) => (
-                            <label key={key} className='gap-2 flex items-center'>
-                                <span className='border border-solid border-black w-[18px] h-[18px]'>
+                            <label key={key} className=' flex items-center '>
+                                <span className={`border border-solid w-[18px] h-[18px] ${item}`}>
                                     {checkedValues.includes(item) && (
-                                        <MdClose className='text-accentColor'/>
+                                        <MdClose className='text-white'/>
                                     )}
                                 </span>
                                 <input
@@ -61,7 +61,6 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
                                     onChange={handleCheckboxChange}
                                     className='checkbox-color-setting w-[20px] h-[20px] border border-solid border-[#BEBEBE] hover:border hover:border-solid hover:border-[#BEBEBE] rounded active:border-solid active:border active:border-[#BEBEBE] focus-removed-css hidden'
                                 />
-                                <span className='text-sm font-normal leading-[16.94px] text-left text-[#1C1C1C]'>{item}</span>
                             </label>
                         ))}
                     </div>

@@ -1,11 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
+import { Dropdown } from '../DropDown';
 
+interface UserProps {
+    options: string[];
+}
 
-
-export const User = () => {
+export const User: React.FC<UserProps> = ({ options }) => {
     return (
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center'>
             <Image
                 className='w-[30px] mr-3 rounded-[50%]'
                 src="/user.jpg"
@@ -15,6 +18,7 @@ export const User = () => {
             />
             <div className='text-white'>
                <p className='text-[13px]'>Hello John</p> 
+               <Dropdown options={options}/>
             </div>
         </div>
     )

@@ -9,6 +9,17 @@ export default function Home() {
   const home = {
     logo: "/logo.png",
     alt: "Deal Website",
+    cart: 2,
+    options: [
+      "My Account",
+      "Profile",
+      "Help",
+    ],
+    price: {
+      label: "Price",
+      range: [300, 1000],
+      maxPrice: 5000,
+    },
     searchbar: {
       name: "searchbar",
       key: "dropdown",
@@ -96,30 +107,93 @@ export default function Home() {
         ],
       },
     },
+    color: {
+      label: "Colour",
+      name: "color",
+      options: [
+        "bg-[#0000FF]",
+        "bg-[#008000]",
+        "bg-[#808080]",
+        "bg-[#ff0000]",
+      ],
+    },
 
-    product_list: {
-      list_1: {
+    product_list: [
+      {
         image: "/AC.jpg",
         title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
         rank: 4,
         rank_list: "1,951",
-        Price: "45000",
-        discount_price: "1000",
+        Price: 45000,
+        discount_price: 71000,
         emi: "No Cost EMI available on select cards",
         service: "Service: Paid Installation",
         delivery: "FREE delivery",
-        currancy: "₹"
-      }
-    }
+        currancy: "₹",
+        mrp: "M.R.P:",
+      },
+      {
+        image: "/AC.jpg",
+        title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
+        rank: 2.5,
+        rank_list: "1,951",
+        Price: 35000,
+        discount_price: 50000,
+        emi: "No Cost EMI available on select cards",
+        service: "Service: Paid Installation",
+        delivery: "FREE delivery",
+        currancy: "₹",
+        mrp: "M.R.P:",
+      },
+      {
+        image: "/AC.jpg",
+        title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
+        rank: 2.5,
+        rank_list: "1,951",
+        Price: 30000,
+        discount_price: 50000,
+        emi: "No Cost EMI available on select cards",
+        service: "Service: Paid Installation",
+        delivery: "FREE delivery",
+        currancy: "₹",
+        mrp: "M.R.P:",
+      },
+      {
+        image: "/AC.jpg",
+        title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
+        rank: 2.5,
+        rank_list: "1,951",
+        Price: 40000,
+        discount_price: 50000,
+        emi: "No Cost EMI available on select cards",
+        service: "Service: Paid Installation",
+        delivery: "FREE delivery",
+        currancy: "₹",
+        mrp: "M.R.P:",
+      },
+      {
+        image: "/AC.jpg",
+        title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
+        rank: 2.5,
+        rank_list: "1,951",
+        Price: 38000,
+        discount_price: 50000,
+        emi: "No Cost EMI available on select cards",
+        service: "Service: Paid Installation",
+        delivery: "FREE delivery",
+        currancy: "₹",
+        mrp: "M.R.P:",
+      },
+    ]
   }
 
   return (
     <>
       <ParentContainer className="bg-primary">
-        <Header logo={home.logo} alt={home.alt} searchbar={home.searchbar} option={home.searchbar.option} language={home.searchbar.language}  />
+        <Header logo={home.logo} alt={home.alt} cart={home.cart} searchbar={home.searchbar} option={home.searchbar.option} language={home.searchbar.language}  options={home.options}/>
       </ParentContainer>
       <ParentContainer>
-        <Product breadcrumb={home.product.breadcrumb} brand={home.product.brand} delivery={home.product.delivery} compressor={home.product.compressor} energy={home.product.energy} coil={home.product.coil} appliances={home.product.appliances} list_1={home.product_list.list_1}/>
+        <Product breadcrumb={home.product.breadcrumb} brand={home.product.brand} delivery={home.product.delivery} compressor={home.product.compressor} energy={home.product.energy} coil={home.product.coil} appliances={home.product.appliances} product_list={home.product_list} price={home.price} color={home.color}/>
       </ParentContainer>
       {/* <ParentContainer>
         <Footer />

@@ -68,7 +68,7 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 left-0 top-7 w-[150px]"
+          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-0 md:left-0 top-7 w-[150px] z-[1] left-[-82px]"
           role="listbox"
           aria-labelledby="options-menu"
         >

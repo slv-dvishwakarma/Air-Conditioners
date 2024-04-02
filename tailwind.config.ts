@@ -15,9 +15,9 @@ const config: Config = {
       },
       colors: {
         "primary": "#131921",
-        "secondary": "#FF8500",
         "ternary": "#E6E6E6",
-        "hover": "#C7511F",
+        "paragraph": "#565959",
+        "accentColor": "#FF8500"
       }
     },
   },

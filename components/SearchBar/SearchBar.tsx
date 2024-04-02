@@ -67,7 +67,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
                 <span className=" shadow-sm ">
                   <button
                     type="button"
-                    className="flex items-center text-sm font-medium text-theme-primary w-[100px] bg-ternary px-2.5 py-[9px] border-[none] rounded-[5px_0px_0px_5px]"
+                    className="flex items-center text-sm font-medium text-primary w-[100px] bg-ternary px-2.5 py-[9px] border-[none] rounded-[5px_0px_0px_5px]"
                     aria-expanded={isOpen}
                     aria-haspopup="listbox"
                     onClick={toggleDropdown}
@@ -126,13 +126,13 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
           )}
         />
         {inputValue && suggestions.length > 0 && (
-          <ul className="absolute w-full bg-[white] shadow-[rgba(60,64,67,0.3)_0px_1px_2px_0px,rgba(60,64,67,0.15)_0px_1px_3px_1px] top-[45px] p-2.5">
+          <ul className="absolute w-full bg-[white] shadow-[rgba(60,64,67,0.3)_0px_1px_2px_0px,rgba(60,64,67,0.15)_0px_1px_3px_1px] top-[45px] p-2.5 z-[1]">
             {suggestions.map((suggestion, index) => (
               <li className='leading-10' key={index} onClick={() => handleSuggestionClick(suggestion)}>{suggestion}</li>
             ))}
           </ul>
         )}
-        <button type='submit' className='bg-secondary h-[38px] w-[38px] text-center items-center flex justify-center p-[11px] rounded-[0px_5px_5px_0px]'><span className='text-white'><FaSearch /></span></button>
+        <button type='submit' className='bg-accentColor h-[38px] w-[38px] text-center items-center flex justify-center p-[11px] rounded-[0px_5px_5px_0px]'><span className='text-white'><FaSearch /></span></button>
       </form>
       <div>
         {errors[searchbar.name] && <span className="text-red-500 text-sm">Please Enter Input</span>}

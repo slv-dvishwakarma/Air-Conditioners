@@ -18,40 +18,41 @@ interface SearchBarItem {
 interface HeaderProps {
   logo: string;
   alt: string;
+  cart: number;
+  options: string[];
   searchbar: SearchBarItem;
   option: string[];
   language: string[];
 }
 
-export const Header: React.FC<HeaderProps> = ({ logo, alt, searchbar, option, language }) => {
+export const Header: React.FC<HeaderProps> = ({ logo, alt, searchbar, option, language, cart, options }) => {
   return (
-    <GridBox columns={12} gap={10} className='items-center py-2.5'>
-      <GridBox.GridItem columnMerge={2}>
+    <GridBox columns={12} gap={10} className='items-center py-5 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-6'>
+      <GridBox.GridItem columnMerge={3} className='flex justify-between items-center gap-[50px]'>
         <Link href="/">
           <Image
-            className='h-8 xl:h-14 lg:h-14 md:h-9 w-[96%]'
+            className='w-[96%]'
             src={logo}
             alt={alt}
-            width={311}
-            height={74}
+            width={280}
+            height={44}
           />
         </Link>
-      </GridBox.GridItem>
-      <GridBox.GridItem columnMerge={1}>
         <LanguageSelector options={language} />
       </GridBox.GridItem>
       <GridBox.GridItem columnMerge={6}>
         <SearchBar searchbar={searchbar} option={option} />
       </GridBox.GridItem>
-
-      <GridBox.GridItem columnMerge={2}>
-        <User />
-      </GridBox.GridItem>
-      <GridBox.GridItem columnMerge={1} >
-        <span className='text-white text-3xl flex justify-center'>
-        <IoIosCart />
-        </span>
-      
+      <GridBox.GridItem columnMerge={3} className='flex xl:justify-arround lg:justify-arround md:justify-arround justify-between items-center gap-[50px]'>
+        <User options={options} />
+        <div className='relative'>
+          <span className='text-white text-3xl'>
+            <IoIosCart />
+          </span>
+          <span className='absolute top-[-13px] bg-accentColor text-[white] w-5 h-5 leading-5 text-center rounded-[50%] right-[20px] text-xs'>
+            {cart}
+          </span>
+        </div>
       </GridBox.GridItem>
     </GridBox>
   )
