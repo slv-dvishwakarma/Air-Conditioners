@@ -30,7 +30,7 @@ export const ProductListing: React.FC<ProductListProps> = ({ product_list }) => 
                     <GridBox key={index} columns={4} gap={5} className='border-b-neutral-100 pt-0 pb-2.5 px-0 border-b border-solid xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-6'>
                         <GridBox.GridItem columnMerge={1}>
                             <Image
-                                className='rounded-[20px]'
+                                className='rounded-[20px] w-full h-60 object-cover'
                                 src={item.image}
                                 alt={item.title}
                                 width={2000}

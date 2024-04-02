@@ -120,7 +120,7 @@ export default function Home() {
 
     product_list: [
       {
-        image: "/AC.jpg",
+        image: "/product/ac1.jpg",
         title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
         rank: 4,
         rank_list: "1,951",
@@ -133,7 +133,7 @@ export default function Home() {
         mrp: "M.R.P:",
       },
       {
-        image: "/AC.jpg",
+        image: "/product/ac2.jpg",
         title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
         rank: 2.5,
         rank_list: "1,951",
@@ -146,7 +146,7 @@ export default function Home() {
         mrp: "M.R.P:",
       },
       {
-        image: "/AC.jpg",
+        image: "/product/ac3.jpg",
         title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
         rank: 2.5,
         rank_list: "1,951",
@@ -159,7 +159,7 @@ export default function Home() {
         mrp: "M.R.P:",
       },
       {
-        image: "/AC.jpg",
+        image: "/product/ac4.jpg",
         title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
         rank: 2.5,
         rank_list: "1,951",
@@ -172,7 +172,7 @@ export default function Home() {
         mrp: "M.R.P:",
       },
       {
-        image: "/AC.jpg",
+        image: "/product/ac5.jpg",
         title: "LG 1.5 Ton 3 Star DUAL Inverter Split AC (Copper, AI Convertible 6-in-1 Cooling, 2 Way Swing, HD Filter with Anti-Virus Protection, 2024 Model, TS-Q18JNXE3, White)",
         rank: 2.5,
         rank_list: "1,951",
