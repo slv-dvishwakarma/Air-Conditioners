@@ -1,7 +1,6 @@
 "use client"
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { GridBox } from '../GridBox';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { SideBar } from '../SideBar';

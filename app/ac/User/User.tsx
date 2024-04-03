@@ -1,6 +1,6 @@
+import { Dropdown } from '@/components/DropDown';
 import Image from 'next/image'
 import React from 'react'
-import { Dropdown } from '../DropDown';
 
 interface UserProps {
     options: string[];

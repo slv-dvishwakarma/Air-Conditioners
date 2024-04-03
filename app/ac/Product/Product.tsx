@@ -1,8 +1,8 @@
 import React from 'react'
-import { GridBox } from '../GridBox'
 import { BreadCrumb } from '../BreadCrumb';
 import { SideBar } from '../SideBar';
 import { ProductListing } from '../ProductListing';
+import { GridBox } from '@/components/GridBox';
 
 interface ColorItem {
   label: string;

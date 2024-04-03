@@ -1,7 +1,7 @@
 import React from 'react';
-import { GridBox } from '../GridBox';
 import Image from 'next/image';
 import { Rating } from '../Rating';
+import { GridBox } from '@/components/GridBox';
 
 interface ProductListItem {
     image: string;

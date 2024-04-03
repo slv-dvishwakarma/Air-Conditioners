@@ -1,8 +1,8 @@
 import React from 'react'
-import { GridBox } from '../GridBox'
 import Image from 'next/image'
 import Link from 'next/link';
-import { LanguageSelector } from '../LanguageSelector';
+import { GridBox } from '@/components/GridBox';
+import { LanguageSelector } from '@/app/ac/LanguageSelector';
 
 interface CopyRightItem {
   label: string;
@@ -49,7 +49,7 @@ export const Footer: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, co
           />
         </GridBox.GridItem>
         <GridBox.GridItem columnMerge={1} colMargeDesktop={1} colMargeLaptop={1} colMargeTablet={2}>
-          <label className='text-[15px] font-semibold'>{know.label}</label>
+          <label className='text-[15px] font-semibold text-white'>{know.label}</label>
           <div className='mt-6 space-y-3'>
             {know.menu.map((item, index) => (
               <div className='text-sm text-[#9399A2] '>
@@ -70,7 +70,7 @@ export const Footer: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, co
         </GridBox.GridItem>
         {footer_item.map((item, index) => (
           <GridBox.GridItem key={index} columnMerge={1} colMargeDesktop={1} colMargeLaptop={1} colMargeTablet={2}>
-            <label className='text-[15px] font-semibold'>{item.label}</label>
+            <label className='text-[15px] font-semibold text-white'>{item.label}</label>
             <div className='mt-6 space-y-3'>
               {item.menu.map((item, index) => (
                 <div className='text-sm text-[#9399A2] '>
@@ -84,7 +84,7 @@ export const Footer: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, co
       <GridBox columns={2} desktop={2} laptop={2} tablet={1} className='py-5'>
         <GridBox.GridItem columnMerge={1}>
           <div className='xl:flex lg:flex md:flex block items-center xl:gap-10 lg:gap-10 md:gap-10 gap-2 xl:justify-start lg:justify-start md:justify-center justify-start'>
-            <div className='text-[15px]'>
+            <div className='text-[15px] text-white'>
               <span>{copyright.label} {copyright.year}</span>
             </div>
             <div className='xl:flex lg:flex md:flex block items-center xl:gap-10 lg:gap-10 md:gap-10 gap-2 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-3 xl:mt-0 lg:mt-0 md:mt-0 mt-6'>

@@ -1,11 +1,11 @@
 import React from 'react'
-import { GridBox } from '../GridBox'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SearchBar } from '../SearchBar';
 import { IoIosCart } from "react-icons/io";
-import { LanguageSelector } from '../LanguageSelector';
-import { User } from '../User';
+import { GridBox } from '@/components/GridBox';
+import { User } from '@/app/ac/User';
+import { SearchBar } from '@/app/ac/SearchBar';
+import { LanguageSelector } from '@/app/ac/LanguageSelector';
 
 
 
