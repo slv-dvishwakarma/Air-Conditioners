@@ -2,7 +2,7 @@ import React from 'react';
 
 interface RatingProps {
     rating: number;
-    rank_list: string;
+    rank_list: number;
 }
 
 export const Rating: React.FC<RatingProps> = ({ rating, rank_list }) => {

@@ -7,7 +7,7 @@ interface ProductListItem {
     image: string;
     title: string;
     rank: number;
-    rank_list: string;
+    rank_list: number;
     Price: number;
     discount_price: number;
     emi: string;

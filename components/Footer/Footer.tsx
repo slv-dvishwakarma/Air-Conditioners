@@ -52,7 +52,7 @@ export const Footer: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, co
           <label className='text-[15px] font-semibold text-white'>{know.label}</label>
           <div className='mt-6 space-y-3'>
             {know.menu.map((item, index) => (
-              <div className='text-sm text-[#9399A2] '>
+              <div key={index} className='text-sm text-[#9399A2] '>
                 <Link className='hover:text-accentColor' key={index} href={item.link}>{item.name}</Link>
               </div>
             ))}
@@ -73,7 +73,7 @@ export const Footer: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, co
             <label className='text-[15px] font-semibold text-white'>{item.label}</label>
             <div className='mt-6 space-y-3'>
               {item.menu.map((item, index) => (
-                <div className='text-sm text-[#9399A2] '>
+                <div key={index} className='text-sm text-[#9399A2] '>
                   <Link className='hover:text-accentColor' key={index} href={item.link}>{item.name}</Link>
                 </div>
               ))}
@@ -89,7 +89,7 @@ export const Footer: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, co
             </div>
             <div className='xl:flex lg:flex md:flex block items-center xl:gap-10 lg:gap-10 md:gap-10 gap-2 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-3 xl:mt-0 lg:mt-0 md:mt-0 mt-6'>
               {copyright.menu.map((item, index) => (
-                <div className='text-sm text-[#9399A2] '>
+                <div key={index} className='text-sm text-[#9399A2] '>
                   <Link className='hover:text-accentColor' key={index} href={item.link}>{item.name}</Link>
                 </div>
               ))}
