@@ -36,6 +36,7 @@ interface SideBarProps {
 export const SideBar: React.FC<SideBarProps> = ({ brand, delivery, compressor, energy, coil, appliances, price, color }) => {
     return (
         <>
+        
             <PriceFilter defaultRange={price.range} maxRange={price.maxPrice} label={price.label}/>
             <CheckBox id={brand.name} label={brand.label} option={brand.options} name={brand.name} />
             <CheckBox id={delivery.name} label={delivery.label} option={delivery.options} name={delivery.name} />
@@ -44,6 +45,7 @@ export const SideBar: React.FC<SideBarProps> = ({ brand, delivery, compressor, e
             <CheckBox id={coil.name} label={coil.label} option={coil.options} name={coil.name} />
             <CheckBox id={appliances.name} label={appliances.label} option={appliances.options} name={appliances.name} />
             <ColorCheckBox id={color.name} label={color.label} option={color.options} name={color.name} />
+ 
         </>
     )
 }

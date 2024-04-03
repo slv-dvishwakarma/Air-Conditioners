@@ -6,6 +6,8 @@ import { Product } from "@/components/Product";
 
 export default function Home() {
 
+  const currentYear = new Date().getFullYear();
+
   const home = {
     logo: "/logo.png",
     alt: "Deal Website",
@@ -99,7 +101,7 @@ export default function Home() {
           "Copper",
         ],
       },
-      appliances : {
+      appliances: {
         label: "Large Appliances Top Brands",
         name: "appliances",
         options: [
@@ -184,20 +186,187 @@ export default function Home() {
         currancy: "₹",
         mrp: "M.R.P:",
       },
-    ]
+    ],
+
+    footer: {
+      know: {
+        label: "Let to Know Us",
+        image: [
+          "/play-store.png",
+          "/app-store.png",
+        ],
+        menu: [
+          {
+            name: "Careers",
+            link: "/"
+          },
+          {
+            name: "About Us",
+            link: "/"
+          },
+          {
+            name: "UK Modern Slavery Statement",
+            link: "/"
+          },
+        ],
+      },
+      footer_item: [
+        {
+          label: "Make Money with Us",
+          menu: [
+            {
+              name: "Make Money with Us",
+              link: "/"
+            },
+            {
+              name: "Sell on Deal",
+              link: "/"
+            },
+            {
+              name: "Sell Under Private Brands",
+              link: "/"
+            },
+            {
+              name: "Sell on Deal Business",
+              link: "/"
+            },
+            {
+              name: "Sell on Deal Handmade",
+              link: "/"
+            },
+            {
+              name: "Fulfilment by Deal",
+              link: "/"
+            },
+            {
+              name: "Seller Fulfilled Prime",
+              link: "/"
+            },
+            {
+              name: "Advertise Your Products",
+              link: "/"
+            },
+            {
+              name: "Deal Pay",
+              link: "/"
+            },
+            {
+              name: "Host an Deal Hub",
+              link: "/"
+            },
+          ],
+        },
+        {
+          label: "Deal Payment Methods.",
+          menu: [
+            {
+              name: "Deal Platinum Mastercard",
+              link: "/"
+            },
+            {
+              name: "Deal Classic Mastercard",
+              link: "/"
+            },
+            {
+              name: "Deal Money Store",
+              link: "/"
+            },
+            {
+              name: "Gift Cards",
+              link: "/"
+            },
+            {
+              name: "Deal Currency Converter",
+              link: "/"
+            },
+            {
+              name: "Payment Methods Help",
+              link: "/"
+            },
+            {
+              name: "Shop with Points",
+              link: "/"
+            },
+            {
+              name: "Top Up Your Account",
+              link: "/"
+            },
+            {
+              name: "Top Up Your Account in Store",
+              link: "/"
+            },
+          ],
+        },
+        {
+          label: "Let Us Help You",
+          menu: [
+            {
+              name: "Track Packages or View Orders",
+              link: "/"
+            },
+            {
+              name: "Delivery Rates & Policies",
+              link: "/"
+            },
+            {
+              name: "Deal Prime",
+              link: "/"
+            },
+            {
+              name: "Returns & Replacements",
+              link: "/"
+            },
+            {
+              name: "Recycling Manage Your Content and Devices",
+              link: "/"
+            },
+            {
+              name: "Deal Mobile App",
+              link: "/"
+            },
+            {
+              name: "Deal Assistant",
+              link: "/"
+            },
+            {
+              name: "Customer Service",
+              link: "/"
+            },
+          ],
+        },
+      ],
+    },
+    copyright: {
+      label: "© Deal.com",
+      year: currentYear,
+      menu: [
+        {
+          name: "Conditions of Use & Sale",
+          link: "/"
+        },
+        {
+          name: "Privacy Notice",
+          link: "/"
+        },
+        {
+          name: "Cookies Notice",
+          link: "/"
+        },
+      ]
+    }
   }
 
   return (
     <>
       <ParentContainer className="bg-primary">
-        <Header logo={home.logo} alt={home.alt} cart={home.cart} searchbar={home.searchbar} option={home.searchbar.option} language={home.searchbar.language}  options={home.options}/>
+        <Header logo={home.logo} alt={home.alt} cart={home.cart} searchbar={home.searchbar} option={home.searchbar.option} language={home.searchbar.language} options={home.options} />
       </ParentContainer>
       <ParentContainer>
-        <Product breadcrumb={home.product.breadcrumb} brand={home.product.brand} delivery={home.product.delivery} compressor={home.product.compressor} energy={home.product.energy} coil={home.product.coil} appliances={home.product.appliances} product_list={home.product_list} price={home.price} color={home.color}/>
+        <Product breadcrumb={home.product.breadcrumb} brand={home.product.brand} delivery={home.product.delivery} compressor={home.product.compressor} energy={home.product.energy} coil={home.product.coil} appliances={home.product.appliances} product_list={home.product_list} price={home.price} color={home.color} />
       </ParentContainer>
-      {/* <ParentContainer>
-        <Footer />
-      </ParentContainer> */}
+      <ParentContainer className="bg-primary text-white">
+        <Footer logo={home.logo} alt={home.alt} know={home.footer.know} footer_item={home.footer.footer_item} copyright={home.copyright} language={home.searchbar.language}/>
+      </ParentContainer>
     </>
   );
 }

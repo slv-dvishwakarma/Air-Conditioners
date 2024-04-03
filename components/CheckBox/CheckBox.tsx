@@ -1,8 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { MdKeyboardArrowUp } from "react-icons/md";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { MdClose } from "react-icons/md";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown, MdClose } from "react-icons/md";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 interface CheckBoxProps {
     id: string;
@@ -14,6 +14,7 @@ interface CheckBoxProps {
 export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
     const [isToggled, setIsToggled] = useState(true);
     const [checkedValues, setCheckedValues] = useState<string[]>([]);
+    const [showAllOptions, setShowAllOptions] = useState(false);
 
     const toggle = () => {
         setIsToggled(!isToggled);
@@ -47,7 +48,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
                 </div>
                 <div className={`overflow-hidden transition-height duration-500 ease-in-out ${isToggled ? 'h-auto' : 'h-0'}`}>
                     <div className='checkbox-options pt-[16px] gap-10 space-y-4'>
-                        {option.map((item, key) => (
+                        {(showAllOptions ? option : option.slice(0, 6)).map((item, key) => (
                             <label key={key} className='gap-2 flex items-center'>
                                 <span className='border border-solid border-black w-[18px] h-[18px]'>
                                     {checkedValues.includes(item) && (
@@ -64,10 +65,14 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
                                 <span className='text-sm font-normal leading-[16.94px] text-left text-[#1C1C1C]'>{item}</span>
                             </label>
                         ))}
+                        {option.length > 6 && (
+                            <button onClick={() => setShowAllOptions(!showAllOptions)} className='text-sm text-accentColor cursor-pointer'>
+                                {showAllOptions ? (<span className='flex items-center gap-2.5'>Read less <MdOutlineKeyboardArrowUp /></span> ) : (<span className='flex items-center gap-2.5'>Read more <MdOutlineKeyboardArrowDown /></span>)}
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
         </div>
     );
 };
-

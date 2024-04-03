@@ -55,9 +55,9 @@ export const Dropdown: React.FC<DropdownProps> = ({ options }) => {
               {selectedOption}
             </span>
             {!isOpen ? (
-              <span className='text-[22px] ml-5'><MdOutlineKeyboardArrowDown /></span>
+              <span className='text-[22px] ml-5 -mt-5'><MdOutlineKeyboardArrowDown /></span>
             ) : (
-              <span className='text-[22px] ml-5'><MdOutlineKeyboardArrowUp /></span>
+              <span className='text-[22px] ml-5 -mt-5'><MdOutlineKeyboardArrowUp /></span>
             )}
           </button>
         </span>

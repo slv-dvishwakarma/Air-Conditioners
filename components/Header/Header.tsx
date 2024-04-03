@@ -28,10 +28,10 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ logo, alt, searchbar, option, language, cart, options }) => {
   return (
     <GridBox columns={12} gap={10} className='items-center py-5 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-6'>
-      <GridBox.GridItem columnMerge={3} className='flex justify-between items-center gap-[50px]'>
+      <GridBox.GridItem columnMerge={3} colMargeDesktop={3} colMargeLaptop={3} colMargeTablet={3} className='flex justify-between items-center gap-[50px]'>
         <Link href="/">
           <Image
-            className='w-[96%]'
+            className='xl:w-[96%] lg:w-[96%] md:w-full'
             src={logo}
             alt={alt}
             width={280}
@@ -40,10 +40,10 @@ export const Header: React.FC<HeaderProps> = ({ logo, alt, searchbar, option, la
         </Link>
         <LanguageSelector options={language} />
       </GridBox.GridItem>
-      <GridBox.GridItem columnMerge={6}>
+      <GridBox.GridItem columnMerge={6} colMargeDesktop={6} colMargeLaptop={6} colMargeTablet={5}>
         <SearchBar searchbar={searchbar} option={option} />
       </GridBox.GridItem>
-      <GridBox.GridItem columnMerge={3} className='flex xl:justify-arround lg:justify-arround md:justify-arround justify-between items-center gap-[50px]'>
+      <GridBox.GridItem columnMerge={3} colMargeDesktop={3} colMargeLaptop={3} colMargeTablet={4} className='flex  items-center gap-[18px]  xl:justify-end justify-between lg:justify-end md:justify-end'>
         <User options={options} />
         <div className='relative'>
           <span className='text-white text-3xl'>
