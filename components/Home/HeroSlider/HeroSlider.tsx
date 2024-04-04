@@ -37,7 +37,7 @@ export const HeroSlider: React.FC<SliderProps> = ({ slider }) => {
     <Slider className="custom-slick-slider" {...settings}>
       {slider.map((item, index) => (
         <div key={index} className='hero-slider' >
-          <div className='bg-cover bg-no-repeat py-[180px] bg-left-top' style={{ backgroundImage: `url(${item.image})` }}>
+          <div className='bg-cover bg-no-repeat py-[100px] bg-left-top' style={{ backgroundImage: `url(${item.image})` }}>
             <GridBox columns={3} className='px-[3%]'>
               <GridBox.GridItem columnMerge={2}>
                 <div></div>

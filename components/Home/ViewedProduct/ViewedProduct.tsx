@@ -2,7 +2,13 @@
 import { Rating } from '@/app/ac/Rating';
 import { GridBox } from '@/components/GridBox';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react'
+
+interface ListingItem {
+    name: string;
+    link: string;
+}
 
 interface ViewedItem {
     company: string;
@@ -19,9 +25,10 @@ interface ViewedItem {
 interface ViewedProps {
     title: string;
     products: ViewedItem[];
+    listing_button: ListingItem;
 }
 
-export const ViewedProduct: React.FC<ViewedProps> = ({ title, products }) => {
+export const ViewedProduct: React.FC<ViewedProps> = ({ title, products, listing_button }) => {
 
     const [showAllOptions, setShowAllOptions] = useState(false);
 
@@ -30,9 +37,9 @@ export const ViewedProduct: React.FC<ViewedProps> = ({ title, products }) => {
             <div className='flex justify-between'>
                 <label className='text-xl font-medium'>{title}</label>
                 {products.length > 5 && (
-                    <button onClick={() => setShowAllOptions(!showAllOptions)} className='text-sm text-accentColor cursor-pointer'>
-                        {showAllOptions ? (<span className='flex items-center gap-2.5'>View Less</span>) : (<span className='flex items-center gap-2.5'>View All</span>)}
-                    </button>
+                    <Link href={listing_button.link} className='text-sm text-accentColor cursor-pointer'>
+                        {!showAllOptions && (<span className='flex items-center gap-2.5'>{listing_button.name}</span>)}
+                    </Link>
                 )}
             </div>
             <GridBox columns={5} gap={10} className='pt-2'>
@@ -46,7 +53,7 @@ export const ViewedProduct: React.FC<ViewedProps> = ({ title, products }) => {
                         />
                         <div className='p-2'>
                             <div className='font-semibold text-lg'>
-                                <h3>{item.company} <span className='font-normal text-base'>{item.name}</span></h3>
+                                <h3 className='hover:text-accentColor cursor-pointer'>{item.company} <span className='font-normal text-base'>{item.name}</span></h3>
                             </div>
                             <Rating rating={item.rank} rank_list={item.rank_list} />
                             <span className='flex h-[35px]'>
@@ -58,7 +65,6 @@ export const ViewedProduct: React.FC<ViewedProps> = ({ title, products }) => {
                         </div>
                     </GridBox.GridItem>
                 ))}
-
             </GridBox>
         </div>
     )
