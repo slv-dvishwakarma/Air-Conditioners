@@ -1,0 +1,199 @@
+{
+    "trends": {
+        "title": "Inspired by your shopping trends",
+        "listing_button": {
+            "name": "View All",
+            "link": "/ac"
+        },
+        "products": [
+            {
+                "company": "Voltas -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 3,
+                "rank_list": 1951,
+                "Price": 10000.00,
+                "discount_price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Daikin -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-2.jpg",
+                "rank": 4,
+                "rank_list": 1951,
+                "Price": 20000.00,
+                "discount_price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Carrier -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-3.jpg",
+                "rank": 5,
+                "rank_list": 1951,
+                "Price": 30000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Panasonic -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-4.jpg",
+                "rank": 2,
+                "rank_list": 1951,
+                "Price": 40000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Blue Star -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Blue Star -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 60000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            }
+        ]
+    },
+    "product_banner": {
+        "column": 1,
+        "banner": [
+            {
+                "name": "Prodcut Banner",
+                "image": "/banner-3.jpg",
+                "image_width": 1600,
+                "image_height": 533,
+                "link": "/",
+                "column_merge": 1
+            }
+        ]
+    },
+    "devices": {
+        "title": "Deals Devices",
+        "listing_button": {
+            "name": "View All",
+            "link": "/ac"
+        },
+        "products": [
+            {
+                "company": "Voltas -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 3,
+                "rank_list": 1951,
+                "Price": 10000.00,
+                "discount_price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Daikin -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-2.jpg",
+                "rank": 4,
+                "rank_list": 1951,
+                "Price": 20000.00,
+                "discount_price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Carrier -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-3.jpg",
+                "rank": 5,
+                "rank_list": 1951,
+                "Price": 30000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Panasonic -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-4.jpg",
+                "rank": 2,
+                "rank_list": 1951,
+                "Price": 40000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Blue Star -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Blue Star -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 60000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            }
+        ]
+    },
+    "product_banner1": {
+        "column": 1,
+        "banner": [
+            {
+                "name": "Prodcut Banner",
+                "image": "/banner4.gif",
+                "image_width": 1600,
+                "image_height": 533,
+                "link": "/",
+                "column_merge": 1
+            }
+        ]
+    },
+    "off_banner": {
+        "column": 3,
+        "banner": [
+            {
+                "name": "Prodcut Banner",
+                "image": "/off-banner.jpg",
+                "image_width": 300,
+                "image_height": 300,
+                "link": "/",
+                "column_merge": 1
+            },
+            {
+                "name": "Prodcut Banner",
+                "image": "/off-banner.jpg",
+                "image_width": 300,
+                "image_height": 300,
+                "link": "/",
+                "column_merge": 1
+            },
+            {
+                "name": "Prodcut Banner",
+                "image": "/off-banner.jpg",
+                "image_width": 300,
+                "image_height": 300,
+                "link": "/",
+                "column_merge": 1
+            }
+        ]
+    }
+}

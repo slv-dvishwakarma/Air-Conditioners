@@ -26,7 +26,7 @@ type GridD = Record<ColumnType, string>;
 export const GridBox = ({
   children,
   className,
-  columns = 1,
+  columns,
   rows,
   gap = 1,
   mobile,
@@ -122,8 +122,7 @@ export const GridBox = ({
   return (
     <div
       className={classNames(
-        "sm:grid",
-        GRID_COLS[columns],
+        columns && GRID_COLS[columns],
         rows && `grid-rows-${rows}`,
         GRID_GAP[gap],
         mobile && GRID_MOBILE[mobile],

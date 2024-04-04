@@ -57,11 +57,11 @@ export const Product: React.FC<ProductProps> = ({ breadcrumb, brand, delivery, c
   return (
     <div className='product-template'>
       <BreadCrumb breadcrumb={breadcrumb} brand={brand} delivery={delivery} compressor={compressor} energy={energy} coil={coil} appliances={appliances} price={price} color={color}/>
-      <GridBox columns={12} gap={10} >
+      <GridBox columns={12} gap={10} className='sm:grid'>
         <GridBox.GridItem columnMerge={3} className='xl:block lg:block md:hidden hidden'>
           <SideBar brand={brand} delivery={delivery} compressor={compressor} energy={energy} coil={coil} appliances={appliances} price={price} color={color}/>
         </GridBox.GridItem>
-        <GridBox.GridItem columnMerge={9} colMargeTablet={12} colMargeDesktop={9} colMargeLaptop={9} className='pt-[20px]'>
+        <GridBox.GridItem columnMerge={9} colMargeTablet={12} colMargeDesktop={9} colMargeLaptop={9}  className='pt-[20px]'>
           <ProductListing product_list={product_list}/>
         </GridBox.GridItem>
       </GridBox>

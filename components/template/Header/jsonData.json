@@ -1,0 +1,25 @@
+{
+    "logo": "/logo.png",
+    "alt": "Deal Website",
+    "cart": 2,
+    "options": [
+      "My Account",
+      "Profile",
+      "Help"
+    ],
+    "searchbar": {
+      "name": "searchbar",
+      "key": "dropdown",
+      "placeholder": "Search",
+      "option": [
+        "AC 1.5 Ton",
+        "AC 1 Ton",
+        "AC 2 Ton",
+        "AC 3 Ton"
+      ],
+      "language": [
+        "English - EN",
+        "Hindi - HI"
+      ]
+    }
+}

@@ -36,10 +36,10 @@ interface HeaderProps {
   language: string[];
 }
 
-export const Footer: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, copyright, language }) => {
+export const FooterTemplate: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, copyright, language }) => {
   return (
     <>
-      <GridBox columns={5} desktop={5} laptop={5} tablet={1} gap={8} className='py-10 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-6 border-b-[#9399A2] border-b border-solid'>
+      <GridBox columns={5} desktop={5} laptop={5} tablet={1} gap={8} className='py-10 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-6 border-b-[#9399A2] border-b border-solid sm:grid'>
         <GridBox.GridItem columnMerge={1} colMargeDesktop={1} colMargeLaptop={1} colMargeTablet={5}>
           <Image
             src={logo}
@@ -81,7 +81,7 @@ export const Footer: React.FC<HeaderProps> = ({ logo, alt, know, footer_item, co
           </GridBox.GridItem>
         ))}
       </GridBox>
-      <GridBox columns={2} desktop={2} laptop={2} tablet={1} className='py-5'>
+      <GridBox columns={2} desktop={2} laptop={2} tablet={1} className='py-5 sm:grid'>
         <GridBox.GridItem columnMerge={1}>
           <div className='xl:flex lg:flex md:flex block items-center xl:gap-10 lg:gap-10 md:gap-10 gap-2 xl:justify-start lg:justify-start md:justify-center justify-start'>
             <div className='text-[15px] text-white'>

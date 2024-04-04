@@ -1,0 +1,21 @@
+{
+    "column": 3,
+    "banner": [
+        {
+            "name": "Product Banner",
+            "image": "/banner-1.jpg",
+            "image_width": 683,
+            "image_height": 374,
+            "link": "/",
+            "column_merge": 2
+        },
+        {
+            "name": "Product Banner",
+            "image": "/banner-2.jpg",
+            "image_width": 332,
+            "image_height": 374,
+            "link": "/",
+            "column_merge": 1
+        }
+    ]
+}
