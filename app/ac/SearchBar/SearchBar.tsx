@@ -62,8 +62,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
           defaultValue={option[0]}
           rules={{ required: true }}
           render={({ field: { onChange, value } }) => (
-            <div className="relative text-left dropdown-styling">
-              
+            <div className="relative text-left dropdown-styling xl:block lg:block md:block hidden">
                 <span className=" shadow-sm ">
                   <button
                     type="button"
@@ -112,7 +111,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
           render={({ field: { onChange } }) => (
             <input
               type="text"
-              className="w-full input-border flex items-center border border-solid border-[#BEBEBE] focus:outline-none focus:shadow-none shadow-none h-[38px] placeholder:text-[#9D9D9D] px-5"
+              className="w-full input-border flex items-center border border-solid border-[#BEBEBE] focus:outline-none focus:shadow-none shadow-none h-[38px] placeholder:text-[#9D9D9D] px-5 rounded-[5px_0px_0px_5px] xl:rounded-[0px_0px_0px_0px] lg:rounded-[0px_0px_0px_0px] md:rounded-[0px_0px_0px_0px]"
               placeholder={searchbar.placeholder}
               autoComplete="off"
               value={inputValue}

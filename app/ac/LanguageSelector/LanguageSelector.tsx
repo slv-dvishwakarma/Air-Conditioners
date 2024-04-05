@@ -54,7 +54,7 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
       <span className="rounded-md shadow-sm text-white relative">
         <button
           type="button"
-          className="flex items-center rounded-md text-sm font-medium text-theme-primary border border-solid border-[#00000042] w-[40px]"
+          className="flex items-center rounded-md text-sm font-medium text-theme-primary border border-solid border-[#00000042] xl:w-[40px] lg:w-[40px] md:w-[40px] w-[200px] xl:p-0 lg:p-0 md:p-0 p-1 xl:text-white lg:text-white md:text-white text-black"
           id="options-menu"
           aria-expanded={isOpen}
           aria-haspopup="listbox"
@@ -68,7 +68,7 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-0 md:left-0 top-7 w-[150px] z-[1] left-[-82px]"
+          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-0 md:left-0 top-7 w-[150px] z-[1] left-[80px]"
           role="listbox"
           aria-labelledby="options-menu"
         >

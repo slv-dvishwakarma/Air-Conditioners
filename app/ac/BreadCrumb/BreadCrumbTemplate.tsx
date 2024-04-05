@@ -41,7 +41,7 @@ interface BreadCrumbProps {
   color: ColorItem;
 }
 
-export const BreadCrumb: React.FC<BreadCrumbProps> = ({ breadcrumb, brand, delivery, compressor, energy, coil, appliances, price, color }) => {
+export const BreadCrumbTemplate: React.FC<BreadCrumbProps> = ({ breadcrumb, brand, delivery, compressor, energy, coil, appliances, price, color }) => {
 
   const [open, setOpen] = useState(false);
 
@@ -53,7 +53,7 @@ export const BreadCrumb: React.FC<BreadCrumbProps> = ({ breadcrumb, brand, deliv
     setOpen(false);
   }
 
-  return (
+  return ( 
     <>
       <div className='border-b-[#BBBFBF] border-b border-solid px-0 py-5 flex justify-between'>
         <div className='breadcrumb '>

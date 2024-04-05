@@ -11,7 +11,11 @@ interface CheckBoxProps {
     option: string[];
 }
 
-export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
+export const FilterCheckBoxTemplate: React.FC<CheckBoxProps> = ({ option, label, name }) => {
+    const externalData: CheckBoxProps | undefined = undefined; 
+
+    const dataToUse = externalData ? externalData : { option, label, name };
+
     const [isToggled, setIsToggled] = useState(true);
     const [checkedValues, setCheckedValues] = useState<string[]>([]);
     const [showAllOptions, setShowAllOptions] = useState(false);
@@ -39,7 +43,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
         <div className='checkbox border-b-[#BBBFBF] border-b border-solid pb-[20px] pt-[20px]'>
             <div className='toggler cursor-pointer'>
                 <div className='flex justify-between items-center ' onClick={toggle}>
-                    <label className='text-base font-medium leading-[21px] tracking-[0px] text-left cursor-pointer'>{label}</label>
+                    <label className='text-base font-medium leading-[21px] tracking-[0px] text-left cursor-pointer'>{dataToUse.label}</label>
                     {isToggled ? (
                         <span className='text-[25px]'><MdKeyboardArrowDown /></span>
                     ) : (
@@ -48,7 +52,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
                 </div>
                 <div className={`overflow-hidden transition-height duration-500 ease-in-out ${isToggled ? 'h-auto' : 'h-0'}`}>
                     <div className='checkbox-options pt-[16px] gap-10 space-y-4'>
-                        {(showAllOptions ? option : option.slice(0, 6)).map((item, key) => (
+                        {(showAllOptions ? dataToUse.option : dataToUse.option.slice(0, 6)).map((item, key) => (
                             <label key={key} className='gap-2 flex items-center'>
                                 <span className='border border-solid border-black w-[18px] h-[18px]'>
                                     {checkedValues.includes(item) && (
@@ -56,7 +60,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) => {
                                     )}
                                 </span>
                                 <input
-                                    id={`${name}-${key}`}
+                                    id={`${dataToUse.name}-${key}`}
                                     type="checkbox"
                                     value={item}
                                     onChange={handleCheckboxChange}

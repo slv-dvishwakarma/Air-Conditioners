@@ -1,0 +1,27 @@
+{
+    "name": {
+        "label": "Name*",
+        "placeholder": "Enter Your Name",
+        "name": "name"
+    },
+    "email": {
+        "label": "Email*",
+        "placeholder": "Enter Your Email",
+        "name": "email"
+    },
+    "message": {
+        "label": "Message",
+        "placeholder": "Enter Your Message",
+        "name": "message"
+    },
+    "button": "Submit",
+    "review": {
+        "title": "REVIEWS",
+        "label": "There are no reviews yet."
+    },
+    "form": {
+        "title": "BE THE FIRST TO REVIEW “SMART WATCHES WOOD EDITION”",
+        "label": "Your email address will not be published. Required fields are marked *",
+        "review": "Your rating *"
+    }
+}

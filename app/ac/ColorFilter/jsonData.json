@@ -1,0 +1,10 @@
+{
+    "label": "Colour",
+    "name": "color",
+    "options": [
+      "bg-[#0000FF]",
+      "bg-[#008000]",
+      "bg-[#808080]",
+      "bg-[#ff0000]"
+    ]
+  }

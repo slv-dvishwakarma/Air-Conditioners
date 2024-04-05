@@ -7,9 +7,7 @@ interface RatingProps {
 
 export const Rating: React.FC<RatingProps> = ({ rating, rank_list }) => {
     const stars = [];
-    // Loop through each star
     for (let i = 1; i <= 5; i++) {
-        // Check if current star should be full, half, or empty
         if (i <= rating) {
             stars.push(<span key={i} className="text-accentColor text-[25px]">&#9733;</span>);
         } else if (i - rating <= 0.5) {
@@ -19,7 +17,7 @@ export const Rating: React.FC<RatingProps> = ({ rating, rank_list }) => {
         }
     }
     return (
-        <div className="flex items-center gap-[5px]">
+        <div className="flex items-center gap-[5px] flex-wrap">
             <span className='relative'>{stars}</span>
             <span className='text-accentColor flex items-center'>{rank_list}</span>
         </div>

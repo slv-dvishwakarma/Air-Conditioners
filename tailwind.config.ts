@@ -18,7 +18,39 @@ const config: Config = {
         "ternary": "#E6E6E6",
         "paragraph": "#565959",
         "accentColor": "#FF8500"
-      }
+      },
+      keyframes: {
+        slideInDown: {
+          from: {
+            transform: 'translate3d(0, -100%, 0)',
+            visibility: 'visible',
+          },
+          to: {
+            transform: 'translateZ(0)',
+          },
+        },
+        slideIn: {
+          from: {
+            transform: 'translateX(-100%)',
+          },
+          to: {
+            transform: 'translateX(-20%)',
+          },
+        },
+        slideOut: {
+          from: {
+            transform: 'translateX(-20%)',
+          },
+          to: {
+            transform: 'translateX(-100%)',
+          },
+        },
+      },
+      animation: {
+        animateSlideInDown: 'slideInDown 1s ease',
+        animateslideIn: 'slideIn 1s ease',
+        animateslideOut: 'slideOut 1s ease',
+      },
     },
   },
   plugins: [],

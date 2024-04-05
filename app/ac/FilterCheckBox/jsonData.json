@@ -1,0 +1,13 @@
+{
+    "label": "Featured Brand",
+    "name": "brand",
+    "options": [
+      "Voltas",
+      "Daikin",
+      "Carrier",
+      "Panasonic",
+      "Blue Star",
+      "Godrej",
+      "Samsung"
+    ]
+  }

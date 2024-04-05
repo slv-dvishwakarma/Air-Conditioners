@@ -60,8 +60,8 @@ export const ProductTemplate: React.FC<ViewedProps> = ({ title, products, listin
                             </div>
                             <span className='flex flex-wrap h-[35px] xl:text-black lg:text-black md:text-black text-accentColor'>
                                 <span>{item.currancy}</span>
-                                <span className='xl:text-[28px] lg:text-[28px] md:text-[28px] text-[16px] font-medium'>{item.Price.toFixed(2)}</span>
-                                {item.discount_price && <span className='text-paragraph text-[13px] line-through self-end xl:ml-2.5 lg:ml-2.5 md:ml-2.5 ml-0'>{item.currancy} {item.discount_price.toFixed(2)}</span>}
+                                <span className='xl:text-[28px] lg:text-[28px] md:text-[16px] text-[16px] font-medium'>{item.Price.toFixed(2)}</span>
+                                {item.discount_price && <span className='text-paragraph text-[13px] line-through self-end xl:ml-2.5 lg:ml-2.5 md:ml-0 ml-0'>{item.currancy} {item.discount_price.toFixed(2)}</span>}
                             </span>
                             <span className='text-paragraph text-[13px] mt-3 xl:block md:block lg:block hidden'>{item.delivery}</span>
                         </div>
