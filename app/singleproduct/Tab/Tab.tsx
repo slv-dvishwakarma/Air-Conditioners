@@ -16,7 +16,7 @@ export const Tab = () => {
                         {jsonData.descriptin.label?.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
-                    </ul>
+                    </ul> 
                 </div>,
                 <Product key="product" />,
                 <ReviewForm key="reviewForm" />,
