@@ -51,6 +51,7 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
 
   const handleOpen = () => {
     setOpen(true);
+    setIsSticky(false);
   }
 
   const handleClose = () => {
