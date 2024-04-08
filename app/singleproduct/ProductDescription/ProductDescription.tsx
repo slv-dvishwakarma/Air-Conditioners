@@ -94,7 +94,7 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
                             ))}
                         </ul>
  
-                        <div className='flex xl:gap-10 lg:gap-10 md:gap-10 gap-3 pt-[20px]'>
+                        <div className='flex xl:gap-5 lg:gap-5 md:gap-5 gap-3 pt-[20px]'>
                             <Quantity id={quantity.id} name={quantity.name} defaultvalue={quantity.defaultvalue} control={control} />
                             <button type='submit' className='bg-accentColor text-white px-[30px] py-2 rounded-[10px]'>{button}</button>
                         </div>
@@ -131,7 +131,7 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
             {sizeopen && (
                 <div className='fixed inset-0 overflow-y-auto z-[999] bg-[#00000096]'>
                     <div className='flex items-center justify-center min-h-screen'>
-                        <div className='relative bg-white xl:w-2/5 lg:w-2/5 md:w-2/5 w-full mx-auto shadow-lg rounded-[20px] '>
+                        <div className='relative bg-white xl:w-2/5 lg:w-2/5 md:w-9/12 w-full mx-auto shadow-lg rounded-[20px] '>
                             <div className='size-guide p-6 items-center border-b-[#e9ecef] border-b border-solid flex justify-between '>
                                 <span className='xl:text-xl lg:text-xl md:text-xl text-[15px] font-medium text-accentColor'>Room air conditioner with Inverter compressor</span>
                                 <span className='xl:text-[25px] lg:text-[25px] md:text-[25px] text-[20px] cursor-pointer' onClick={handleClose}><RxCross2 /></span>

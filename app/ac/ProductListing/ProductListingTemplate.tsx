@@ -43,11 +43,11 @@ export const ProductListingTemplate: React.FC<ProductListProps> = ({ product_lis
                                 <div className='rating xl:block lg:block md:block hidden'>
                                     <Rating rating={item.rank} rank_list={item.rank_list} />
                                 </div>
-                                <p className='space-y-2.5 flex items-center gap-[5px]'>
-                                    <span className='xl:text-[18px] lg:text-[18px] md:text-[18px] text-[14px] relative -top-2 xl:text-black lg:text-black md:text-black text-accentColor' >{item.currency}</span>
+                                <p className='xl:space-y-2.5 lg:space-y-2.5 md:space-y-2.5 space-y-0 flex items-center gap-[5px]'>
+                                    <span className='xl:text-[18px] lg:text-[18px] md:text-[18px] text-[14px] relative xl:text-black lg:text-black md:text-black text-accentColor' >{item.currency}</span>
                                     <span className='xl:text-[28px] lg:text-[28px] md:text-[28px] text-[16px] xl:text-black lg:text-black md:text-black text-accentColor'>{item.Price}</span>
                                     <span className='text-paragraph text-[14px]'> {item.mrp}</span>
-                                    <span className='text-paragraph text-[13px] line-through'> {item.discount_price}</span>
+                                    <span className='text-paragraph text-[13px] line-through'>{item.currency} {item.discount_price}</span>
                                     <span className='text-[14px] text-[#0F1111] xl:block lg:block md:block hidden'> ({discountPercent.toFixed(2)}% off)</span>
                                 </p>
                                 <p>

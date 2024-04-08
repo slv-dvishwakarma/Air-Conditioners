@@ -8,7 +8,7 @@ export const SingleProductTemplate = () => {
 
   return (
     <>
-    <GridBox columns={2} gap={10} className='sm:grid py-10 border-b-[#BBBFBF] border-b border-solid'>
+    <GridBox columns={2} gap={10} className='sm:grid py-10 border-b-[#BBBFBF] border-b border-solid xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-4'>
       <GridBox.GridItem columnMerge={1}>
         <ProductSlider images={jsonData.productImages}/>
       </GridBox.GridItem>

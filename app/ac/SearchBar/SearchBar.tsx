@@ -1,5 +1,4 @@
-"use client"
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Controller } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import { FaSearch } from "react-icons/fa";
@@ -20,14 +19,31 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string>("All");
+  const [inputValue, setInputValue] = useState<string>("");
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const { handleSubmit, control, formState: { errors }, reset } = useForm();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const { handleSubmit, control, formState: { errors }, reset } = useForm();
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [inputValue, setInputValue] = useState<string>("");
+  const handleDropdownClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleDocumentClick = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleDocumentClick);
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, []);
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -62,7 +78,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
           defaultValue={option[0]}
           rules={{ required: true }}
           render={({ field: { onChange, value } }) => (
-            <div className="relative text-left dropdown-styling xl:block lg:block md:block hidden">
+            <div className="relative text-left dropdown-styling xl:block lg:block md:block hidden" ref={dropdownRef}>
                 <span className=" shadow-sm ">
                   <button
                     type="button"
@@ -77,11 +93,9 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
                 </span>
 
               {isOpen && (
-                <div
-                  className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 left-0 z-[1] w-[150px]"
-                  role="listbox"
+                <div tabIndex={-1} role="list" aria-label="Dropdown Options"
+                  className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 left-0 z-[1] w-[150px] overflow-hidden"
                 >
-                  <div tabIndex={-1} role="list" aria-label="Dropdown Options">
                     {option.map((option) => (
                       <div
                         key={option}
@@ -97,7 +111,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
                         </div>
                       </div>
                     ))}
-                  </div>
                 </div>
               )}
             </div>

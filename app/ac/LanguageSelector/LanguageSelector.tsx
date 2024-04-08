@@ -67,12 +67,9 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
       </span>
 
       {isOpen && (
-        <div
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-0 md:left-0 top-7 w-[150px] z-[1] left-[80px]"
-          role="listbox"
-          aria-labelledby="options-menu"
+        <div tabIndex={-1} role="list" aria-label="Dropdown Options"
+          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-0 md:left-0 top-7 w-[150px] z-[1] left-[80px] overflow-hidden"
         >
-          <div tabIndex={-1} role="list" aria-label="Dropdown Options">
             {options.map((option) => (
               <div
                 key={option}
@@ -92,7 +89,6 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
                 )}
               </div>
             ))}
-          </div>
         </div>
       )}
     </div>

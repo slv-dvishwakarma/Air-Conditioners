@@ -31,14 +31,13 @@ export const ProductSlider: React.FC<ProductSliderProps> = ({ images }) => {
     };
 
     return (
-        <GridBox columns={6} gap={5} className='grid'>
-            <GridBox.GridItem columnMerge={1}>
-                <div className="mt-4 space-y-4 ">
+        <div className='gap-5 xl:flex-row lg:flex-row md:flex-row flex-col-reverse flex'>
+            <div className=' xl:w-[20%] lg:w-[20%] md:w-[20%] w-full' >
+                <div className="mt-4 xl:space-y-4  lg:space-y-4 md:space-y-4 space-y-0 xl:block lg:block md:block flex gap-3 flex-wrap">
                     {images.map((image, index) => (
-
                         <Image
                             key={index}
-                            className="cursor-pointer border border-gray-200 "
+                            className="cursor-pointer border border-gray-200 w-[100px]"
                             src={image}
                             alt={`Product ${index + 1}`}
                             width={500}
@@ -47,8 +46,8 @@ export const ProductSlider: React.FC<ProductSliderProps> = ({ images }) => {
                         />
                     ))}
                 </div>
-            </GridBox.GridItem>
-            <GridBox.GridItem columnMerge={5}>
+            </div>
+            <div className=' xl:w-[80%] lg:w-[80%] md:w-[80%] w-full'>
                 <Slider {...settings} ref={sliderRef}>
                     {images.map((image, index) => (
                         <div key={index}>
@@ -62,7 +61,7 @@ export const ProductSlider: React.FC<ProductSliderProps> = ({ images }) => {
                         </div>
                     ))}
                 </Slider>
-            </GridBox.GridItem>
-        </GridBox>
+            </div>
+        </div>
     );
 };

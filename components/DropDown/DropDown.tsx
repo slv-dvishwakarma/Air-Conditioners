@@ -64,12 +64,9 @@ export const Dropdown: React.FC<DropdownProps> = ({ options }) => {
       </div>
 
       {isOpen && (
-        <div
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 left-0"
-          role="listbox"
-          aria-labelledby="options-menu"
+        <div tabIndex={-1} role="list" aria-label="Dropdown Options"
+          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 left-0 z-[1] overflow-hidden"
         >
-          <div tabIndex={-1} role="list" aria-label="Dropdown Options">
             {options.map((option) => (
               <div
                 key={option}
@@ -90,7 +87,6 @@ export const Dropdown: React.FC<DropdownProps> = ({ options }) => {
                 )}
               </div>
             ))}
-          </div>
         </div>
       )}
     </div>
