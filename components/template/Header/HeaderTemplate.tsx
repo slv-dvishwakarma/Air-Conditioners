@@ -35,7 +35,7 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (!open && window.scrollY > 10) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -46,7 +46,7 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [open]);
 
 
   const handleOpen = () => {
@@ -85,12 +85,14 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
             <User options={options} />
           </div>
           <div className='xl:relative lg:relative md:relative absolute xl:right-0 lg:right-0 md:right-0 right-[35px]'>
-            <span className='text-white text-3xl'>
-              <IoIosCart />
-            </span>
-            <span className='absolute top-[-13px] bg-accentColor text-[white] w-5 h-5 leading-5 text-center rounded-[50%] xl:right-[20px] lg:right-[20px] md:right-[20px] right-[-15px] text-xs'>
-              {cart}
-            </span>
+            <Link href="/">
+              <span className='text-white text-3xl'>
+                <IoIosCart />
+              </span>
+              <span className='absolute top-[-13px] bg-accentColor text-[white] w-5 h-5 leading-5 text-center rounded-[50%] xl:right-[20px] lg:right-[20px] md:right-[20px] right-[-15px] text-xs'>
+                {cart}
+              </span>
+            </Link>
           </div>
         </GridBox.GridItem>
       </GridBox>
@@ -117,7 +119,7 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
                 <span onClick={handleClose}><RxCross2 /></span>
               </div>
               <div className='w-4/5 float-right pt-[30px]'>
-              <LanguageSelector options={language} />
+                <LanguageSelector options={language} />
               </div>
             </div>
           )}
