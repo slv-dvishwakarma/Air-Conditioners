@@ -3,7 +3,6 @@ import React from 'react'
 import { ProductSlider } from '../ProductSlider'
 import { ProductDescription } from '../ProductDescription';
 import jsonData from "./jsonData.json";
-import { Skelton } from './Skelton';
 
 export const SingleProductTemplate = () => {
 
