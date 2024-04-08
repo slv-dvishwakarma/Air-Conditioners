@@ -28,22 +28,13 @@
         "defaultvalue": 1,
         "name": "quantity"
     },
-    "function": [
-        {
-            "label": "Compare",
-            "icon": "MdCompareArrows"
-        },
-        {
-            "label": "Add to wishlist",
-            "icon": "CiHeart"
-        },
-        {
-            "label": "Size Guide",
-            "icon": "TbRulerMeasure"
-        }
-    ],
-    "sku": {
-        "title": "SKU",
-        "label": "MNK-0147"
+    "Compare": {
+        "label": "Compare"
+    },
+    "wishlist": {
+        "label": "Add to wishlist"
+    },
+    "size": {
+        "label": "Size Guide"
     }
 }

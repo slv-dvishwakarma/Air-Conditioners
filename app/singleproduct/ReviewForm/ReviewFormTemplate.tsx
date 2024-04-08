@@ -41,7 +41,7 @@ export const ReviewFormTemplate: React.FC<ReviewFormTemplateProps> = ({ name, em
     };
 
     return (
-        <GridBox columns={2} gap={10} className='sm:grid py-[50px] px-[50px]'>
+        <GridBox columns={2} gap={10} className='sm:grid py-[50px] xl:px-[50px] lg:px-[50px] md:px-[50px] px-[10px] xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-5'>
             <GridBox.GridItem columnMerge={1}>
                 <div className='space-y-3'>
                 <h5 className='text-sm font-semibold'>{review.title}</h5>
@@ -52,8 +52,8 @@ export const ReviewFormTemplate: React.FC<ReviewFormTemplateProps> = ({ name, em
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='space-y-3'>
                     <h6 className='text-lg font-semibold'>{form.title}</h6>
-                    <span className='text-[#777777] text-[12px]'>{form.label}</span>
-                    <span >{form.review}</span>
+                    <span className='text-[#777777] text-[12px]'>{form.label}</span><br />
+                    <span className='text-[#777777] text-[12px]'>{form.review}</span>
                     </div>
                     <div>
                         <Text placeholder={name.placeholder} name={name.name} control={control} errors={errors} label={name.label}/>

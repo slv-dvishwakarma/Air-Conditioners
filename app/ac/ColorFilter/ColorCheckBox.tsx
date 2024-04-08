@@ -49,7 +49,7 @@ export const ColorCheckBox: React.FC<CheckBoxProps> = ({ option, label, name }) 
                     <div className='checkbox-options pt-[16px] gap-4 flex items-center flex-wrap'>
                         {option.map((item, key) => (
                             <label key={key} className=' flex items-center '>
-                                <span className={`border border-solid w-[18px] h-[18px] ${item}`}>
+                                <span className="border border-solid w-[18px] h-[18px]" style={{ backgroundColor: item }}>
                                     {checkedValues.includes(item) && (
                                         <MdClose className='text-white'/>
                                     )}

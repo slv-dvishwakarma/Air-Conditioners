@@ -17,7 +17,10 @@ const config: Config = {
         "primary": "#131921",
         "ternary": "#E6E6E6",
         "paragraph": "#565959",
-        "accentColor": "#FF8500"
+        "accentColor": "#FF8500",
+        'blue': '#0000FF',
+        'green': '#008000',
+        'red': '#ff0000',
       },
       keyframes: {
         slideInDown: {

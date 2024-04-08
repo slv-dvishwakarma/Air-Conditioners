@@ -39,9 +39,10 @@ interface BreadCrumbProps {
   appliances: BrandItem;
   price: PriceItem;
   color: ColorItem;
+  title?: string;
 }
 
-export const BreadCrumbTemplate: React.FC<BreadCrumbProps> = ({ breadcrumb, brand, delivery, compressor, energy, coil, appliances, price, color }) => {
+export const BreadCrumbTemplate: React.FC<BreadCrumbProps> = ({ breadcrumb, delivery, compressor, energy, coil, appliances, title}) => {
 
   const [open, setOpen] = useState(false);
 
@@ -65,7 +66,7 @@ export const BreadCrumbTemplate: React.FC<BreadCrumbProps> = ({ breadcrumb, bran
           ))}
         </div>
         <div className='xl:hidden lg:hidden md:block block text-accentColor'>
-          <span className='flex items-center gap-2.5' onClick={handleclicked}>Filters <MdOutlineKeyboardArrowDown /></span>
+          <span className='flex items-center gap-2.5' onClick={handleclicked}>{title} <MdOutlineKeyboardArrowDown /></span>
         </div>
       </div>
       {open && (
@@ -75,7 +76,7 @@ export const BreadCrumbTemplate: React.FC<BreadCrumbProps> = ({ breadcrumb, bran
               <span>Filters</span>
               <span className='w-[30px] h-[30px] bg-accentColor text-[white] flex justify-center text-xl p-[5px] rounded-[50%]' onClick={handleclose}><RxCross2 /></span>
             </div>
-            <SideBar brand={brand} delivery={delivery} compressor={compressor} energy={energy} coil={coil} appliances={appliances} price={price} color={color} />
+            <SideBar delivery={delivery} compressor={compressor} energy={energy} coil={coil} appliances={appliances} />
           </div>
         </div>
       )}

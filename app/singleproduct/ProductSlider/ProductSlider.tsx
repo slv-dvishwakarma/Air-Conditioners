@@ -30,15 +30,15 @@ export const ProductSlider: React.FC<ProductSliderProps> = ({ images }) => {
     };
 
     return (
-        <GridBox columns={6} gap={5} className='sm:grid'>
+        <GridBox columns={6} gap={5} className='grid'>
             <GridBox.GridItem columnMerge={1}>
-                <div className="mt-4 space-y-4">
+                <div className="mt-4 space-y-4 ">
                     {images.map((image, index) => (
                         <img
                             key={index}
                             src={image}
                             alt={`Product ${index + 1}`}
-                            className=" cursor-pointer border border-gray-200"
+                            className="cursor-pointer border border-gray-200 "
                             onClick={() => handlePreviewClick(index)}
                         />
                     ))}

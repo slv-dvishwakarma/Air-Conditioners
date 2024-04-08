@@ -1,4 +1,5 @@
 {
+    "title": "Filters",
     "price": {
       "label": "Price",
       "range": [300, 1000],
@@ -80,11 +81,11 @@
       "label": "Colour",
       "name": "color",
       "options": [
-        "bg-[#0000FF]",
-        "bg-[#008000]",
-        "bg-[#808080]",
-        "bg-[#ff0000]"
+        "blue",
+        "green",
+        "gray",
+        "red"
       ]
-    }
+  }
   }
   
