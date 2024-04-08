@@ -3,7 +3,6 @@ import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 
-
 interface DropdownProps {
   options: string[];
 }
@@ -11,11 +10,11 @@ interface DropdownProps {
 export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
   const [selectedOption, setSelectedOption] = useState<string>(options[0]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [dropdownPosition, setDropdownPosition] = useState<'top' | 'bottom'>('bottom');
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-
     const handleOutsideClick = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -28,6 +27,23 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
       document.removeEventListener('mousedown', handleOutsideClick);
     };
   }, []);
+
+  useEffect(() => {
+    const dropdownMenuHeight = dropdownRef.current?.getBoundingClientRect().height || 0;
+    const buttonRect = dropdownRef.current?.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (buttonRect) {
+      const spaceAbove = buttonRect.top;
+      const spaceBelow = windowHeight - buttonRect.bottom;
+
+      if (spaceBelow < dropdownMenuHeight && spaceAbove > dropdownMenuHeight) {
+        setDropdownPosition('top');
+      } else {
+        setDropdownPosition('bottom');
+      }
+    }
+  }, [isOpen]);
 
   const handleOptionChange = (option: string) => {
     setSelectedOption(option);
@@ -42,7 +58,6 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
   const selectedLanguageAbbreviation = selectedOption.split(' - ')[1];
 
   return (
-
     <div className="relative text-left dropdown-styling flex justify-center" ref={dropdownRef} onClick={toggleDropdown}>
       <Image
         className='w-[30px] mr-3'
@@ -67,33 +82,34 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
       </span>
 
       {isOpen && (
-        <div tabIndex={-1} role="list" aria-label="Dropdown Options"
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-0 md:left-0 top-7 w-[150px] z-[1] left-[80px] overflow-hidden"
+        <div
+          tabIndex={-1}
+          role="list"
+          aria-label="Dropdown Options"
+          className={`origin-${dropdownPosition}-right absolute ${dropdownPosition === 'top' ? 'bottom-7' : 'top-7'} right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-0 md:left-0 w-[150px] z-[1] left-[80px] overflow-hidden`}
         >
-            {options.map((option) => (
-              <div
-                key={option}
-                onClick={() => handleOptionChange(option)}
-                className="cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-100"
-              >
-                <div className="flex items-center">
-                  <span className="font-normal block truncate">{option}</span>
-                </div>
-
-                {selectedOption === option && (
-                  <span
-                    className="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600"
-                    aria-hidden="true"
-                  >
-                  </span>
-                )}
+          {options.map((option) => (
+            <div
+              key={option}
+              onClick={() => handleOptionChange(option)}
+              className="cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-100"
+            >
+              <div className="flex items-center">
+                <span className="font-normal block truncate">{option}</span>
               </div>
-            ))}
+
+              {selectedOption === option && (
+                <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600" aria-hidden="true">
+                  {/* You can add any indicator for the selected option here */}
+                </span>
+              )}
+            </div>
+          ))}
         </div>
       )}
     </div>
-
   );
 };
+
 
 
