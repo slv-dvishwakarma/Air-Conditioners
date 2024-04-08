@@ -46,7 +46,7 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [open]);
+  }, [open]); 
 
 
   const handleOpen = () => {
