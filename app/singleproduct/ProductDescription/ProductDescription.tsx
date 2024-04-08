@@ -93,7 +93,7 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
-
+ 
                         <div className='flex xl:gap-10 lg:gap-10 md:gap-10 gap-3 pt-[20px]'>
                             <Quantity id={quantity.id} name={quantity.name} defaultvalue={quantity.defaultvalue} control={control} />
                             <button type='submit' className='bg-accentColor text-white px-[30px] py-2 rounded-[10px]'>{button}</button>
