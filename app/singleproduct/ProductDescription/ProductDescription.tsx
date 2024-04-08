@@ -78,7 +78,7 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='description'>
                     <div>
-                        <h1 className='text-2xl leading-8'>{title}</h1>
+                        <h1 className='xl:text-2xl lg:text-2xl md:text-2xl text-xl  leading-8'>{title}</h1>
                         <Rating rating={rating} rank_list={rank_list} />
 
                         <div className='space-y-2.5 flex items-center gap-[5px]'>
