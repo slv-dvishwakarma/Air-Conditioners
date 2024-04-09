@@ -2,8 +2,8 @@ import React from 'react'
 import { BannersTemplate } from './BannersTemplate'
 import jsonData from "./jsonData.json";
 
-export const Banners = () => {
+export const TwoSideBanners = () => {
   return (
-    <BannersTemplate banner={jsonData.banner} column={jsonData.column} />
+    <BannersTemplate banner={jsonData.banner}/>
   )
 }

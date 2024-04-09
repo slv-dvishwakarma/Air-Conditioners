@@ -195,5 +195,38 @@
                 "column_merge": 1
             }
         ]
+    },
+    "banner": {
+        "label": "“Cleaning Filter Indication” is a unique & smart feature in which indoor panel indicates “CL” symbol, which alarms customer to clean indoor unit air flter.",
+        "title": "CLEAN FILTER INDICATION",
+        "image": "/banner-3.jpg",
+        "image_width": 1600,
+        "image_height": 533,
+        "button": [
+            {
+                "label": "Buy",
+                "url": "/singleproduct"
+            },
+            {
+                "label": "Learn More",
+                "url": "/ac"
+            }
+        ]
+    },
+    "fullbanner": {
+        "title": "AIR CONDITIONER MEETS VACUUM TECHNOLOGY",
+        "image": "/full-banner.jpg",
+        "image_width": 1600,
+        "image_height": 533,
+        "button": [
+            {
+                "label": "Buy",
+                "url": "/singleproduct"
+            },
+            {
+                "label": "Learn More",
+                "url": "/ac"
+            }
+        ]
     }
 }

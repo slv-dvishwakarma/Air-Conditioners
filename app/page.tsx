@@ -1,11 +1,11 @@
 import { HeroSlider } from '@/components/Home/HeroSlider'
 import { ParentContainer } from '@/components/ParentContainer';
-import { Banners } from '@/components/template/Banners';
 import React from 'react'
 import { Product } from '@/components/template/Product';
 import { ProductTemplate } from '@/components/template/Product/ProductTemplate';
-import { BannersTemplate } from '@/components/template/Banners/BannersTemplate';
 import jsonData from "./jsonData.json";
+import { TwoSideBanners } from '@/components/template/TwoSideBanners';
+import { FullBanner } from '@/components/template/FullBanner';
 
 const page = () => {
 
@@ -14,15 +14,15 @@ const page = () => {
             <HeroSlider />
             <ParentContainer>
                 <Product />
-                <Banners />
+                <TwoSideBanners />
                 <ProductTemplate title={jsonData.trends.title} products={jsonData.trends.products} listing_button={jsonData.trends.listing_button} />
-                <BannersTemplate banner={jsonData.product_banner.banner} column={jsonData.product_banner.column} />
+                <FullBanner banner={jsonData.banner}/>
                 <ProductTemplate title={jsonData.devices.title} products={jsonData.devices.products} listing_button={jsonData.devices.listing_button} />
             </ParentContainer>
-            <BannersTemplate banner={jsonData.product_banner1.banner} column={jsonData.product_banner1.column} />
+            
             <ParentContainer className='pb-[50px]'>
                 <div className='pt-[30px]'>
-                    <BannersTemplate banner={jsonData.off_banner.banner} column={jsonData.off_banner.column} />
+                <FullBanner banner={jsonData.fullbanner}/>
                 </div>
                 <ProductTemplate title={jsonData.devices.title} products={jsonData.devices.products} listing_button={jsonData.devices.listing_button} />
             </ParentContainer>
