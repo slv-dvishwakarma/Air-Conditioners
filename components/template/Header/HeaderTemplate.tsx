@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoIosCart } from "react-icons/io";
-import { GridBox } from '@/components/GridBox';
 import { User } from '@/app/ac/User';
 import { SearchBar } from '@/app/ac/SearchBar';
 import { LanguageSelector } from '@/app/ac/LanguageSelector';
@@ -60,12 +59,11 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
 
   return (
     <header className={`main-header  ${isSticky ? 'shadow-[0_13px_35px_-12px_rgba(35,35,35,0.15)] fixed w-full z-[99] top-0 animate-animateSlideInDown bg-primary px-[4%] left-0' : ''}`} style={isSticky ? { animationDuration: ".5s", animationFillMode: "both", animationName: "slideInDown", transform: "translate3d(0, -100%, 0)" } : undefined}>
-      <GridBox columns={12} desktop={12} laptop={12} tablet={12} mobile={8} gap={10} className='items-center py-5 xl:space-y-0 lg:space-y-0 md:space-y-0  grid'>
-        <GridBox.GridItem colMargeDesktop={3} colMargeLaptop={3} colMargeTablet={3} className='xl:w-full lg:w-full md:w-full w-[20%]'>
-          <div className='justify-between items-center gap-[50px] xl:flex lg:flex md:flex hidden'>
-            <Link href="/">
+      <div className='items-center py-5 xl:space-y-0 lg:space-y-0 md:space-y-0  flex gap-5'>
+        <div className='xl:w-1/5 lg:w-[25%] md:w-[30%] w-[8%]'>
+          <div className='justify-between items-center xl:flex lg:flex md:flex hidden'>
+            <Link href="/" className='xl:w-[60%] lg:w-[55%] md:w-[50%] w-full'>
               <Image
-                className='xl:w-[96%] lg:w-[96%] md:w-full'
                 src={logo}
                 alt={alt}
                 width={280}
@@ -77,11 +75,11 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
           <div className='xl:hidden lg:hidden md:hidden'>
             <span className='text-white text-[25px]' onClick={handleOpen}><GiHamburgerMenu /></span>
           </div>
-        </GridBox.GridItem>
-        <GridBox.GridItem columnMerge={6} colMargeDesktop={6} colMargeLaptop={6} colMargeTablet={5} className='col-span-7'>
+        </div>
+        <div className='xl:w-[62%] lg:w-[50%] md:w-[40%] w-[80%]'>
           <SearchBar searchbar={searchbar} option={option} />
-        </GridBox.GridItem>
-        <GridBox.GridItem colMargeDesktop={3} colMargeLaptop={3} colMargeTablet={4} className='flex  items-center gap-[18px]  xl:justify-end justify-between lg:justify-end md:justify-end'>
+        </div>
+        <div className='flex  items-center gap-[18px] justify-between xl:w-[18%] lg:w-[25%] md:w-[30%] w-[15%]'>
           <div className='xl:block lg:block md:block hidden'>
             <User options={options} />
           </div>
@@ -95,8 +93,8 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
               </span>
             </Link>
           </div>
-        </GridBox.GridItem>
-      </GridBox>
+        </div>
+      </div>
       <div className={`${open ? "bg-[rgba(0,0,0,0.8)] fixed inset-0 overflow-y-auto z-[999] " : ""}`}>
         <div className={`lg:w-auto lg:order-1 z-50 ${open ? "animate-[slideIn_0.5s_forwards] fixed w-full h-full bg-white transition-[left] duration-[0.3s] ease-[ease] z-[1] left-0 top-0 xl:bg-transparent xl:relative xl:animate-[unset] xl:inset-x-[unset] lg:bg-transparent lg:relative lg:animate-[unset] lg:inset-x-[unset]" : "animate-[slideOut_0.5s_forwards] fixed w-full h-full bg-white transition-[left] duration-[0.3s] ease-[ease] left-0 top-0 xl:bg-transparent xl:relative xl:animate-[unset] xl:inset-x-[unset] lg:bg-transparent lg:relative lg:animate-[unset] lg:inset-x-[unset]"}`}>
           {open && (

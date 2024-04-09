@@ -1,183 +1,62 @@
 {
     "logo": "/logo.png",
     "alt": "Deal Website",
-    "know": {
-        "label": "Let to Know Us",
-        "image": [
-            "/play-store.png",
-            "/app-store.png"
-        ],
-        "menu": [
-            {
-                "name": "Careers",
-                "link": "/"
-            },
-            {
-                "name": "About Us",
-                "link": "/"
-            },
-            {
-                "name": "UK Modern Slavery Statement",
-                "link": "/"
-            }
-        ]
-    },
-    "searchbar": {
-        "name": "searchbar",
-        "key": "dropdown",
-        "placeholder": "Search",
-        "option": [
-            "AC 1.5 Ton",
-            "AC 1 Ton",
-            "AC 2 Ton",
-            "AC 3 Ton"
-        ],
-        "language": [
-            "English - EN",
-            "Hindi - HI"
-        ]
-    },
-    "copyright": {
-        "label": "© Deal.com",
-        "year": 2024,
-        "menu": [
-            {
-                "name": "Conditions of Use & Sale",
-                "link": "/"
-            },
-            {
-                "name": "Privacy Notice",
-                "link": "/"
-            },
-            {
-                "name": "Cookies Notice",
-                "link": "/"
-            }
-        ]
-    },
     "footer_item": [
         {
-            "label": "Make Money with Us",
+            "label": "Let to Know Us",
             "menu": [
                 {
-                    "name": "Make Money with Us",
+                    "name": "Careers",
                     "link": "/"
                 },
                 {
-                    "name": "Sell on Deal",
+                    "name": "About Us",
                     "link": "/"
                 },
                 {
-                    "name": "Sell Under Private Brands",
-                    "link": "/"
-                },
-                {
-                    "name": "Sell on Deal Business",
-                    "link": "/"
-                },
-                {
-                    "name": "Sell on Deal Handmade",
-                    "link": "/"
-                },
-                {
-                    "name": "Fulfilment by Deal",
-                    "link": "/"
-                },
-                {
-                    "name": "Seller Fulfilled Prime",
-                    "link": "/"
-                },
-                {
-                    "name": "Advertise Your Products",
-                    "link": "/"
-                },
-                {
-                    "name": "Deal Pay",
-                    "link": "/"
-                },
-                {
-                    "name": "Host an Deal Hub",
+                    "name": "UK Modern Slavery Statement",
                     "link": "/"
                 }
             ]
         },
         {
-            "label": "Deal Payment Methods.",
+            "label": "Notice",
             "menu": [
                 {
-                    "name": "Deal Platinum Mastercard",
+                    "name": "Conditions of Use & Sale",
                     "link": "/"
                 },
                 {
-                    "name": "Deal Classic Mastercard",
+                    "name": "Privacy Notice",
                     "link": "/"
                 },
                 {
-                    "name": "Deal Money Store",
-                    "link": "/"
-                },
-                {
-                    "name": "Gift Cards",
-                    "link": "/"
-                },
-                {
-                    "name": "Deal Currency Converter",
-                    "link": "/"
-                },
-                {
-                    "name": "Payment Methods Help",
-                    "link": "/"
-                },
-                {
-                    "name": "Shop with Points",
-                    "link": "/"
-                },
-                {
-                    "name": "Top Up Your Account",
-                    "link": "/"
-                },
-                {
-                    "name": "Top Up Your Account in Store",
-                    "link": "/"
-                }
-            ]
-        },
-        {
-            "label": "Let Us Help You",
-            "menu": [
-                {
-                    "name": "Track Packages or View Orders",
-                    "link": "/"
-                },
-                {
-                    "name": "Delivery Rates & Policies",
-                    "link": "/"
-                },
-                {
-                    "name": "Deal Prime",
-                    "link": "/"
-                },
-                {
-                    "name": "Returns & Replacements",
-                    "link": "/"
-                },
-                {
-                    "name": "Recycling Manage Your Content and Devices",
-                    "link": "/"
-                },
-                {
-                    "name": "Deal Mobile App",
-                    "link": "/"
-                },
-                {
-                    "name": "Deal Assistant",
-                    "link": "/"
-                },
-                {
-                    "name": "Customer Service",
+                    "name": "Cookies Notice",
                     "link": "/"
                 }
             ]
         }
-    ]
+    ],
+    "contact": {
+        "label": "Contact Us",
+        "support": [
+            {
+                "label": "Phone",
+                "title": "+01- 12345-67890",
+                "url": "tel:+01- 12345-67890"
+            },
+            {
+                "label": "Email",
+                "title": "deal@gmail.com",
+                "url": "mailto:deal@gmail.com"
+            }
+        ]
+    },
+    "copyright": {
+        "label": "Copyright © 2024. Deal Website. All rights reserved.",
+        "language": [
+            "English - EN",
+            "Hindi - HI"
+        ]
+    }
 }
