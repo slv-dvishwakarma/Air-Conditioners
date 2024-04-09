@@ -81,8 +81,8 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
                         <h1 className='xl:text-2xl lg:text-2xl md:text-2xl text-xl  leading-8'>{title}</h1>
                         <Rating rating={rating} rank_list={rank_list} />
 
-                        <div className='space-y-2.5 flex items-center gap-[5px]'>
-                            <span className='xl:text-[18px] lg:text-[18px] md:text-[18px] text-[14px] relative -top-2 xl:text-black lg:text-black md:text-black text-accentColor'>{currency}</span>
+                        <div className='xl:space-y-2.5 lg:space-y-2.5 md:space-y-2.5 space-y-0 flex items-center gap-[5px] xl:pt-0 lg:pt-0 md:pt-0 pt-2'>
+                            <span className='xl:text-[18px] lg:text-[18px] md:text-[18px] text-[14px] relative  xl:text-black lg:text-black md:text-black text-accentColor'>{currency}</span>
                             <span className='xl:text-[28px] lg:text-[28px] md:text-[28px] text-[16px] xl:text-black lg:text-black md:text-black text-accentColor'>{Price}</span>
                             <span className='text-paragraph text-[14px]'>{mrp}</span>
                             <span className='text-paragraph text-[13px] line-through'>{discount_price}</span>

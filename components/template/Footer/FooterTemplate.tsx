@@ -81,7 +81,7 @@ export const FooterTemplate: React.FC<HeaderProps> = ({ logo, alt, know, footer_
           </GridBox.GridItem>
         ))}
       </GridBox>
-      <GridBox columns={2} desktop={2} laptop={2} tablet={1} className='py-5 sm:grid'>
+      <GridBox columns={2} desktop={2} laptop={2} tablet={1} className='py-5 sm:grid items-center'>
         <GridBox.GridItem columnMerge={1}>
           <div className='xl:flex lg:flex md:flex block items-center xl:gap-10 lg:gap-10 md:gap-10 gap-2 xl:justify-start lg:justify-start md:justify-center justify-start'>
             <div className='text-[15px] text-white'>

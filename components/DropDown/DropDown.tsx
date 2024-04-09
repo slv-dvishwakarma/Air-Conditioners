@@ -10,7 +10,7 @@ interface DropdownProps {
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({ options }) => {
-  const defaultOption = "Account & List"; // Set the default option here
+  const defaultOption = "Account & List"; 
   const [selectedOption, setSelectedOption] = useState<string>(defaultOption);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -55,9 +55,9 @@ export const Dropdown: React.FC<DropdownProps> = ({ options }) => {
               {selectedOption}
             </span>
             {!isOpen ? (
-              <span className='text-[22px] ml-5 -mt-5'><MdOutlineKeyboardArrowDown /></span>
+              <span className='text-[22px] ml-2.5 -mt-5'><MdOutlineKeyboardArrowDown /></span>
             ) : (
-              <span className='text-[22px] ml-5 -mt-5'><MdOutlineKeyboardArrowUp /></span>
+              <span className='text-[22px] ml-2.5 -mt-5'><MdOutlineKeyboardArrowUp /></span>
             )}
           </button>
         </span>
