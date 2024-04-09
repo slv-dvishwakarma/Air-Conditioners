@@ -100,7 +100,6 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
 
               {selectedOption === option && (
                 <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600" aria-hidden="true">
-                  {/* You can add any indicator for the selected option here */}
                 </span>
               )}
             </div>

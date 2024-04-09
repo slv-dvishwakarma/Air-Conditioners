@@ -11,13 +11,13 @@
         "title": "Discover new items",
         "label": "Grab your favorites at discounted prices",
         "button_label": "Explore",
-        "button_link": "/latest"
+        "button_link": "/singleproduct"
     },
     {
         "image": "/slider-3.jpg",
         "title": "Check out the latest",
         "label": "Grab your favorites at discounted prices",
         "button_label": "Shop now",
-        "button_link": "/sale"
+        "button_link": "/ac"
     }
 ]

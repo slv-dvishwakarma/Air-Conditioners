@@ -86,7 +86,7 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
             <User options={options} />
           </div>
           <div className='xl:relative lg:relative md:relative absolute xl:right-0 lg:right-0 md:right-0 right-[35px]'>
-            <Link href="/">
+            <Link href="/singleproduct">
               <span className='text-white text-3xl'>
                 <IoIosCart />
               </span>
