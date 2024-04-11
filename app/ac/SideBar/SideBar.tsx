@@ -1,9 +1,15 @@
+"use client"
 import React from 'react'
 import { FilterCheckBox } from '../FilterCheckBox';
 import { PriceFilter } from '../PriceFilter';
 import { ColorFilter } from '../ColorFilter';
-import { FilterCheckBoxTemplate } from '../FilterCheckBox/FilterCheckBoxTemplate';
 
+
+interface PriceItem {
+    range: number[];
+    maxPrice: number;
+    label: string;
+  }
 
 interface BrandItem {
     label: string;
@@ -18,20 +24,23 @@ interface SideBarProps {
     energy: BrandItem;
     coil: BrandItem;
     appliances: BrandItem;
+    price: PriceItem;
+    brand: BrandItem;
+    color: BrandItem;
 }
 
-export const SideBar: React.FC<SideBarProps> = ({delivery, compressor, energy, coil, appliances}) => {
+export const SideBar: React.FC<SideBarProps> = ({delivery, compressor, energy, coil, appliances, price, brand, color}) => {
     return (
         <>
         
-            <PriceFilter />
-            <FilterCheckBox />
-            <FilterCheckBoxTemplate id={delivery.name} label={delivery.label} option={delivery.options} name={delivery.name} />
-            <FilterCheckBoxTemplate id={compressor.name} label={compressor.label} option={compressor.options} name={compressor.name} />
-            <FilterCheckBoxTemplate id={energy.name} label={energy.label} option={energy.options} name={energy.name} />
-            <FilterCheckBoxTemplate id={coil.name} label={coil.label} option={coil.options} name={coil.name} />
-            <FilterCheckBoxTemplate id={appliances.name} label={appliances.label} option={appliances.options} name={appliances.name} />
-            <ColorFilter />
+            <PriceFilter price={price}/>
+            <FilterCheckBox id={brand.name} label={brand.label} option={brand.options} name={brand.name}/>
+            <FilterCheckBox id={delivery.name} label={delivery.label} option={delivery.options} name={delivery.name} />
+            <FilterCheckBox id={compressor.name} label={compressor.label} option={compressor.options} name={compressor.name} />
+            <FilterCheckBox id={energy.name} label={energy.label} option={energy.options} name={energy.name} />
+            <FilterCheckBox id={coil.name} label={coil.label} option={coil.options} name={coil.name} />
+            <FilterCheckBox id={appliances.name} label={appliances.label} option={appliances.options} name={appliances.name} />
+            <ColorFilter color={color}/>
  
         </>
     )

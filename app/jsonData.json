@@ -1,4 +1,140 @@
 {
+    "slider": [
+        {
+            "image": "/slider-1.jpg",
+            "title": "Refresh your space",
+            "label": "Grab your favorites at discounted prices",
+            "button_label": "Learn more",
+            "button_link": "/ac"
+        },
+        {
+            "image": "/slider-2.jpg",
+            "title": "Discover new items",
+            "label": "Grab your favorites at discounted prices",
+            "button_label": "Explore",
+            "button_link": "/singleproduct"
+        },
+        {
+            "image": "/slider-3.jpg",
+            "title": "Check out the latest",
+            "label": "Grab your favorites at discounted prices",
+            "button_label": "Shop now",
+            "button_link": "/ac"
+        }
+    ],
+    "related": {
+        "title": "Related to items you've viewed",
+        "listing_button": {
+            "name": "View All",
+            "link": "/ac"
+        },
+        "products": [
+            {
+                "company": "Voltas -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 3,
+                "rank_list": 1951,
+                "Price": 10000.00,
+                "discount_price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Daikin -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-2.jpg",
+                "rank": 4,
+                "rank_list": 1951,
+                "Price": 20000.00,
+                "discount_price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Carrier -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-3.jpg",
+                "rank": 5,
+                "rank_list": 1951,
+                "Price": 30000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Panasonic -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-4.jpg",
+                "rank": 2,
+                "rank_list": 1951,
+                "Price": 40000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Blue Star -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 50000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            },
+            {
+                "company": "Blue Star -",
+                "name": "1 Ton 3 Star Wi-Fi Inverter Smart Split AC",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 60000.00,
+                "delivery": "FREE delivery",
+                "currancy": "₹"
+            }
+        ]
+    },
+    "twobanner": [
+        {
+            "title": "5 Step Cooling",
+            "from": "From",
+            "price": 30000,
+            "currency": "₹",
+            "image": "/ac-banner.png",
+            "image_width": 1000,
+            "image_height": 500,
+            "column_merge": 2,
+            "button": [
+                {
+                    "label": "Buy",
+                    "url": "/singleproduct"
+                },
+                {
+                    "label": "Learn More",
+                    "url": "/ac"
+                }
+            ]
+        },
+        {
+            "title": "5-3 Star",
+            "from": "From",
+            "price": 40000,
+            "currency": "₹",
+            "image": "/ac-banner-2.jpg",
+            "image_width": 500,
+            "image_height": 500,
+            "column_merge": 1,
+            "button": [
+                {
+                    "label": "Buy",
+                    "url": "/singleproduct"
+                },
+                {
+                    "label": "Learn More",
+                    "url": "/ac"
+                }
+            ]
+        }
+    ],
     "trends": {
         "title": "Inspired by your shopping trends",
         "listing_button": {

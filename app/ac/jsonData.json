@@ -17,6 +17,11 @@
             "link": "/ac"
         }
     ],
+    "price": {
+        "label": "Price",
+        "range": [300, 1000],
+        "maxPrice": 5000
+    },
     "brand": {
         "label": "Featured Brand",
         "name": "brand",
@@ -68,5 +73,15 @@
         "options": [
             "Top Brands"
         ]
-    }
+    },
+    "colorfilter": {
+        "label": "Colour",
+        "name": "color",
+        "options": [
+          "blue",
+          "green",
+          "gray",
+          "red"
+        ]
+      }
 }

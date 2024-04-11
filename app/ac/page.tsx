@@ -14,7 +14,7 @@ export default function Home() {
       <BreadCrumbs />
       <GridBox columns={12} gap={10} className='sm:grid'>
         <GridBox.GridItem columnMerge={3} className='xl:block lg:block md:hidden hidden'>
-          <SideBar delivery={jsonData.delivery} compressor={jsonData.compressor} energy={jsonData.energy} coil={jsonData.coil} appliances={jsonData.appliances}/>
+          <SideBar delivery={jsonData.delivery} compressor={jsonData.compressor} energy={jsonData.energy} coil={jsonData.coil} appliances={jsonData.appliances} price={jsonData.price} brand={jsonData.brand} color={jsonData.colorfilter}/>
         </GridBox.GridItem>
         <GridBox.GridItem columnMerge={9} colMargeTablet={12} colMargeDesktop={9} colMargeLaptop={9}  className='pt-[20px]'>
           <ProductListing/>
