@@ -22,9 +22,9 @@ interface ViewedItem {
 }
 
 interface ViewedProps {
-    title: string;
+    title?: string;
     products: ViewedItem[];
-    listing_button: ListingItem;
+    listing_button?: ListingItem;
 }
 
 export const Product: React.FC<ViewedProps> = ({ title, products, listing_button }) => {
@@ -34,8 +34,8 @@ export const Product: React.FC<ViewedProps> = ({ title, products, listing_button
             <div className='flex justify-between items-center'>
                 <label className='xl:text-[21px] lg:text-[21px] md:text-[21px] font-semibold text-[17px] '>{title}</label>
                 {products?.length > 5 && (
-                    <Link href={listing_button.link} className='xl:text-sm lg:text-sm md:text-sm text-[12px] text-accentColor cursor-pointer'>
-                        <span className='flex items-center gap-2.5'>{listing_button.name}</span>
+                    <Link href={listing_button?.link || ""} className='xl:text-sm lg:text-sm md:text-sm text-[12px] text-accentColor cursor-pointer'>
+                        <span className='flex items-center gap-2.5'>{listing_button?.name}</span>
                     </Link>
                 )}
             </div>

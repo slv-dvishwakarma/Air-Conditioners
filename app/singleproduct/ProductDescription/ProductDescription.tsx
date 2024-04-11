@@ -20,6 +20,11 @@ interface QuantityItem {
     name: string,
 }
 
+interface SizeItem {
+    size: string;
+    ton: string;
+}
+
 interface DescriptionProps {
     title: string;
     rating: number;
@@ -37,9 +42,11 @@ interface DescriptionProps {
     wishlist: FunctionItem;
     Compare: FunctionItem;
     size: FunctionItem;
+    chart_label: string[];
+    size_chart: SizeItem[];
 }
 
-export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, rank_list, Price, discount_price, emi, service, delivery, currency, mrp, label, quantity, button, Compare, wishlist, size }) => {
+export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, rank_list, Price, discount_price, emi, service, delivery, currency, mrp, label, quantity, button, Compare, wishlist, size, chart_label, size_chart }) => {
     const discountPercent = ((discount_price - Price) / discount_price) * 100;
 
     const [heart, setHeart] = useState(false);
@@ -136,7 +143,7 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
                                 <span className='xl:text-xl lg:text-xl md:text-xl text-[15px] font-medium text-accentColor'>Room air conditioner with Inverter compressor</span>
                                 <span className='xl:text-[25px] lg:text-[25px] md:text-[25px] text-[20px] cursor-pointer' onClick={handleClose}><RxCross2 /></span>
                             </div>
-                            <SizeChart />
+                            <SizeChart chart_label={chart_label} size_chart={size_chart}/>
                         </div>
                     </div>
                 </div>
