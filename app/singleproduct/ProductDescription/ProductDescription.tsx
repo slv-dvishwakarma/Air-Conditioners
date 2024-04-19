@@ -3,11 +3,8 @@ import { Rating } from '@/app/ac/Rating'
 import { Quantity } from '@/components/Quantity';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
-import { MdCompareArrows } from "react-icons/md";
-import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { TbRulerMeasure } from "react-icons/tb";
-import { RxCross2 } from "react-icons/rx";
 import { SizeChart } from '../SizeChart';
+import { SVGIcon } from '@/components/Icons';
 
 
 interface FunctionItem {
@@ -100,7 +97,7 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
- 
+
                         <div className='flex xl:gap-5 lg:gap-5 md:gap-5 gap-3 pt-[20px]'>
                             <Quantity id={quantity.id} name={quantity.name} defaultvalue={quantity.defaultvalue} control={control} />
                             <button type='submit' className='bg-accentColor text-white px-[30px] py-2 rounded-[10px]'>{button}</button>
@@ -108,20 +105,20 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
                         {errors[quantity.name] && <span className="text-red-500 text-sm">Please add Qunatity</span>}
                         <div className='flex flex-wrap items-center justify-between xl:w-[60%] lg:w-[60%] md:w-[60%] w-full border-b-[#BBBFBF] border-b border-solid py-[20px]'>
                             <div className='flex items-center text-[#333] gap-2 cursor-pointer' onClick={handleCompareClick}>
-                                <span className={`${isInComparison ? "text-accentColor" : "text-black"}`}><MdCompareArrows /></span>
+                                <SVGIcon className={`${isInComparison ? "text-accentColor" : "text-black"}`} name="Compare" />
                                 <span className='text-[14px] font-medium'>{Compare.label}</span>
                             </div>
                             <div className='flex items-center text-[#333] gap-2 cursor-pointer' onClick={handleHeartClick}>
                                 {heart ? (
-                                    <span className='text-accentColor'><FaHeart /></span>
+                                    <SVGIcon className='text-accentColor' name="FillHeart" />
                                 ) : (
-                                    <span ><FaRegHeart /></span>
+                                    <SVGIcon name="Heart" />
                                 )}
                                 <span className='text-[14px] font-medium'>{wishlist.label}</span>
 
                             </div>
                             <div className='flex items-center text-[#333] gap-2 cursor-pointer' onClick={handleSize}>
-                                <span><TbRulerMeasure /></span>
+                                <SVGIcon name="MeasureScale" />
                                 <span className='text-[14px] font-medium'>{size.label}</span>
                             </div>
 
@@ -141,9 +138,9 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
                         <div className='relative bg-white xl:w-2/5 lg:w-2/5 md:w-9/12 w-full mx-auto shadow-lg rounded-[20px] '>
                             <div className='size-guide p-6 items-center border-b-[#e9ecef] border-b border-solid flex justify-between '>
                                 <span className='xl:text-xl lg:text-xl md:text-xl text-[15px] font-medium text-accentColor'>Room air conditioner with Inverter compressor</span>
-                                <span className='xl:text-[25px] lg:text-[25px] md:text-[25px] text-[20px] cursor-pointer' onClick={handleClose}><RxCross2 /></span>
+                                <span onClick={handleClose}><SVGIcon className='xl:text-[25px] lg:text-[25px] md:text-[25px] text-[20px] cursor-pointer' name="RxCross2" /></span>
                             </div>
-                            <SizeChart chart_label={chart_label} size_chart={size_chart}/>
+                            <SizeChart chart_label={chart_label} size_chart={size_chart} />
                         </div>
                     </div>
                 </div>

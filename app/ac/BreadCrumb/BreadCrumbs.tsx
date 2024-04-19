@@ -1,9 +1,8 @@
 "use client"
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { RxCross2 } from "react-icons/rx";
 import { SideBar } from '../SideBar';
+import { SVGIcon } from '@/components/Icons';
 
 interface BreadCrumbItem {
   label: string;
@@ -65,9 +64,9 @@ export const BreadCrumbs: React.FC<BreadCrumbProps> = ({ breadcrumb, delivery, c
           ))}
         </div>
         {title && (
-        <div className='xl:hidden lg:hidden md:block block text-accentColor'>
-          <span className='flex items-center gap-2.5' onClick={handleClick}>{title} <MdOutlineKeyboardArrowDown /></span>
-        </div>
+          <div className='xl:hidden lg:hidden md:block block text-accentColor'>
+            <span className='flex items-center gap-2.5' onClick={handleClick}>{title} <SVGIcon name="ArrowDown" /></span>
+          </div>
         )}
       </div>
       {open && (
@@ -75,7 +74,7 @@ export const BreadCrumbs: React.FC<BreadCrumbProps> = ({ breadcrumb, delivery, c
           <div className="px-[4%]">
             <div className='flex items-center justify-between px-0 py-5 border-b-[gray] border-b border-solid'>
               <span>Filters</span>
-              <span className='w-[30px] h-[30px] bg-accentColor text-[white] flex justify-center text-xl p-[5px] rounded-[50%]' onClick={handleClose}><RxCross2 /></span>
+              <span onClick={handleClose}><SVGIcon className='w-[30px] h-[30px] bg-accentColor text-[white] flex justify-center text-xl p-[5px] rounded-[50%]' name="RxCross2" /></span>
             </div>
             <SideBar delivery={delivery} compressor={compressor} energy={energy} coil={coil} appliances={appliances} price={price} brand={brand} color={color} />
           </div>

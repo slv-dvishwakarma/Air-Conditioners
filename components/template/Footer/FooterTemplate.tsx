@@ -3,12 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { GridBox } from '@/components/GridBox';
 import { LanguageSelector } from '@/app/ac/LanguageSelector';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { SVGIcon } from '@/components/Icons';
 
 interface CopyrightItem {
   label: string;
   language: string[];
+}
+
+interface SocialIconItem {
+  icon: string;
+  url: string;
 }
 
 interface SupportItem {
@@ -20,6 +24,7 @@ interface SupportItem {
 interface ContactItem {
   label: string;
   support: SupportItem[];
+  social_media: SocialIconItem[]
 }
 
 interface MenuItem {
@@ -43,27 +48,6 @@ interface HeaderProps {
 }
 
 export const FooterTemplate: React.FC<HeaderProps> = ({ logo, alt, footer_item, contact, copyright }) => {
-
-  const socialIcon = [
-    {
-      icon: FaFacebookF,
-      url: "https://www.facebook.com/"
-    },
-    {
-      icon: FaInstagram,
-      url: "https://www.instagram.com/"
-    },
-    {
-      icon: FaXTwitter,
-      url: "https://twitter.com/"
-    },
-    {
-      icon: FaLinkedinIn,
-      url: "https://in.linkedin.com/"
-    },
-  ]
-
-
   return (
     <>
       <GridBox columns={4} desktop={4} laptop={4} tablet={3} gap={8} className='py-10 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-6 border-b-[#9399A2] border-b border-solid sm:grid'>
@@ -102,8 +86,8 @@ export const FooterTemplate: React.FC<HeaderProps> = ({ logo, alt, footer_item, 
           </div>
           <div className='social-icon mt-6'>
             <ul className='flex justify-between xl:w-[70%] lg:w-[70%] md:w-[70%] w-[50%] xl:text-[25px] lg:text-[25px] md:text-[25px] text-[15px]  text-white'>
-              {socialIcon.map((item, index) => (
-                <li className='hover:text-accentColor' key={index}><Link href={item.url} target='_blank'>{<item.icon />}</Link></li>
+              {contact.social_media?.map((item, index) => (
+                <li className='hover:text-accentColor' key={index}><Link href={item.url} target='_blank'><SVGIcon name={item.icon}/></Link></li>
               ))}
             </ul>
           </div>

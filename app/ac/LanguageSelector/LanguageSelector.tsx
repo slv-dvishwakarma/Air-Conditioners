@@ -1,7 +1,7 @@
 "use client"
+import { SVGIcon } from '@/components/Icons';
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
-import { IoIosArrowDown } from "react-icons/io";
 
 interface DropdownProps {
   options: string[];
@@ -77,7 +77,7 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
           <span>
             {selectedLanguageAbbreviation}
           </span>
-          <span className='absolute text-xl right-0'><IoIosArrowDown /></span>
+          <SVGIcon className='absolute text-xl right-0' name="ArrowDown" />
         </button>
       </span>
 

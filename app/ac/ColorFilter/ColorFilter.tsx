@@ -1,17 +1,15 @@
 "use client"
+import { SVGIcon } from '@/components/Icons';
 import React, { useEffect, useState } from 'react';
-import { MdKeyboardArrowUp } from "react-icons/md";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { MdClose } from "react-icons/md";
 
 interface ColorItem {
-  label: string;
-  name: string;
-  options: string[];
+    label: string;
+    name: string;
+    options: string[];
 }
 
 interface CheckBoxProps {
-   color: ColorItem;
+    color: ColorItem;
 }
 
 export const ColorFilter: React.FC<CheckBoxProps> = ({ color }) => {
@@ -43,9 +41,9 @@ export const ColorFilter: React.FC<CheckBoxProps> = ({ color }) => {
                 <div className='flex justify-between items-center ' onClick={toggle}>
                     <label className='text-base font-medium leading-[21px] tracking-[0px] text-left cursor-pointer'>{color.label}</label>
                     {isToggled ? (
-                        <span className='text-[25px]'><MdKeyboardArrowDown /></span>
+                        <SVGIcon className='text-[25px]' name="ArrowDown" />
                     ) : (
-                        <span className='text-[25px]'><MdKeyboardArrowUp /></span>
+                        <SVGIcon className='text-[25px]' name="ArrowUp" />
                     )}
                 </div>
                 <div className={`overflow-hidden transition-height duration-500 ease-in-out ${isToggled ? 'h-auto' : 'h-0'}`}>
@@ -54,7 +52,7 @@ export const ColorFilter: React.FC<CheckBoxProps> = ({ color }) => {
                             <label key={key} className=' flex items-center '>
                                 <span className="border border-solid w-[18px] h-[18px]" style={{ backgroundColor: item }}>
                                     {checkedValues.includes(item) && (
-                                        <MdClose className='text-white'/>
+                                        <SVGIcon className='text-white' name="RxCross2" />
                                     )}
                                 </span>
                                 <input

@@ -1,8 +1,6 @@
 "use client"
+import { SVGIcon } from '@/components/Icons';
 import React, { useEffect, useState } from 'react';
-import { MdKeyboardArrowUp, MdKeyboardArrowDown, MdClose } from "react-icons/md";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 interface CheckBoxProps {
     id: string;
@@ -42,9 +40,9 @@ export const FilterCheckBox: React.FC<CheckBoxProps> = ({ option, label, name })
                 <div className='flex justify-between items-center ' onClick={toggle}>
                     <label className='text-base font-medium leading-[21px] tracking-[0px] text-left cursor-pointer'>{label}</label>
                     {isToggled ? (
-                        <span className='text-[25px]'><MdKeyboardArrowDown /></span>
+                        <SVGIcon className='text-[25px]' name="ArrowDown" />
                     ) : (
-                        <span className='text-[25px]'><MdKeyboardArrowUp /></span>
+                        <SVGIcon className='text-[25px]' name="ArrowUp" />
                     )}
                 </div>
                 <div className={`overflow-hidden transition-height duration-500 ease-in-out ${isToggled ? 'h-auto' : 'h-0'}`}>
@@ -53,7 +51,7 @@ export const FilterCheckBox: React.FC<CheckBoxProps> = ({ option, label, name })
                             <label key={key} className='gap-2 flex items-center'>
                                 <span className='border border-solid border-black w-[18px] h-[18px]'>
                                     {checkedValues.includes(item) && (
-                                        <MdClose className='text-accentColor'/>
+                                        <SVGIcon className='text-accentColor' name="RxCross2" />
                                     )}
                                 </span>
                                 <input
@@ -68,7 +66,7 @@ export const FilterCheckBox: React.FC<CheckBoxProps> = ({ option, label, name })
                         ))}
                         {option.length > 6 && (
                             <button onClick={() => setShowAllOptions(!showAllOptions)} className='text-sm text-accentColor cursor-pointer'>
-                                {showAllOptions ? (<span className='flex items-center gap-2.5'>Read less <MdOutlineKeyboardArrowUp /></span> ) : (<span className='flex items-center gap-2.5'>Read more <MdOutlineKeyboardArrowDown /></span>)}
+                                {showAllOptions ? (<span className='flex items-center gap-2.5'>Read less <SVGIcon name="ArrowUp" /></span>) : (<span className='flex items-center gap-2.5'>Read more <SVGIcon name="ArrowDown" /></span>)}
                             </button>
                         )}
                     </div>

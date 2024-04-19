@@ -1,6 +1,6 @@
 import React from 'react';
 import { Controller, Control, FieldValues, DeepMap, FieldError } from 'react-hook-form';
-import { MdMyLocation } from 'react-icons/md';
+import { SVGIcon } from '../Icons';
 
 
 type IconType = React.ElementType;
@@ -21,10 +21,10 @@ export const Text: React.FC<InputProps> = ({ name, placeholder, label, icon, con
         name={name}
         control={control}
         defaultValue=""
-        rules={{ required: true }} 
+        rules={{ required: true }}
         render={({ field: { onChange, value } }) => (
           <div>
-            {label && <label className='text-[#777777] text-[12px] font-medium leading-[21px] tracking-[0px] text-left'>{label}</label> }
+            {label && <label className='text-[#777777] text-[12px] font-medium leading-[21px] tracking-[0px] text-left'>{label}</label>}
             <span className='input-border flex items-center border rounded-md border-solid border-[#BEBEBE] mt-[12px]'>
               <input
                 type="text"
@@ -34,18 +34,16 @@ export const Text: React.FC<InputProps> = ({ name, placeholder, label, icon, con
                 value={value}
                 onChange={onChange}
               />
-              
+
               {icon && typeof icon === 'string' ? (
-                <span className='text-[#7E52FF] text-xl pl-0 pr-5 py-0 absolute right-0'>
-                  <MdMyLocation />
-                </span>
+                <SVGIcon className='text-[#7E52FF] text-xl pl-0 pr-5 py-0 absolute right-0' name="Location" />
               ) : null}
             </span>
           </div>
         )}
       />
       <div className='mt-[10px]'>
-      {errors[name] && <span className="text-red-500 text-sm">Please Enter {placeholder}</span>}
+        {errors[name] && <span className="text-red-500 text-sm">Please Enter {placeholder}</span>}
       </div>
     </div>
   );

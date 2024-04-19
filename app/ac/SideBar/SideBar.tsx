@@ -9,7 +9,7 @@ interface PriceItem {
     range: number[];
     maxPrice: number;
     label: string;
-  }
+}
 
 interface BrandItem {
     label: string;
@@ -29,10 +29,10 @@ interface SideBarProps {
     color?: BrandItem;
 }
 
-export const SideBar: React.FC<SideBarProps> = ({delivery, compressor, energy, coil, appliances, price, brand, color}) => {
+export const SideBar: React.FC<SideBarProps> = ({ delivery, compressor, energy, coil, appliances, price, brand, color }) => {
     return (
         <>
-                   {price && <PriceFilter price={price} />}
+            {price && <PriceFilter price={price} />}
             {brand && <FilterCheckBox id={brand.name} label={brand.label} option={brand.options} name={brand.name} />}
             {delivery && <FilterCheckBox id={delivery.name} label={delivery.label} option={delivery.options} name={delivery.name} />}
             {compressor && <FilterCheckBox id={compressor.name} label={compressor.label} option={compressor.options} name={compressor.name} />}

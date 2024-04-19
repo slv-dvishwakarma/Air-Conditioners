@@ -2,13 +2,10 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { IoIosCart } from "react-icons/io";
 import { User } from '@/app/ac/User';
 import { SearchBar } from '@/app/ac/SearchBar';
 import { LanguageSelector } from '@/app/ac/LanguageSelector';
-import { GiHamburgerMenu } from "react-icons/gi";
-import { FaRegUser } from "react-icons/fa";
-import { RxCross2 } from "react-icons/rx";
+import { SVGIcon } from '@/components/Icons';
 
 
 interface SearchBarItem {
@@ -73,7 +70,7 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
             <LanguageSelector options={language} />
           </div>
           <div className='xl:hidden lg:hidden md:hidden'>
-            <span className='text-white text-[25px]' onClick={handleOpen}><GiHamburgerMenu /></span>
+            <span className='text-white text-[25px]' onClick={handleOpen}><SVGIcon name="HamburgerMenu"/></span>
           </div>
         </div>
         <div className='xl:w-[62%] lg:w-[50%] md:w-[40%] w-[80%]'>
@@ -86,7 +83,7 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
           <div className='xl:relative lg:relative md:relative absolute xl:right-0 lg:right-0 md:right-0 right-[35px]'>
             <Link href="/singleproduct">
               <span className='text-white text-3xl'>
-                <IoIosCart />
+                 <SVGIcon name="cart"/>
               </span>
               <span className='absolute top-[-13px] bg-accentColor text-[white] w-5 h-5 leading-5 text-center rounded-[50%] xl:right-[20px] lg:right-[20px] md:right-[20px] right-[-15px] text-xs'>
                 {cart}
@@ -111,11 +108,11 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
                       height={44}
                     />
                   </Link>
-                  <button className='flex items-center space-x-2 text-accentColor'><span className='text-[14px]'>Sign In</span> <span><FaRegUser /></span></button>
+                  <button className='flex items-center space-x-2 text-accentColor'><span className='text-[14px]'>Sign In</span> <span><SVGIcon name="User" /></span></button>
                 </div>
               </div>
               <div className='text-[white] absolute right-[-60px] text-[35px] top-5'>
-                <span onClick={handleClose}><RxCross2 /></span>
+                <span onClick={handleClose}><SVGIcon name="RxCross2" /></span>
               </div>
               <div className='w-4/5 float-right pt-[30px]'>
                 <LanguageSelector options={language} />

@@ -16,7 +16,7 @@ export const User: React.FC<UserProps> = ({ options }) => {
                 width={300}
                 height={158}
             />
-            <div className='text-white'>
+            <div className='text-white space-y-1'>
                <p className='text-[13px]'>Hello John</p> 
                <Dropdown options={options}/>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Slider from '@mui/material/Slider';
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+import { SVGIcon } from '@/components/Icons';
 
 interface PriceItem {
   range: number[];
@@ -68,9 +68,9 @@ export const PriceFilter: React.FC<PriceFilterProps> = ({ price }) => {
       <div className='flex justify-between items-center cursor-pointer' onClick={toggle}>
         <label className='text-base font-medium leading-[21px] tracking-[0px] text-left cursor-pointer'>{price?.label}</label>
         {isToggled ? (
-          <span className='text-[25px]'><MdKeyboardArrowDown /></span>
+          <SVGIcon className='text-[25px]' name="ArrowDown" />
         ) : (
-          <span className='text-[25px]'><MdKeyboardArrowUp /></span>
+          <SVGIcon className='text-[25px]' name="ArrowUp" />
         )}
       </div>
       <div className={`overflow-hidden transition-height duration-500 ease-in-out pt-2  ${isToggled ? 'h-auto' : 'h-0'}`}>

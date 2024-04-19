@@ -50,6 +50,24 @@
                 "title": "deal@gmail.com",
                 "url": "mailto:deal@gmail.com"
             }
+        ],
+        "social_media": [
+            {
+                "icon": "facebook",
+                "url": "https://www.facebook.com/"
+            },
+            {
+                "icon": "instagram",
+                "url": "https://www.instagram.com/"
+            },
+            {
+                "icon": "twitter",
+                "url": "https://twitter.com/"
+            },
+            {
+                "icon": "Linkedin",
+                "url": "https://in.linkedin.com/"
+            }
         ]
     },
     "copyright": {

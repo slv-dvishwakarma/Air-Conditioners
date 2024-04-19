@@ -1,6 +1,6 @@
+import { SvgIcon } from '@mui/material';
 import React from 'react';
 import { Controller, Control, FieldValues, DeepMap, FieldError } from 'react-hook-form';
-import { MdMyLocation } from 'react-icons/md';
 
 
 type IconType = React.ElementType;
@@ -36,9 +36,7 @@ export const Email: React.FC<InputProps> = ({ name, placeholder, label, icon, co
               />
               
               {icon && typeof icon === 'string' ? (
-                <span className='text-[#7E52FF] text-xl pl-0 pr-5 py-0 absolute right-0'>
-                  <MdMyLocation />
-                </span>
+                  <SvgIcon className='text-[#7E52FF] text-xl pl-0 pr-5 py-0 absolute right-0' name="Location" />
               ) : null}
             </span>
           </div>

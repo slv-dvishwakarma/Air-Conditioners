@@ -1,8 +1,7 @@
+import { SVGIcon } from '@/components/Icons';
 import React, { useState, useRef, useEffect } from 'react';
 import { Controller } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
-import { FaSearch } from "react-icons/fa";
-import { IoIosArrowDown } from "react-icons/io";
 
 interface SearchBarItem {
   name: string;
@@ -28,9 +27,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
     setIsOpen(!isOpen);
   };
 
-  const handleDropdownClick = () => {
-    setIsOpen(!isOpen);
-  };
 
   const handleDocumentClick = (event: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -64,7 +60,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
   };
 
   const handleSuggestionClick = (suggestion: string) => {
-    setSelectedOption(suggestion); // Update selected option
+    setSelectedOption(suggestion);
     setInputValue(suggestion);
     setSuggestions([]);
   };
@@ -79,38 +75,38 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
           rules={{ required: true }}
           render={({ field: { onChange, value } }) => (
             <div className="relative text-left dropdown-styling xl:block lg:block md:block hidden" ref={dropdownRef}>
-                <span className=" shadow-sm ">
-                  <button
-                    type="button"
-                    className="flex items-center text-sm font-medium text-primary w-[100px] bg-ternary px-2.5 py-[9px] border-[none] rounded-[5px_0px_0px_5px]"
-                    aria-expanded={isOpen}
-                    aria-haspopup="listbox"
-                    onClick={toggleDropdown}
-                  >
-                    <span>{selectedOption.substring(0, 6)}</span>
-                    <span className='absolute text-xl right-2.5'><IoIosArrowDown /></span>
-                  </button>
-                </span>
+              <span className=" shadow-sm ">
+                <button
+                  type="button"
+                  className="flex items-center text-sm font-medium text-primary w-[100px] bg-ternary px-2.5 py-[9px] border-[none] rounded-[5px_0px_0px_5px]"
+                  aria-expanded={isOpen}
+                  aria-haspopup="listbox"
+                  onClick={toggleDropdown}
+                >
+                  <span>{selectedOption.substring(0, 6)}</span>
+                  <SVGIcon className='absolute text-xl right-2.5' name="ArrowDown" />
+                </button>
+              </span>
 
               {isOpen && (
                 <div tabIndex={-1} role="list" aria-label="Dropdown Options"
                   className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 left-0 z-[1] w-[150px] overflow-hidden"
                 >
-                    {option.map((option) => (
-                      <div
-                        key={option}
-                        onClick={() => {
-                          setSelectedOption(option); 
-                          onChange(option);
-                          toggleDropdown();
-                        }}
-                        className="cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-100"
-                      >
-                        <div className="flex items-center">
-                          <span className="font-normal block truncate">{option}</span>
-                        </div>
+                  {option.map((option) => (
+                    <div
+                      key={option}
+                      onClick={() => {
+                        setSelectedOption(option);
+                        onChange(option);
+                        toggleDropdown();
+                      }}
+                      className="cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-100"
+                    >
+                      <div className="flex items-center">
+                        <span className="font-normal block truncate">{option}</span>
                       </div>
-                    ))}
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
@@ -144,7 +140,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchbar, option }) => {
             ))}
           </ul>
         )}
-        <button type='submit' className='bg-accentColor h-[38px] w-[38px] text-center items-center flex justify-center p-[11px] rounded-[0px_5px_5px_0px]'><span className='text-white'><FaSearch /></span></button>
+        <button type='submit' className='bg-accentColor h-[38px] w-[38px] text-center items-center flex justify-center p-[11px] rounded-[0px_5px_5px_0px]'><SVGIcon className='text-white' name="Search" /></button>
       </form>
       <div>
         {errors[searchbar.name] && <span className="text-red-500 text-sm">Please Enter Input</span>}
