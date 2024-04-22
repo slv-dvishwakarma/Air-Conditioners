@@ -33,7 +33,7 @@ export const Quantity: React.FC<QuantityProps> = ({ label, name, control, onChan
                   <p>{title}</p>
                 </div>
               )}
-              <div className='w-[157px]  flex items-center relative'>
+              <div className='w-[157px]  flex items-center relative mx-auto'>
                 <button className='absolute text-xs left-6'
                   type="button"
                   onClick={() => onChange(value - 1)}

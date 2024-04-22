@@ -1,0 +1,35 @@
+{
+    "cartpagedata": {
+        "title": "Shopping Cart",
+        "cartItemCount": 2,
+        "currency": "₹",
+        "summery": {
+            "title": "Order Summary",
+            "coupon": {
+                "name": "coupon",
+                "placeholder": "Enter Code Here",
+                "label": "Discount Code"
+            }
+        }
+    },
+    "productItems": [
+        {
+            "productImage": "/Product/ac1.jpg",
+            "defaultValue": 1,
+            "productData": {
+                "name": "LG 1.5 Ton 3 Star DUAL Inverter Split AC",
+                "category": "Voltas",
+                "price": 30000.00
+            }
+        },
+        {
+            "productImage": "/Product/ac4.jpg",
+            "defaultValue": 1,
+            "productData": {
+                "name": "LG 1 Ton 3 Star DUAL Inverter Split AC",
+                "category": "Voltas",
+                "price": 40000.00
+            }
+        }
+    ]
+}
