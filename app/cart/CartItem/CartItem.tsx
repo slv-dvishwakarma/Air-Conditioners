@@ -21,7 +21,7 @@ interface ProductItem {
 
 interface CartItem {
     title: string;
-    cartItemCount: number;
+    cartItemCount: number; 
     currency: string;
 }
 
