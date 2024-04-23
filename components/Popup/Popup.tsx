@@ -32,7 +32,7 @@ export const Popup = () => {
               <div className='rounded-[20px]'>
                 <Image src="/Sale-Banner.jpg" alt="sale" width={6912} height={3456}  className='w-full rounded-[20px]'/>
                 <div className='absolute xl:left-[21%] lg:left-[21%] md:left-[21%] left-[17%] xl:bottom-[50px] lg:bottom-[50px] md:bottom-[23px] bottom-[10px]'>
-                  <Link onClick={handlurlClick} href="/ac" className='bg-accentColor text-[white] xl:px-5 lg:px-5 md:px-5 px-3 xl:py-2.5 lg:py-2.5 md:py-2.5 py-2 rounded-xl'>Buy Now</Link>
+                  <Link onClick={handlurlClick} href="/sale" className='bg-accentColor text-[white] xl:px-5 lg:px-5 md:px-5 px-3 xl:py-2.5 lg:py-2.5 md:py-2.5 py-2 rounded-xl'>Buy Now</Link>
                 </div>
                 <span className='absolute xl:text-[15px] lg:text-[15px] md:text-[15px] text-[13px] text-[#FF8500] font-extrabold xl:left-[21.5%] lg:left-[21.5%] md:left-[21.5%] left-[17.5%] xl:bottom-[87px] lg:bottom-[87px] md:bottom-[63px] bottom-[41px]'>5 Days Left</span>
               </div>

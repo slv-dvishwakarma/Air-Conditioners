@@ -1,0 +1,33 @@
+{
+    "banner": {
+        "image": "/sale-banners.jpg",
+        "title": "Air Conditioner",
+        "label": "Make your dream cool every night",
+        "booking_label": "Book Your Air Conditioner From ₹100",
+        "book_button": "Book Now",
+        "book_url": "/ac"
+    },
+    "enquiry": {
+        "image": "/sale.png",
+        "title": "Enquiry Form",
+        "label": "You Can Feel Free To Contact Us",
+        "enquiry_form": {
+            "fname": {
+                "name": "fname",
+                "placeholder": "Enter Full Name"
+            },
+            "email": {
+                "name": "email",
+                "placeholder": "Enter Your Email Address" 
+            },
+            "phone": {
+                "name": "phone",
+                "placeholder": "Enter Your Mobile No." 
+            },
+            "message": {
+                "name": "message",
+                "placeholder": "Message" 
+            }
+        }
+    }
+}
