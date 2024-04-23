@@ -49,21 +49,21 @@ export const TotalItem: React.FC<TotalItemProps> = ({ title, coupon, item }) => 
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label className='mb-1.5 text-gray-600 text-lg font-medium'>{coupon.label}</label>
-                <Text name={coupon.name} placeholder={coupon.placeholder} control={control} errors={errors}/>
+                <Text name={coupon.name} placeholder={coupon.placeholder} control={control} errors={errors} />
                 <button type='submit' className='rounded-lg w-full bg-black py-2.5 px-4 text-white text-sm font-semibold text-center mb-8 transition-all duration-500 hover:bg-black/80'>Apply</button>
             </form>
             <div className='total divide-y-2'>
-            {total.map((item, index) => (
-                <div key={index} className='flex items-center justify-between'>
-                    <p>{item.label}</p>
-                    <p className='font-normal text-lg leading-8'>{item.title}</p>
-                </div>
-                ))}
+                {total.map((item, index) => (
+                    <div key={index} className='flex items-center justify-between'>
+                        <p>{item.label}</p>
+                        <p className='font-normal text-lg leading-8'>{item.title}</p>
+                    </div>
+                ))} 
             </div>
             <div className='my-8'>
-            <button type='button' className='w-full text-center bg-accentColor rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700'>Checkout</button>
+                <button type='button' className='w-full text-center bg-accentColor rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700'>Checkout</button>
             </div>
-            </section>
+        </section>
 
     )
 }

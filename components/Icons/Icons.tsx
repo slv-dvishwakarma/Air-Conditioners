@@ -58,6 +58,12 @@ const icons: any = {
     ),
     delete: (
         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8ZM6 10V20H18V10H6ZM9 12H11V18H9V12ZM13 12H15V18H13V12ZM7 5V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V5H22V7H2V5H7ZM9 4V5H15V4H9Z"></path></svg>
+    ),
+    circle: (
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 32 32" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M 16 4 C 9.378906 4 4 9.378906 4 16 C 4 22.621094 9.378906 28 16 28 C 22.621094 28 28 22.621094 28 16 C 28 9.378906 22.621094 4 16 4 Z M 16 5 C 22.082031 5 27 9.917969 27 16 C 27 22.082031 22.082031 27 16 27 C 9.917969 27 5 22.082031 5 16 C 5 9.917969 9.917969 5 16 5 Z"></path></svg>
+    ),
+    dotcircle: (
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 152c-57.2 0-104 46.8-104 104s46.8 104 104 104 104-46.8 104-104-46.8-104-104-104zm0-104C141.601 48 48 141.601 48 256s93.601 208 208 208 208-93.601 208-208S370.399 48 256 48zm0 374.4c-91.518 0-166.4-74.883-166.4-166.4S164.482 89.6 256 89.6 422.4 164.482 422.4 256 347.518 422.4 256 422.4z"></path></svg>
     )
 };
 

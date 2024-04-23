@@ -1,0 +1,105 @@
+{
+    "checkout_form": {
+        "coupon": {
+            "name": "coupon",
+            "placeholder": "Enter Coupon Code"
+        },
+        "fname": {
+            "name": "address",
+            "placeholder": "House, Flat, Building No."
+        },
+        "lname": {
+            "name": "address",
+            "placeholder": "House, Flat, Building No."
+        },
+        "house_no": {
+            "name": "address",
+            "placeholder": "House, Flat, Building No."
+        },
+        "house_name": {
+            "name": "Building-Name",
+            "placeholder": "Flat, Floor, Building Name"
+        },
+        "city": {
+            "name": "city",
+            "placeholder": "Town/City"
+        },
+        "state": {
+            "name": "state",
+            "placeholder": "State"
+        },
+        "zip": {
+            "name": "zip-code",
+            "placeholder": "Zip Code"
+        },
+        "phone": {
+            "name": "phone",
+            "placeholder": "Enter Your Contact No."
+        },
+        "email": {
+            "name": "Email",
+            "placeholder": "Email address"
+        }
+    },
+    "product": [
+        {
+            "image": "/Product/ac1.jpg",
+            "name": "LG 1.5 Ton 3 Star DUAL Inverter Split AC",
+            "qty": 1,
+            "price": "30,000.00",
+            "currency": "₹"
+        },
+        {
+            "image": "/Product/ac4.jpg",
+            "name": "LG 1.5 Ton 3 Star DUAL Inverter Split AC",
+            "qty": 1,
+            "price": "40,000.00",
+            "currency": "₹"
+        }
+    ],
+    "total": [
+        {
+            "label": "Subtotal",
+            "title": "₹70,000.00"
+        },
+        {
+            "label": "Discount",
+            "title": "₹0"
+        },
+        {
+            "label": "Grand Total",
+            "title": "₹70,000.00"
+        }
+    ],
+    "item": 2,
+    "bank": {
+        "label": "Choose the transaction mode:",
+        "button": "Verify",
+        "account": [
+            {
+                "title": "Add Bank account",
+                "checkbox": {
+                    "label": "Account belongs to Me",
+                    "name": "my-account"
+                },
+                "account": {
+                    "placeholder": "Account Number",
+                    "name": "account-number"
+                },
+                "ifsc": {
+                    "placeholder": "IFS Code",
+                    "name": "ifsc-code"
+                }
+            },
+            {
+                "title": "Add UPI",
+                "upi": {
+                    "label": "Please enter your UPI ID",
+                    "placeholder": "Add here",
+                    "name": "upi",
+                    "guide_text": "The UPI ID is in the format of name/phonenumber@bankname"
+                }
+            }
+        ]
+    }
+}
