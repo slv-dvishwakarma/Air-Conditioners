@@ -6,6 +6,7 @@ import { User } from '@/app/ac/User';
 import { SearchBar } from '@/app/ac/SearchBar';
 import { LanguageSelector } from '@/app/ac/LanguageSelector';
 import { SVGIcon } from '@/components/Icons';
+import { Popup } from '@/components/Popup';
 
 
 interface SearchBarItem {
@@ -55,6 +56,8 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
   }
 
   return (
+    <>
+    <Popup />
     <header className={`main-header  ${isSticky ? 'shadow-[0_13px_35px_-12px_rgba(35,35,35,0.15)] fixed w-full z-[99] top-0 animate-animateSlideInDown bg-primary px-[4%] left-0' : ''}`} style={isSticky ? { animationDuration: ".5s", animationFillMode: "both", animationName: "slideInDown", transform: "translate3d(0, -100%, 0)" } : undefined}>
       <div className='items-center py-5 xl:space-y-0 lg:space-y-0 md:space-y-0  flex gap-5'>
         <div className='xl:w-1/5 lg:w-[25%] md:w-[30%] w-[8%]'>
@@ -122,5 +125,6 @@ export const HeaderTemplate: React.FC<HeaderProps> = ({ logo, alt, searchbar, op
         </div>
       </div>
     </header>
+    </>
   )
 }
