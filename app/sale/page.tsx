@@ -12,7 +12,7 @@ const page = () => {
         <>
             <SaleBanner banner={jsonData.banner} />
             <ParentContainer>
-                <GridBox columns={2} gap={10} className='sm:grid py-[50px]'>
+                <GridBox columns={2} gap={10} className='sm:grid py-[50px] items-center'>
                     <GridBox.GridItem columnMerge={1}>
                         <Image src={jsonData.enquiry.image} alt='sale' width={800} height={570} />
                     </GridBox.GridItem>

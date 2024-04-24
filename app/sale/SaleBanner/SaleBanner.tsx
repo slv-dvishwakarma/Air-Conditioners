@@ -20,15 +20,15 @@ export const SaleBanner: React.FC<BannerProps> = ({ banner})  => {
     const backgroundImage = banner.image ? `url(${banner.image})` : 'none';
 
   return (
-    <div className="sale bg-cover bg-no-repeat py-[149px]" style={{ backgroundImage: backgroundImage }}>
+    <div className="sale bg-cover bg-no-repeat xl:py-[147px] lg:py-[76px] md:py-[70px] py-[20px]" style={{ backgroundImage: backgroundImage }}>
                 <ParentContainer>
                     <GridBox columns={2} gap={10} className='sm:grid'>
-                        <GridBox.GridItem columnMerge={1} className='space-y-12'>
-                            <h1 className='text-[50px] text-[white] leading-[0]'>{banner.title}</h1>
-                            <p className='text-xl text-[white] leading-[0]'>{banner.label}</p>
-                            <p className='font-semibold text-xl text-[white] leading-[0] text-accentColor'>{banner.booking_label}</p>
+                        <GridBox.GridItem columnMerge={1} className='xl:space-y-5 lg:space-y-10 md:space-y-6 space-y-6'>
+                            <h1 className='xl:text-[50px] lg:text-[40px] md:text-[30px] text-[20px] text-[white] leading-[35px]'>{banner.title}</h1>
+                            <p className='xl:text-xl lg:text-lg md:text-sm text-[12px] text-[white]  text-balance'>{banner.label}</p>
+                            <p className='font-semibold xl:text-xl lg:text-lg md:text-sm text-[12px] text-[white]  text-accentColor'>{banner.booking_label}</p>
                             <div>
-                                <Link href={banner.book_url} className='w-full text-center bg-accentColor rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700'>{banner.book_button}</Link>
+                                <Link href={banner.book_url} className='w-full text-center bg-accentColor rounded-xl xl:py-3 lg:py-3 md:py-3 py-2 xl:px-6 lg:px-6 md:px-6 px-3 font-semibold xl:text-lg lg:text-lg md:text-lg text-sm text-white transition-all duration-500 hover:bg-indigo-700'>{banner.book_button}</Link>
                             </div>
                         </GridBox.GridItem>
                     </GridBox>

@@ -57,7 +57,7 @@ export const FooterTemplate: React.FC<HeaderProps> = ({ logo, alt, footer_item, 
             alt={alt}
             width={280}
             height={44}
-            className='xl:w-[80%] lg:w-[80%] md:w-full w-[55%]'
+            className='xl:w-[80%] lg:w-[80%] md:w-[50%] w-[55%]'
           />
         </GridBox.GridItem>
         {footer_item.map((item, index) => (
