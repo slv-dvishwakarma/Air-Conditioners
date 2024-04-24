@@ -48,7 +48,15 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
   const handleOptionChange = (option: string) => {
     setSelectedOption(option);
     setIsOpen(false);
-    console.log('Selected option:', option);
+    console.log(option);
+
+    if (option === 'Hindi - HI') {
+      localStorage.setItem('language', 'hi');
+      localStorage.removeItem('en');
+    } else if (option === 'English - EN') {
+      localStorage.setItem('language', 'en');
+      localStorage.removeItem('hi');
+    }
   };
 
   const toggleDropdown = () => {

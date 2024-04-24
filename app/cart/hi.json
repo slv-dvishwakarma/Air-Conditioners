@@ -1,0 +1,55 @@
+{
+    "fix_title": {
+        "items": "आइटम्स",
+        "update_cart": "कार्ट अपडेट करें",
+        "Checkout": "चेकआउट",
+        "apply": "लागू करें",
+        "total": [
+            {
+                "label": "कुल योग",
+                "title": "₹70,000.00"
+            },
+            {
+                "label": "छूट",
+                "title": "₹0"
+            },
+            {
+                "label": "कुल योग",
+                "title": "₹70,000.00"
+            }
+        ]
+    },
+    "cartpagedata": {
+        "title": "खरीदारी कार्ट",
+        "cartItemCount": 2,
+        "currency": "₹",
+        "summery": {
+            "title": "आदेश सारांश",
+            "coupon": {
+                "name": "coupon",
+                "placeholder": "यहाँ कोड दर्ज करें",
+                "label": "डिस्काउंट कोड"
+            }
+        }
+    },
+    "productItems": [
+        {
+            "productImage": "/Product/ac1.jpg",
+            "defaultValue": 1,
+            "productData": {
+                "name": "एलजी 1.5 टन 3 स्टार ड्यूल इनवर्टर स्प्लिट एसी",
+                "category": "वोल्टास",
+                "price": 30000.00
+            }
+        },
+        {
+            "productImage": "/Product/ac4.jpg",
+            "defaultValue": 1,
+            "productData": {
+                "name": "एलजी 1 टन 3 स्टार ड्यूल इनवर्टर स्प्लिट एसी",
+                "category": "वोल्टास",
+                "price": 40000.00
+            }
+        }
+    ]
+}

@@ -28,9 +28,11 @@ interface CartItem {
 interface CartItemProps {
     cartproduct: ProductItem[];
     cartpagedata: CartItem;
+    title: string;
+    button: string;
 }
 
-export const CartItem: React.FC<CartItemProps> = ({ cartproduct, cartpagedata }) => {
+export const CartItem: React.FC<CartItemProps> = ({ cartproduct, cartpagedata, title, button }) => {
 
     const { handleSubmit, control, formState: { errors }, reset } = useForm();
 
@@ -45,7 +47,7 @@ export const CartItem: React.FC<CartItemProps> = ({ cartproduct, cartpagedata })
             <section className='py-10'>
                 <div className='flex items-center justify-between pb-8 border-b border-gray-300'>
                     <h1 className='font-bold text-3xl leading-10 text-black'>{cartpagedata.title}</h1>
-                    <p className='font-bold text-xl leading-8 text-gray-600'>{cartpagedata.cartItemCount} Items</p>
+                    <p className='font-bold text-xl leading-8 text-gray-600'>{cartpagedata.cartItemCount} {title}</p>
                 </div>
                 <div className='divide-y-2'>
                 {cartproduct.map((items, index) => (
@@ -73,7 +75,7 @@ export const CartItem: React.FC<CartItemProps> = ({ cartproduct, cartpagedata })
                 </div>
                 <div className="flex items-center xl:justify-end lg:justify-end md:justify-end justify-center xl:mt-0 lg:mt-0 md:mt-0 mt-8">
                     <button className="flex items-center rounded-full gap-2 border-none outline-0 group font-semibold text-lg leading-8 text-indigo-600 shadow-sm shadow-transparent transition-all duration-500 hover:text-indigo-700">
-                        Update Cart
+                        {button}
                         <svg className="transition-all duration-500 group-hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                             <path d="M12.7757 5.5L18.3319 11.0562M18.3319 11.0562L12.7757 16.6125M18.3319 11.0562L1.83203 11.0562" stroke="#4F46E5" strokeWidth="1.6" strokeLinecap="round"></path>
                         </svg>

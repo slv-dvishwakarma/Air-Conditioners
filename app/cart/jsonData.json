@@ -1,4 +1,24 @@
 {
+    "fix_title": {
+        "items": "Items",
+        "update_cart": "Update Cart",
+        "Checkout": "Checkout",
+        "apply": "Apply",
+        "total": [
+            {
+                "label": "Subtotal",
+                "title": "₹70,000.00"
+            },
+            {
+                "label": "Discount",
+                "title": "₹0"
+            },
+            {
+                "label": "Grand Total",
+                "title": "₹70,000.00"
+            }
+        ]
+    },
     "cartpagedata": {
         "title": "Shopping Cart",
         "cartItemCount": 2,
