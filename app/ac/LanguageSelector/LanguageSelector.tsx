@@ -1,13 +1,14 @@
-"use client"
 import { SVGIcon } from '@/components/Icons';
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 
 interface DropdownProps {
-  options: string[];
+  options?: string[];
 }
 
-export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
+export const LanguageSelector: React.FC<DropdownProps> = ({ }) => {
+  const options = ['English - EN', 'हिंदी - HI'];
+
   const [selectedOption, setSelectedOption] = useState<string>(options[0]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [dropdownPosition, setDropdownPosition] = useState<'top' | 'bottom'>('bottom');
@@ -45,18 +46,29 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language');
+
+    if (savedLanguage) {
+      if (savedLanguage === 'hi') {
+        setSelectedOption('हिंदी - HI');
+      } else if (savedLanguage === 'en') {
+        setSelectedOption('English - EN');
+      }
+    }
+  }, []); 
+
   const handleOptionChange = (option: string) => {
     setSelectedOption(option);
     setIsOpen(false);
-    console.log(option);
 
-    if (option === 'Hindi - HI') {
+    if (option === 'हिंदी - HI') {
       localStorage.setItem('language', 'hi');
-      localStorage.removeItem('en');
     } else if (option === 'English - EN') {
       localStorage.setItem('language', 'en');
-      localStorage.removeItem('hi');
     }
+
+    window.location.reload();
   };
 
   const toggleDropdown = () => {
@@ -94,7 +106,7 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
           tabIndex={-1}
           role="list"
           aria-label="Dropdown Options"
-          className={`origin-${dropdownPosition}-right absolute ${dropdownPosition === 'top' ? 'bottom-7' : 'top-7'} right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-[-25px] md:left-0 w-[150px] z-[1] left-[80px] overflow-hidden`}
+          className={`origin-${dropdownPosition}-right absolute ${dropdownPosition === 'top' ? 'bottom-7' : 'top-7'} right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-[-10px] lg:left-[-25px] md:left-0 w-[150px] z-[1] left-[80px] overflow-hidden`}
         >
           {options.map((option) => (
             <div
@@ -118,4 +130,3 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ options }) => {
   );
 };
 
-export default LanguageSelector;

@@ -1,0 +1,25 @@
+{
+    "logo": "/logo.png",
+    "alt": "Deal Website",
+    "cart": 2,
+    "options": [
+      "मेरा खाता",
+      "प्रोफ़ाइल",
+      "सहायता"
+    ],
+    "searchbar": {
+      "name": "searchbar",
+      "key": "dropdown",
+      "placeholder": "खोजें",
+      "option": [
+        "एसी 1.5 टन",
+        "एसी 1 टन",
+        "एसी 2 टन",
+        "एसी 3 टन"
+      ],
+      "language": [
+        "अंग्रेज़ी - EN",
+        "हिंदी - HI"
+      ]
+    }
+}

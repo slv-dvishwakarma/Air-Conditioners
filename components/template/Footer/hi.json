@@ -1,0 +1,80 @@
+{
+    "logo": "/logo.png",
+    "alt": "Deal Website",
+    "footer_item": [
+        {
+            "label": "हमें जानने दें",
+            "menu": [
+                {
+                    "name": "करियर",
+                    "link": "/"
+                },
+                {
+                    "name": "हमारे बारे में",
+                    "link": "/"
+                },
+                {
+                    "name": "यूके मॉडर्न गुलामी का बयान",
+                    "link": "/"
+                }
+            ]
+        },
+        {
+            "label": "सूचना",
+            "menu": [
+                {
+                    "name": "उपयोग और बिक्री की शर्तें",
+                    "link": "/"
+                },
+                {
+                    "name": "गोपनीयता सूचना",
+                    "link": "/"
+                },
+                {
+                    "name": "कुकीज़ सूचना",
+                    "link": "/"
+                }
+            ]
+        }
+    ],
+    "contact": {
+        "label": "हमसे संपर्क करें",
+        "support": [
+            {
+                "label": "फ़ोन",
+                "title": "+01- 12345-67890",
+                "url": "tel:+01- 12345-67890"
+            },
+            {
+                "label": "ईमेल",
+                "title": "deal@gmail.com",
+                "url": "mailto:deal@gmail.com"
+            }
+        ],
+        "social_media": [
+            {
+                "icon": "facebook",
+                "url": "https://www.facebook.com/"
+            },
+            {
+                "icon": "instagram",
+                "url": "https://www.instagram.com/"
+            },
+            {
+                "icon": "twitter",
+                "url": "https://twitter.com/"
+            },
+            {
+                "icon": "Linkedin",
+                "url": "https://in.linkedin.com/"
+            }
+        ]
+    },
+    "copyright": {
+        "label": "कॉपीराइट © 2024. डील वेबसाइट. सभी अधिकार सुरक्षित हैं।",
+        "language": [
+            "अंग्रेज़ी - EN",
+            "हिन्दी - HI"
+        ]
+    }
+}
