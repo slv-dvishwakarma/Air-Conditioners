@@ -1,0 +1,27 @@
+{
+    "image": "/page-banner.jpg",
+    "title": "हमसे संपर्क करें",
+    "enquiry": {
+        "image": "/hero-home.jpg",
+        "title": "पूछताछ फ़ॉर्म",
+        "label": "आप हमसे 24*7 संपर्क कर सकते हैं।",
+        "enquiry_form": {
+            "fname": {
+                "name": "fname",
+                "placeholder": "पूरा नाम दर्ज करें"
+            },
+            "email": {
+                "name": "email",
+                "placeholder": "अपना ईमेल पता दर्ज करें" 
+            },
+            "phone": {
+                "name": "phone",
+                "placeholder": "अपना मोबाइल नंबर दर्ज करें" 
+            },
+            "message": {
+                "name": "message",
+                "placeholder": "संदेश" 
+            }
+        }
+    }
+}

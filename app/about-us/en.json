@@ -1,0 +1,37 @@
+{
+    "image": "/page-banner.jpg",
+    "title": "About Us",
+    "overview": {
+        "image": "/industrial-ac-dealer.jpg",
+        "title": "Why Choose Us",
+        "paragraph": "At Deal Website, we're dedicated to your comfort and satisfaction. With a focus on quality, innovation, and personalized service, we provide air conditioning solutions that exceed expectations. Our rigorously tested products ensure lasting performance and reliability. Innovation drives us to deliver cutting-edge technology that enhances your comfort and convenience. Our experienced team offers expert guidance from selection to maintenance, ensuring a seamless experience. We prioritize sustainability, incorporating eco-friendly materials and energy-efficient technologies. When you choose Deal Website, you're choosing a partner committed to your well-being and the environment. Join thousands of satisfied customers who trust Deal for their air conditioning needs."
+    },
+    "label": "Our Success",
+    "counter": [
+            {
+                "icon": "business",
+                "title": "Years in Business",
+                "value": "15+"
+            },
+            {
+                "icon": "helpdesk",
+                "title": "Satisfaction Rate",
+                "value": "100%"
+            },
+            {
+                "icon": "award",
+                "title": "Certified Technicians",
+                "value": "100+"
+            },
+            {
+                "icon": "graph",
+                "title": "AC Sell Rate",
+                "value": "1000+"
+            },
+            {
+                "icon": "security",
+                "title": "Warranty Coverage",
+                "value": "10"
+            }
+     ]
+}

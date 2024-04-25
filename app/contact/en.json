@@ -1,0 +1,27 @@
+{
+    "image": "/page-banner.jpg",
+    "title": "Contact Us",
+    "enquiry": {
+        "image": "/hero-home.jpg",
+        "title": "Enquiry Form",
+        "label": "You Can Feel Free To Contact Us",
+        "enquiry_form": {
+            "fname": {
+                "name": "fname",
+                "placeholder": "Enter Full Name"
+            },
+            "email": {
+                "name": "email",
+                "placeholder": "Enter Your Email Address" 
+            },
+            "phone": {
+                "name": "phone",
+                "placeholder": "Enter Your Mobile No." 
+            },
+            "message": {
+                "name": "message",
+                "placeholder": "Message" 
+            }
+        }
+    }
+}
