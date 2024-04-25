@@ -39,9 +39,10 @@ interface SingleProps {
   size: FunctionItem;
   chart_label: string[];
   size_chart: SizeItem[];
+  size_guide: string;
 }
 
-export const Single: React.FC<SingleProps> = ({ images, title, rating, rank_list, Price, discount_price, emi, service, delivery, currency, mrp, label, quantity, button, Compare, wishlist, size, chart_label, size_chart  }) => {
+export const Single: React.FC<SingleProps> = ({ images, title, rating, rank_list, Price, discount_price, emi, service, delivery, currency, mrp, label, quantity, button, Compare, wishlist, size, chart_label, size_chart , size_guide }) => {
 
   return (
     <>
@@ -50,7 +51,7 @@ export const Single: React.FC<SingleProps> = ({ images, title, rating, rank_list
         <ProductSlider images={images}/>
       </GridBox.GridItem>
       <GridBox.GridItem columnMerge={1}>
-          <ProductDescription title={title} rank_list={rank_list} rating={rating} Price={Price} discount_price={discount_price} emi={emi} service={service} delivery={delivery} currency={currency} mrp={mrp} label={label} button={button} quantity={quantity} Compare={Compare} wishlist={wishlist} size={size} size_chart={size_chart} chart_label={chart_label}/>
+          <ProductDescription title={title} rank_list={rank_list} rating={rating} Price={Price} discount_price={discount_price} emi={emi} service={service} delivery={delivery} currency={currency} mrp={mrp} label={label} button={button} quantity={quantity} Compare={Compare} wishlist={wishlist} size={size} size_chart={size_chart} chart_label={chart_label} size_guide={size_guide}/>
       </GridBox.GridItem>
     </GridBox>
     </>

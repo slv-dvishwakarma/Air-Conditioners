@@ -1,0 +1,368 @@
+{
+    "slider": [
+        {
+            "image": "/slider-1.jpg",
+            "title": "अपने स्थान को ताज़ा करें",
+            "label": "छूट कीमतों पर अपने पसंदीदा उत्पादों को पकड़ें",
+            "button_label": "अधिक जानें",
+            "button_link": "/ac"
+        },
+        {
+            "image": "/slider-2.jpg",
+            "title": "नए आइटम खोजें",
+            "label": "छूट कीमतों पर अपने पसंदीदा उत्पादों को पकड़ें",
+            "button_label": "अन्वेषण करें",
+            "button_link": "/singleproduct"
+        },
+        {
+            "image": "/slider-3.jpg",
+            "title": "नवीनतम की जाँच करें",
+            "label": "छूट कीमतों पर अपने पसंदीदा उत्पादों को पकड़ें",
+            "button_label": "अभी खरीदें",
+            "button_link": "/ac"
+        }
+    ],
+    "related": {
+        "title": "आपके देखे गए आइटम के संबंध में",
+        "listing_button": {
+            "name": "सभी देखें",
+            "link": "/ac"
+        },
+        "products": [
+            {
+                "company": "वोल्टास -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 3,
+                "rank_list": 1951,
+                "Price": 10000.00,
+                "discount_price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "डाइकिन -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-2.jpg",
+                "rank": 4,
+                "rank_list": 1951,
+                "Price": 20000.00,
+                "discount_price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "कैरियर -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-3.jpg",
+                "rank": 5,
+                "rank_list": 1951,
+                "Price": 30000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "पैनासोनिक -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-4.jpg",
+                "rank": 2,
+                "rank_list": 1951,
+                "Price": 40000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "ब्लू स्टार -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "ब्लू स्टार -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 60000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            }
+        ]
+    },
+    "twobanner": [
+        {
+            "title": "5 स्टेप कूलिंग",
+            "from": "से",
+            "price": 30000,
+            "currency": "₹",
+            "image": "/ac-banner.png",
+            "image_width": 1000,
+            "image_height": 500,
+            "column_merge": 2,
+            "button": [
+                {
+                    "label": "खरीदें",
+                    "url": "/singleproduct"
+                },
+                {
+                    "label": "और अधिक जानें",
+                    "url": "/ac"
+                }
+            ]
+        },
+        {
+            "title": "5-3 स्टार",
+            "from": "से",
+            "price": 40000,
+            "currency": "₹",
+            "image": "/ac-banner-2.jpg",
+            "image_width": 500,
+            "image_height": 500,
+            "column_merge": 1,
+            "button": [
+                {
+                    "label": "खरीदें",
+                    "url": "/singleproduct"
+                },
+                {
+                    "label": "और अधिक जानें",
+                    "url": "/ac"
+                }
+            ]
+        }
+    ],
+    "trends": {
+        "title": "आपकी खरीदारी के ट्रेंड से प्रेरित",
+        "listing_button": {
+            "name": "सभी देखें",
+            "link": "/ac"
+        },
+        "products": [
+            {
+                "company": "वोल्टास -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 3,
+                "rank_list": 1951,
+                "Price": 10000.00,
+                "discount_price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "डाइकिन -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-2.jpg",
+                "rank": 4,
+                "rank_list": 1951,
+                "Price": 20000.00,
+                "discount_price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "कैरियर -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-3.jpg",
+                "rank": 5,
+                "rank_list": 1951,
+                "Price": 30000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "पैनासोनिक -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-4.jpg",
+                "rank": 2,
+                "rank_list": 1951,
+                "Price": 40000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "ब्लू स्टार -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "ब्लू स्टार -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 60000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            }
+        ]
+    },
+    "product_banner": {
+        "column": 1,
+        "banner": [
+            {
+                "name": "Prodcut Banner",
+                "image": "/banner-3.jpg",
+                "image_width": 1600,
+                "image_height": 533,
+                "link": "/",
+                "column_merge": 1
+            }
+        ]
+    },
+    "devices": {
+        "title": "डील्स डिवाइसेज़",
+        "listing_button": {
+            "name": "सभी देखें",
+            "link": "/ac"
+        },
+        "products": [
+            {
+                "company": "वोल्टास -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 3,
+                "rank_list": 1951,
+                "Price": 10000.00,
+                "discount_price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "डाइकिन -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-2.jpg",
+                "rank": 4,
+                "rank_list": 1951,
+                "Price": 20000.00,
+                "discount_price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "कैरियर -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-3.jpg",
+                "rank": 5,
+                "rank_list": 1951,
+                "Price": 30000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "पैनासोनिक -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-4.jpg",
+                "rank": 2,
+                "rank_list": 1951,
+                "Price": 40000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "ब्लू स्टार -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 50000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            },
+            {
+                "company": "ब्लू स्टार -",
+                "name": "1 टन 3 स्टार वाई-फाई इनवर्टर स्मार्ट स्प्लिट एसी",
+                "image": "/viewedproduct/product-1.jpg",
+                "rank": 1,
+                "rank_list": 1951,
+                "Price": 60000.00,
+                "delivery": "मुफ्त डिलीवरी",
+                "currancy": "₹"
+            }
+        ]
+    },
+    "product_banner1": {
+        "column": 1,
+        "banner": [
+            {
+                "name": "Prodcut Banner",
+                "image": "/banner4.gif",
+                "image_width": 1600,
+                "image_height": 533,
+                "link": "/",
+                "column_merge": 1
+            }
+        ]
+    },
+    "off_banner": {
+        "column": 3,
+        "banner": [
+            {
+                "name": "Prodcut Banner",
+                "image": "/off-banner.jpg",
+                "image_width": 300,
+                "image_height": 300,
+                "link": "/",
+                "column_merge": 1
+            },
+            {
+                "name": "Prodcut Banner",
+                "image": "/off-banner.jpg",
+                "image_width": 300,
+                "image_height": 300,
+                "link": "/",
+                "column_merge": 1
+            },
+            {
+                "name": "Prodcut Banner",
+                "image": "/off-banner.jpg",
+                "image_width": 300,
+                "image_height": 300,
+                "link": "/",
+                "column_merge": 1
+            }
+        ]
+    },
+    "banner": {
+        "label": "“क्लीनिंग फ़िल्टर संकेत” एक अद्वितीय और स्मार्ट सुविधा है जिसमें इंडोर पैनल “CL” प्रतीक दिखाता है, जो ग्राहक को इंडोर यूनिट वायु फिल्टर को साफ करने के लिए चेतावनी देता है।",
+        "title": "क्लीन फिल्टर संकेत",
+        "image": "/banner-3.jpg",
+        "image_width": 1600,
+        "image_height": 533,
+        "button": [
+            {
+                "label": "खरीदें",
+                "url": "/singleproduct"
+            },
+            {
+                "label": "अधिक जानें",
+                "url": "/ac"
+            }
+        ]
+    },
+    "fullbanner": {
+        "title": "एयर कंडीशनर मीट्स वैक्यूम टेक्नोलॉजी",
+        "image": "/full-banner.jpg",
+        "image_width": 1600,
+        "image_height": 533,
+        "button": [
+            {
+                "label": "खरीदें",
+                "url": "/singleproduct"
+            },
+            {
+                "label": "अधिक जानें",
+                "url": "/ac"
+            }
+        ]
+    }
+}

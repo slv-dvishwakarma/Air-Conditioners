@@ -1,0 +1,33 @@
+{
+    "banner": {
+        "image": "/sale-banners.jpg",
+        "title": "एयर कंडीशनर",
+        "label": "हर रात अपने सपने को ठंडा बनाएं",
+        "booking_label": "₹100 से अपना एयर कंडीशनर बुक करें",
+        "book_button": "अब बुक करें",
+        "book_url": "/ac"
+    },
+    "enquiry": {
+        "image": "/sale.png",
+        "title": "पूछताछ फ़ॉर्म",
+        "label": "आप हमसे 24*7 संपर्क कर सकते हैं।",
+        "enquiry_form": {
+            "fname": {
+                "name": "fname",
+                "placeholder": "पूरा नाम दर्ज करें"
+            },
+            "email": {
+                "name": "email",
+                "placeholder": "अपना ईमेल पता दर्ज करें" 
+            },
+            "phone": {
+                "name": "phone",
+                "placeholder": "अपना मोबाइल नंबर दर्ज करें" 
+            },
+            "message": {
+                "name": "message",
+                "placeholder": "संदेश" 
+            }
+        }
+    }
+}

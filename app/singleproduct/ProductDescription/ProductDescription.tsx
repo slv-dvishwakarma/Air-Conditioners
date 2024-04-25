@@ -41,9 +41,10 @@ interface DescriptionProps {
     size: FunctionItem;
     chart_label: string[];
     size_chart: SizeItem[];
+    size_guide: string;
 }
 
-export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, rank_list, Price, discount_price, emi, service, delivery, currency, mrp, label, quantity, button, Compare, wishlist, size, chart_label, size_chart }) => {
+export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, rank_list, Price, discount_price, emi, service, delivery, currency, mrp, label, quantity, button, Compare, wishlist, size, chart_label, size_chart, size_guide }) => {
     const discountPercent = ((discount_price - Price) / discount_price) * 100;
 
     const [heart, setHeart] = useState(false);
@@ -137,7 +138,7 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
                     <div className='flex items-center justify-center min-h-screen'>
                         <div className='relative bg-white xl:w-2/5 lg:w-2/5 md:w-9/12 w-full mx-auto shadow-lg rounded-[20px] '>
                             <div className='size-guide p-6 items-center border-b-[#e9ecef] border-b border-solid flex justify-between '>
-                                <span className='xl:text-xl lg:text-xl md:text-xl text-[15px] font-medium text-accentColor'>Room air conditioner with Inverter compressor</span>
+                                <span className='xl:text-xl lg:text-xl md:text-xl text-[15px] font-medium text-accentColor'>{size_guide}</span>
                                 <span onClick={handleClose}><SVGIcon className='xl:text-[25px] lg:text-[25px] md:text-[25px] text-[20px] cursor-pointer' name="RxCross2" /></span>
                             </div>
                             <SizeChart chart_label={chart_label} size_chart={size_chart} />

@@ -1,18 +1,32 @@
+"use client"
 import { ParentContainer } from '@/components/ParentContainer'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Single } from './Single'
 import { BreadCrumbs } from '../ac/BreadCrumb'
 import { Tab } from './Tab'
 import jsonData from "./jsonData.json";
+import hi from "./hi.json";
 
-const page = () => {
+const Page = () => {
+
+    const [jsonDataFile, setJsonDataFile] = useState<typeof jsonData | typeof hi>(jsonData);
+
+    useEffect(() => {
+      const newLanguage = localStorage.getItem('language');
+      if (newLanguage === 'en') {
+        setJsonDataFile(jsonData);
+      } else {
+        setJsonDataFile(hi);
+      }
+    }, []);
+
     return (
         <ParentContainer>
-            <BreadCrumbs breadcrumb={jsonData.breadcrumb} />
-            <Single images={jsonData.productImages} title={jsonData.description.title} rating={jsonData.description.rank} rank_list={jsonData.description.rank_list} Price={jsonData.description.Price} discount_price={jsonData.description.discount_price} emi={jsonData.description.emi} service={jsonData.description.service} delivery={jsonData.description.delivery} currency={jsonData.description.currency} mrp={jsonData.description.mrp} label={jsonData.description.label} button={jsonData.description.button} quantity={jsonData.quantity} wishlist={jsonData.wishlist} Compare={jsonData.Compare} size={jsonData.size} size_chart={jsonData.size_chart} chart_label={jsonData.chart_label}/>
-            <Tab products={jsonData.products} tab={jsonData.tab} title={jsonData.description.title} label={jsonData.description.label} size_chart={jsonData.size_chart} chart_label={jsonData.chart_label}/>
+            <BreadCrumbs breadcrumb={jsonDataFile.breadcrumb} />
+            <Single images={jsonDataFile.productImages} title={jsonDataFile.description.title} rating={jsonDataFile.description.rank} rank_list={jsonDataFile.description.rank_list} Price={jsonDataFile.description.Price} discount_price={jsonDataFile.description.discount_price} emi={jsonDataFile.description.emi} service={jsonDataFile.description.service} delivery={jsonDataFile.description.delivery} currency={jsonDataFile.description.currency} mrp={jsonDataFile.description.mrp} label={jsonDataFile.description.label} button={jsonDataFile.description.button} quantity={jsonDataFile.quantity} wishlist={jsonDataFile.wishlist} Compare={jsonDataFile.Compare} size={jsonDataFile.size} size_chart={jsonDataFile.size_chart} chart_label={jsonDataFile.chart_label} size_guide={jsonDataFile.size_guide}/>
+            <Tab products={jsonDataFile.products} tab={jsonDataFile.tab} title={jsonDataFile.description.title} label={jsonDataFile.description.label} size_chart={jsonDataFile.size_chart} chart_label={jsonDataFile.chart_label}/>
         </ParentContainer>
     )
 }
 
-export default page
+export default Page

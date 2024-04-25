@@ -1,0 +1,115 @@
+{
+    "static_content": {
+        "apply": "लागू करें",
+        "checkout": "चेकआउट",
+        "coupon_code_label": "कूपन कोड जोड़ें",
+        "billing_label": "बिलिंग विवरण जोड़ें",
+        "summary": "आदेश सारांश",
+        "total": "कुल",
+        "items": "आइटम",
+        "payment_method_label": "भुगतान पद्धति जोड़ें"
+    },
+    "checkout_form": {
+        "coupon": {
+            "name": "coupon",
+            "placeholder": "कूपन कोड डालें"
+        },
+        "fname": {
+            "name": "fname",
+            "placeholder": "पहला नाम दर्ज करें"
+        },
+        "lname": {
+            "name": "lname",
+            "placeholder": "अंतिम नाम दर्ज करें"
+        },
+        "house_no": {
+            "name": "address",
+            "placeholder": "घर, फ्लैट, बिल्डिंग नंबर"
+        },
+        "house_name": {
+            "name": "Building-Name",
+            "placeholder": "फ्लैट, मंजिल, बिल्डिंग नाम"
+        },
+        "city": {
+            "name": "city",
+            "placeholder": "शहर/गाँव"
+        },
+        "state": {
+            "name": "state",
+            "placeholder": "राज्य"
+        },
+        "zip": {
+            "name": "zip-code",
+            "placeholder": "पिन कोड"
+        },
+        "phone": {
+            "name": "phone",
+            "placeholder": "अपना संपर्क नंबर दर्ज करें"
+        },
+        "email": {
+            "name": "Email",
+            "placeholder": "ईमेल पता"
+        }
+    },
+    "product": [
+        {
+            "image": "/Product/ac1.jpg",
+            "name": "एलजी 1.5 टन 3 स्टार डुअल इनवर्टर स्प्लिट एसी",
+            "qty": 1,
+            "price": "30,000.00",
+            "currency": "₹"
+        },
+        {
+            "image": "/Product/ac4.jpg",
+            "name": "एलजी 1.5 टन 3 स्टार डुअल इनवर्टर स्प्लिट एसी",
+            "qty": 1,
+            "price": "40,000.00",
+            "currency": "₹"
+        }
+    ],
+    "total": [
+        {
+            "label": "उप-योग",
+            "title": "₹70,000.00"
+        },
+        {
+            "label": "डिस्काउंट",
+            "title": "₹0"
+        },
+        {
+            "label": "महायोग्य",
+            "title": "₹70,000.00"
+        }
+    ],
+    "item": 2,
+    "bank": {
+        "label": "लेन-देन का तरीका चुनें:",
+        "button": "सत्यापित करें",
+        "account": [
+            {
+                "title": "बैंक खाता जोड़ें",
+                "checkbox": {
+                    "label": "खाता मेरा है",
+                    "name": "my-account"
+                },
+                "account": {
+                    "placeholder": "खाता संख्या",
+                    "name": "account-number"
+                },
+                "ifsc": {
+                    "placeholder": "आईएफएस कोड",
+                    "name": "ifsc-code"
+                }
+            },
+            {
+                "title": "यूपीआई जोड़ें",
+                "upi": {
+                    "label": "कृपया अपना यूपीआई आईडी दर्ज करें",
+                    "placeholder": "यहाँ जोड़ें",
+                    "name": "upi",
+                    "guide_text": "यूपीआई आईडी नाम/फोननंबर@बैंकनाम के प्रारूप में है"
+                }
+            }
+        ]
+    }
+}

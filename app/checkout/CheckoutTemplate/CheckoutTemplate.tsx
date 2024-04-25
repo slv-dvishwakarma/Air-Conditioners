@@ -7,30 +7,41 @@ import { TextSelection } from '@/components/TextSelection';
 import Image from 'next/image';
 import { Accordian } from '@/components/Accordian';
 
+interface StaticItem {
+    apply: string;
+    checkout: string;
+    coupon_code_label: string;
+    billing_label: string;
+    summary: string;
+    total: string;
+    items: string;
+    payment_method_label: string;
+}
+
 interface UPIItem {
     label: string;
     placeholder: string;
     name: string;
     guide_text: string;
-  }
-  
-  interface CheckboxItem {
+}
+
+interface CheckboxItem {
     label: string;
     name: string;
-  }
-  
-  interface AccountItem {
+}
+
+interface AccountItem {
     placeholder: string;
     name: string;
-  }
-  
-  interface TabItem {
+}
+
+interface TabItem {
     title: string;
     checkbox?: CheckboxItem;
     account?: AccountItem;
     ifsc?: AccountItem;
     upi?: UPIItem;
-  }
+}
 
 interface TextItem {
     name: string;
@@ -70,10 +81,11 @@ interface CheckoutTemplateProps {
     label?: string;
     button: string;
     bank: TabItem[];
+    static_item: StaticItem;
 }
 
 
-export const CheckoutTemplate: React.FC<CheckoutTemplateProps> = ({ checkout_form, product, total, item, button, bank, label }) => {
+export const CheckoutTemplate: React.FC<CheckoutTemplateProps> = ({ checkout_form, product, total, item, button, bank, label, static_item }) => {
     const { handleSubmit, control, formState: { errors }, reset } = useForm();
 
     const onSubmit = (data: any) => {
@@ -84,28 +96,28 @@ export const CheckoutTemplate: React.FC<CheckoutTemplateProps> = ({ checkout_for
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className='pb-[50px]'>
-            <h1 className='font-semibold text-3xl leading-9 text-center px-0 py-[50px] text-accentColor'>Checkout</h1>
+            <h1 className='font-semibold text-3xl leading-9 text-center px-0 py-[50px] text-accentColor'>{static_item.checkout}</h1>
             <GridBox columns={3} desktop={3} laptop={1} tablet={1} gap={10} className='sm:grid'>
                 <GridBox.GridItem columnMerge={2} colMargeDesktop={2} colMargeLaptop={1} colMargeTablet={1} className='space-y-8'>
                     <div className='shadow-[rgba(149,157,165,0.2)_0px_8px_24px] rounded-3xl p-[30px]'>
-                        <h3 className='font-bold text-lg leading-6 text-accentColor'>Add Coupon Code</h3>
+                        <h3 className='font-bold text-lg leading-6 text-accentColor'>{static_item.coupon_code_label}</h3>
                         <GridBox columns={3} className='sm:grid pt-5'>
                             <GridBox.GridItem columnMerge={2}>
                                 <TextSelection name={checkout_form.coupon.name} placeholder={checkout_form.coupon.placeholder} control={control} errors={errors} required={false} />
                             </GridBox.GridItem>
                             <GridBox.GridItem columnMerge={1}>
-                                <button type='button' className='rounded-lg w-full bg-accentColor px-3 py-1.5 h-[50px] text-white text-sm font-semibold text-center transition-all duration-500 hover:bg-[#131921]'>Apply</button>
+                                <button type='button' className='rounded-lg w-full bg-accentColor px-3 py-1.5 h-[50px] text-white text-sm font-semibold text-center transition-all duration-500 hover:bg-[#131921]'>{static_item.apply}</button>
                             </GridBox.GridItem>
                         </GridBox>
                     </div>
                     <div className='shadow-[rgba(149,157,165,0.2)_0px_8px_24px] rounded-3xl p-[30px]'>
-                        <h3 className='font-bold text-lg leading-6 text-accentColor'>Add Billing Details</h3>
+                        <h3 className='font-bold text-lg leading-6 text-accentColor'>{static_item.billing_label}</h3>
                         <DeliveryAddressForm fname={checkout_form.fname} lname={checkout_form.lname} zip={checkout_form.zip} email={checkout_form.email} house_no={checkout_form.house_no} house_name={checkout_form.house_name} city={checkout_form.city} state={checkout_form.state} phone={checkout_form.phone} control={control} errors={errors} />
                     </div>
                 </GridBox.GridItem>
                 <GridBox.GridItem colMargeDesktop={1} colMargeLaptop={1} colMargeTablet={1}>
                     <div className='shadow-[rgba(149,157,165,0.2)_0px_8px_24px] rounded-3xl p-[30px]'>
-                        <h3 className='font-bold text-lg leading-6 text-accentColor'>Order Summary</h3>
+                        <h3 className='font-bold text-lg leading-6 text-accentColor'>{static_item.summary}</h3>
                         <div className='space-y-5 pt-5'>
                             {product.map((items, index) => (
                                 <div key={index} className='flex gap-5'>
@@ -119,8 +131,8 @@ export const CheckoutTemplate: React.FC<CheckoutTemplateProps> = ({ checkout_for
                             ))}
                         </div>
                         <div className='mt-5 py-3 flex justify-between items-center border-y-[#ced4da] border-b border-solid border-t'>
-                            <h3 className='font-bold text-lg leading-6 text-black '>Total</h3>
-                            <p>{item} Items</p>
+                            <h3 className='font-bold text-lg leading-6 text-black '>{static_item.total}</h3>
+                            <p>{item} {static_item.items}</p>
                         </div>
                         <div className='total divide-y-2'>
                             {total.map((item, index) => (
@@ -131,10 +143,10 @@ export const CheckoutTemplate: React.FC<CheckoutTemplateProps> = ({ checkout_for
                             ))}
                         </div>
                         <div className='payment pt-5'>
-                            <h3 className='font-bold text-lg leading-6 text-accentColor'>Add Payment Method</h3>
-                            <Accordian button={button} bank={bank}/>
+                            <h3 className='font-bold text-lg leading-6 text-accentColor'>{static_item.payment_method_label}</h3>
+                            <Accordian button={button} bank={bank} />
                         </div>
-                        <button type='submit' className='rounded-lg w-full bg-accentColor px-3 py-1.5 h-[50px] text-white text-sm font-semibold text-center transition-all duration-500 hover:bg-[#131921] mt-5'>Checkout</button>
+                        <button type='submit' className='rounded-lg w-full bg-accentColor px-3 py-1.5 h-[50px] text-white text-sm font-semibold text-center transition-all duration-500 hover:bg-[#131921] mt-5'>{static_item.checkout}</button>
                     </div>
                 </GridBox.GridItem>
             </GridBox>

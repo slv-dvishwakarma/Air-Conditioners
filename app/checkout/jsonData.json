@@ -1,16 +1,26 @@
 {
+    "static_content": {
+        "apply": "Apply",
+        "checkout": "Checkout",
+        "coupon_code_label": "Add Coupon Code",
+        "billing_label": "Add Billing Details",
+        "summary": "Order Summary",
+        "total": "Total",
+        "items": "Items",
+        "payment_method_label": "Add Payment Method"
+    },
     "checkout_form": {
         "coupon": {
             "name": "coupon",
             "placeholder": "Enter Coupon Code"
         },
         "fname": {
-            "name": "address",
-            "placeholder": "House, Flat, Building No."
+            "name": "fname",
+            "placeholder": "Enter First Name"
         },
         "lname": {
-            "name": "address",
-            "placeholder": "House, Flat, Building No."
+            "name": "lname",
+            "placeholder": "Enter Last Name"
         },
         "house_no": {
             "name": "address",
