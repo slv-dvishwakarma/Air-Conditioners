@@ -15,7 +15,10 @@ const Page = () => {
       const newLanguage = localStorage.getItem('language');
       if (newLanguage === 'en') {
         setJsonDataFile(jsonData);
-      } else {
+      } else if (newLanguage === null) {
+        setJsonDataFile(jsonData);
+      } 
+      else {
         setJsonDataFile(hi);
       }
     }, []);

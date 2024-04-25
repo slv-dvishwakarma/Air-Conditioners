@@ -7,10 +7,6 @@ interface DropdownProps {
 }
 
 export const LanguageSelector: React.FC<DropdownProps> = ({ }) => {
-  if (typeof window !== 'undefined') {
-  localStorage.setItem('language', 'en');
-}
-
   const options = ['English - EN', 'हिंदी - HI'];
 
   const [selectedOption, setSelectedOption] = useState<string>(options[0]);
