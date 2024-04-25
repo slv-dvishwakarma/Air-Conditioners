@@ -6,16 +6,16 @@
             "label": "हमें जानने दें",
             "menu": [
                 {
-                    "name": "करियर",
-                    "link": "/"
-                },
-                {
                     "name": "हमारे बारे में",
-                    "link": "/"
+                    "link": "/about-us"
                 },
                 {
-                    "name": "यूके मॉडर्न गुलामी का बयान",
-                    "link": "/"
+                    "name": "संपर्क करें",
+                    "link": "/contact"
+                },
+                {
+                    "name": "दुकान",
+                    "link": "/shop"
                 }
             ]
         },
@@ -24,15 +24,15 @@
             "menu": [
                 {
                     "name": "उपयोग और बिक्री की शर्तें",
-                    "link": "/"
+                    "link": "/conditions-of-use"
                 },
                 {
                     "name": "गोपनीयता सूचना",
-                    "link": "/"
+                    "link": "/privacy-notice"
                 },
                 {
                     "name": "कुकीज़ सूचना",
-                    "link": "/"
+                    "link": "/cookies-notice"
                 }
             ]
         }

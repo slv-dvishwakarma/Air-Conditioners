@@ -1,8 +1,8 @@
 import React from 'react';
-import { Rating } from '@/app/ac/Rating';
 import { GridBox } from '@/components/GridBox';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Rating } from '@/app/shop/Rating';
 
 interface ListingItem {
     name: string;

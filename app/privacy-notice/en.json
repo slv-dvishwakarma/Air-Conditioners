@@ -1,0 +1,33 @@
+{
+    "title": "Privacy Notice",
+    "content": [
+        {
+            "title": "Information Collection:",
+            "paragraph": "We collect personal information such as your name, contact details, and payment information, as well as device information, usage data, and location information (with your consent) related to your use of our air conditioner products."
+        },
+        {
+            "title": "Data Usage:",
+            "paragraph": "We use the information collected to provide and maintain our services, improve product functionality and user experience, personalize your interactions, send important updates and notifications, and comply with legal requirements."
+        },
+        {
+            "title": "Data Security:",
+            "paragraph": "We employ industry-standard security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction."
+        },
+        {
+            "title": "Data Sharing:",
+            "paragraph": "We may share your information with trusted third-party service providers to assist in delivering our services, comply with legal obligations, or in the event of a corporate transaction."
+        },
+        {
+            "title": "Your Choices:",
+            "paragraph": "You have the right to access and update your personal information, withdraw consent for data processing, and opt-out of receiving promotional communications from us."
+        },
+        {
+            "title": "Contact Us:",
+            "paragraph": "If you have any questions, concerns, or requests regarding your privacy or the handling of your personal information, please contact us at [contact email/phone number]."
+        },
+        {
+            "title": "Changes to Notice:",
+            "paragraph": "We reserve the right to update this Privacy Notice as needed, and any changes will be reflected on this page. We encourage you to review this notice periodically for updates."
+        }
+    ]
+}

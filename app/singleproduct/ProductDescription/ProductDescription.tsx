@@ -1,10 +1,10 @@
 "use client"
-import { Rating } from '@/app/ac/Rating'
 import { Quantity } from '@/components/Quantity';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { SizeChart } from '../SizeChart';
 import { SVGIcon } from '@/components/Icons';
+import { Rating } from '@/app/shop/Rating';
 
 
 interface FunctionItem {

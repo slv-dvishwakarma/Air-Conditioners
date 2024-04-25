@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { User } from '@/app/ac/User';
-import { SearchBar } from '@/app/ac/SearchBar';
-import { LanguageSelector } from '@/app/ac/LanguageSelector';
 import { SVGIcon } from '@/components/Icons';
 import { Popup } from '@/components/Popup';
+import { LanguageSelector } from '@/app/shop/LanguageSelector';
+import { SearchBar } from '@/app/shop/SearchBar';
+import { User } from '@/app/shop/User';
 
 
 interface SearchBarItem {

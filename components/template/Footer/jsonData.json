@@ -6,16 +6,16 @@
             "label": "Let to Know Us",
             "menu": [
                 {
-                    "name": "Careers",
-                    "link": "/"
-                },
-                {
                     "name": "About Us",
-                    "link": "/"
+                    "link": "/about-us"
                 },
                 {
-                    "name": "UK Modern Slavery Statement",
-                    "link": "/"
+                    "name": "Contact Us",
+                    "link": "/contact"
+                },
+                {
+                    "name": "Shop",
+                    "link": "/shop"
                 }
             ]
         },
@@ -24,15 +24,15 @@
             "menu": [
                 {
                     "name": "Conditions of Use & Sale",
-                    "link": "/"
+                    "link": "/conditions-of-use"
                 },
                 {
                     "name": "Privacy Notice",
-                    "link": "/"
+                    "link": "/privacy-notice"
                 },
                 {
                     "name": "Cookies Notice",
-                    "link": "/"
+                    "link": "/cookies-notice"
                 }
             ]
         }

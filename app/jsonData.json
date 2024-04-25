@@ -5,7 +5,7 @@
             "title": "Refresh your space",
             "label": "Grab your favorites at discounted prices",
             "button_label": "Learn more",
-            "button_link": "/ac"
+            "button_link": "/shop"
         },
         {
             "image": "/slider-2.jpg",
@@ -19,14 +19,14 @@
             "title": "Check out the latest",
             "label": "Grab your favorites at discounted prices",
             "button_label": "Shop now",
-            "button_link": "/ac"
+            "button_link": "/shop"
         }
     ],
     "related": {
         "title": "Related to items you've viewed",
         "listing_button": {
             "name": "View All",
-            "link": "/ac"
+            "link": "/shop"
         },
         "products": [
             {
@@ -110,7 +110,7 @@
                 },
                 {
                     "label": "Learn More",
-                    "url": "/ac"
+                    "url": "/shop"
                 }
             ]
         },
@@ -130,7 +130,7 @@
                 },
                 {
                     "label": "Learn More",
-                    "url": "/ac"
+                    "url": "/shop"
                 }
             ]
         }
@@ -139,7 +139,7 @@
         "title": "Inspired by your shopping trends",
         "listing_button": {
             "name": "View All",
-            "link": "/ac"
+            "link": "/shop"
         },
         "products": [
             {
@@ -223,7 +223,7 @@
         "title": "Deals Devices",
         "listing_button": {
             "name": "View All",
-            "link": "/ac"
+            "link": "/shop"
         },
         "products": [
             {
@@ -345,7 +345,7 @@
             },
             {
                 "label": "Learn More",
-                "url": "/ac"
+                "url": "/shop"
             }
         ]
     },
@@ -361,7 +361,7 @@
             },
             {
                 "label": "Learn More",
-                "url": "/ac"
+                "url": "/shop"
             }
         ]
     }

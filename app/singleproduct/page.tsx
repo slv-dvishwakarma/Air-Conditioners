@@ -2,10 +2,10 @@
 import { ParentContainer } from '@/components/ParentContainer'
 import React, { useEffect, useState } from 'react'
 import { Single } from './Single'
-import { BreadCrumbs } from '../ac/BreadCrumb'
 import { Tab } from './Tab'
 import jsonData from "./jsonData.json";
 import hi from "./hi.json";
+import { BreadCrumbs } from '../shop/BreadCrumb'
 
 const Page = () => {
 

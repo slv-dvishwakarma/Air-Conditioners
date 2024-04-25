@@ -5,7 +5,7 @@
             "title": "अपने स्थान को ताज़ा करें",
             "label": "छूट कीमतों पर अपने पसंदीदा उत्पादों को पकड़ें",
             "button_label": "अधिक जानें",
-            "button_link": "/ac"
+            "button_link": "/shop"
         },
         {
             "image": "/slider-2.jpg",
@@ -19,14 +19,14 @@
             "title": "नवीनतम की जाँच करें",
             "label": "छूट कीमतों पर अपने पसंदीदा उत्पादों को पकड़ें",
             "button_label": "अभी खरीदें",
-            "button_link": "/ac"
+            "button_link": "/shop"
         }
     ],
     "related": {
         "title": "आपके देखे गए आइटम के संबंध में",
         "listing_button": {
             "name": "सभी देखें",
-            "link": "/ac"
+            "link": "/shop"
         },
         "products": [
             {
@@ -110,7 +110,7 @@
                 },
                 {
                     "label": "और अधिक जानें",
-                    "url": "/ac"
+                    "url": "/shop"
                 }
             ]
         },
@@ -130,7 +130,7 @@
                 },
                 {
                     "label": "और अधिक जानें",
-                    "url": "/ac"
+                    "url": "/shop"
                 }
             ]
         }
@@ -139,7 +139,7 @@
         "title": "आपकी खरीदारी के ट्रेंड से प्रेरित",
         "listing_button": {
             "name": "सभी देखें",
-            "link": "/ac"
+            "link": "/shop"
         },
         "products": [
             {
@@ -223,7 +223,7 @@
         "title": "डील्स डिवाइसेज़",
         "listing_button": {
             "name": "सभी देखें",
-            "link": "/ac"
+            "link": "/shop"
         },
         "products": [
             {
@@ -345,7 +345,7 @@
             },
             {
                 "label": "अधिक जानें",
-                "url": "/ac"
+                "url": "/shop"
             }
         ]
     },
@@ -361,7 +361,7 @@
             },
             {
                 "label": "अधिक जानें",
-                "url": "/ac"
+                "url": "/shop"
             }
         ]
     }

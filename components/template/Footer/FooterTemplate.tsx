@@ -2,8 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 import { GridBox } from '@/components/GridBox';
-import { LanguageSelector } from '@/app/ac/LanguageSelector';
 import { SVGIcon } from '@/components/Icons';
+import { usePathname } from 'next/navigation';
+import { LanguageSelector } from '@/app/shop/LanguageSelector';
 
 interface CopyrightItem {
   label: string;
@@ -48,6 +49,8 @@ interface HeaderProps {
 }
 
 export const FooterTemplate: React.FC<HeaderProps> = ({ logo, alt, footer_item, contact, copyright }) => {
+  const pathName = usePathname();
+
   return (
     <>
       <GridBox columns={4} desktop={4} laptop={4} tablet={3} gap={8} className='py-10 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-6 border-b-[#9399A2] border-b border-solid sm:grid'>
@@ -65,8 +68,8 @@ export const FooterTemplate: React.FC<HeaderProps> = ({ logo, alt, footer_item, 
             <label className='text-[15px] font-semibold text-white'>{item.label}</label>
             <div className='xl:mt-6 lg:mt-6 md:mt-6 mt-3 space-y-3'>
               {item.menu.map((item, index) => (
-                <div key={index} className='text-sm text-[#9399A2] '>
-                  <Link className='hover:text-accentColor' key={index} href={item.link}>{item.name}</Link>
+                <div key={index} className='text-sm  '>
+                  <Link className={` ${pathName === item.link ? "text-accentColor hover:text-accentColor" : "text-[#9399A2] hover:text-white"}`} key={index} href={item.link}>{item.name}</Link>
                 </div>
               ))}
             </div>

@@ -1,0 +1,37 @@
+{
+    "title": "Cookies Notice",
+    "content": [
+        {
+            "title": "What Are Cookies:",
+            "paragraph": "Cookies are small text files that are stored on your device when you visit a website. They are commonly used to enhance your browsing experience, remember your preferences, and analyze website usage."
+        },
+        {
+            "title": "Types of Cookies We Use:",
+            "paragraph": "We use both session and persistent cookies. Session cookies are temporary and are deleted when you close your browser, while persistent cookies remain on your device for a set period of time or until you delete them."
+        },
+        {
+            "title": "How We Use Cookies:",
+            "paragraph": "We use cookies to provide and improve our services, personalize your experience, analyze website traffic, and deliver targeted advertisements. By using our website, you consent to the use of cookies as described in this notice."
+        },
+        {
+            "title": "Your Cookie Choices:",
+            "paragraph": "You have the option to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser settings to decline cookies if you prefer. However, this may prevent you from taking full advantage of our website."
+        },
+        {
+            "title": "Third-Party Cookies:",
+            "paragraph": "We may also use third-party cookies, such as those from advertising partners or social media platforms. These cookies are subject to the respective privacy policies of the third parties."
+        },
+        {
+            "title": "Managing Cookies:",
+            "paragraph": "You can manage your cookie preferences and settings in your browser or device settings. You can also delete cookies stored on your device at any time."
+        },
+        {
+            "title": "Contact Us:",
+            "paragraph": "If you have any questions or concerns about our use of cookies, please contact us at [contact email/phone number]."
+        },
+        {
+            "title": "Changes to Notice:",
+            "paragraph": "We reserve the right to update this Cookies Notice as needed, and any changes will be reflected on this page. We encourage you to review this notice periodically for updates."
+        }
+    ]
+}
