@@ -1,0 +1,48 @@
+{
+    "style": true,
+    "template_2": {
+      "logo": "/logo.png",
+      "alt": "Deal Website",
+      "cart": 2,
+      "options": [
+        "मेरा खाता",
+        "प्रोफ़ाइल",
+        "सहायता"
+      ],
+      "language": [
+        "अंग्रेज़ी - EN",
+        "हिंदी - HI"
+      ],
+      "search": {
+        "name": "search",
+        "placeholder": "खोज करें....",
+        "icon": "Search"
+      },
+      "button": {
+        "login_btn": "लॉगिन",
+        "signup_button": "साइन अप"
+      },
+      "navigation": [
+        {
+            "label": "होम",
+            "link": "/"
+        },
+        {
+            "label": "हमारे बारे में",
+            "link": "/about-us"
+        },
+        {
+            "label": "शॉप",
+            "link": "/shop"
+        },
+        {
+            "label": "हमसे संपर्क करें",
+            "link": "/contact"
+        },
+        {
+            "label": "बिक्री",
+            "link": "/sale"
+        }
+      ]
+    }
+  }

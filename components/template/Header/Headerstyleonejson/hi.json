@@ -1,4 +1,6 @@
 {
+  "style": false,
+  "template_1": {
     "logo": "/logo.png",
     "alt": "Deal Website",
     "cart": 2,
@@ -22,4 +24,5 @@
         "हिंदी - HI"
       ]
     }
+  }
 }

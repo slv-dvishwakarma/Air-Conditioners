@@ -1,0 +1,48 @@
+{
+    "style": true,
+    "template_2": {
+      "logo": "/logo.png",
+      "alt": "Deal Website",
+      "cart": 2,
+      "options": [
+        "My Account",
+        "Profile",
+        "Help"
+      ],
+      "language": [
+        "English - EN",
+        "Hindi - HI"
+      ],
+      "search": {
+        "name": "search",
+        "placeholder": "Search....",
+        "icon": "Search"
+      },
+      "button": {
+        "login_btn": "Login",
+        "signup_button": "Sign Up"
+      },
+      "navigation": [
+        {
+            "label": "Home",
+            "link": "/"
+        },
+        {
+            "label": "About Us",
+            "link": "/about-us"
+        },
+        {
+            "label": "Shop",
+            "link": "/shop"
+        },
+        {
+            "label": "Contact Us",
+            "link": "/contact"
+        },
+        {
+            "label": "Sale",
+            "link": "/sale"
+        }
+      ]
+    }
+  }

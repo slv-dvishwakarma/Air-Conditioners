@@ -1,26 +1,35 @@
 "use client"
-import React, { useEffect, useState } from 'react'
-import jsonData from "./jsonData.json";
+import React, { useEffect, useState } from 'react';
+import jsonData from "./Headerstyleonejson/jsonData.json";
+import hi from "./Headerstyleonejson/hi.json";
+import english from "./Headerstyletwojson/english.json";
+import hindi from "./Headerstyletwojson/hindi.json";
 import { HeaderTemplate } from './HeaderTemplate';
-import hi from "./hi.json";
+import { HeaderTemplatetwo } from './HeaderTemplatetwo';
 
 export const Header = () => {
-
-  const [jsonDataFile, setJsonDataFile] = useState<typeof jsonData | typeof hi>(jsonData);
+  const [jsonDataFile, setJsonDataFile] = useState(jsonData);
+  const [jsonFile, setJsonFile] = useState(english);
 
   useEffect(() => {
     const newLanguage = localStorage.getItem('language');
-    if (newLanguage === 'en') {
-      setJsonDataFile(jsonData);
-    } else if (newLanguage === null) {
-      setJsonDataFile(jsonData);
-    }  
-    else {
+    if (newLanguage === 'hi') {
       setJsonDataFile(hi);
+      setJsonFile(hindi);
+    } else {
+      setJsonDataFile(jsonData);
+      setJsonFile(english);
     }
   }, []);
 
   return (
-    <HeaderTemplate logo={jsonDataFile.logo} alt={jsonDataFile.alt} cart={jsonDataFile.cart} searchbar={jsonDataFile.searchbar} option={jsonDataFile.searchbar.option} language={jsonDataFile.searchbar.language} options={jsonDataFile.options}/>
-  )
-}
+    <>
+      {jsonDataFile.style && (
+        <HeaderTemplate logo={jsonDataFile.template_1.logo} alt={jsonDataFile.template_1.alt} cart={jsonDataFile.template_1.cart} searchbar={jsonDataFile.template_1.searchbar} option={jsonDataFile.template_1.searchbar.option} language={jsonDataFile.template_1.searchbar.language} options={jsonDataFile.template_1.options} />
+      )}
+      {jsonFile.style && (
+        <HeaderTemplatetwo header_data={jsonFile.template_2} search={jsonFile.template_2.search} button={jsonFile.template_2.button}/>
+      )}
+    </>
+  );
+};

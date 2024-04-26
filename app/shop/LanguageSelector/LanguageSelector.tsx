@@ -78,7 +78,7 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ }) => {
   const selectedLanguageAbbreviation = selectedOption.split(' - ')[1];
 
   return (
-    <div className="relative text-left dropdown-styling flex justify-center" ref={dropdownRef} onClick={toggleDropdown}>
+    <div className="relative text-left dropdown-styling flex justify-center items-center" ref={dropdownRef} onClick={toggleDropdown}>
       <Image
         className='w-[30px] mr-3'
         src="/flag.jpg"
@@ -89,15 +89,15 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ }) => {
       <span className="rounded-md shadow-sm text-white relative">
         <button
           type="button"
-          className="flex items-center rounded-md text-sm font-medium text-theme-primary border border-solid border-[#00000042] xl:w-[40px] lg:w-[40px] md:w-[40px] w-[200px] xl:p-0 lg:p-0 md:p-0 p-1 xl:text-white lg:text-white md:text-white text-black"
+          className="flex items-center rounded-md text-sm font-medium text-theme-primary border border-solid border-[transparent] xl:w-[40px] lg:w-[40px] md:w-[40px] w-full xl:p-0 lg:p-0 md:p-0 p-1 xl:text-white lg:text-white md:text-white text-black"
           id="options-menu"
           aria-expanded={isOpen}
           aria-haspopup="listbox"
         >
-          <span>
+          <span className='text-white'>
             {selectedLanguageAbbreviation}
           </span>
-          <SVGIcon className='absolute text-xl right-0' name="ArrowDown" />
+          <SVGIcon className='absolute text-xl xl:right-0 lg:right-0 md:right-0 right-[-20px] text-white' name="ArrowDown" />
         </button>
       </span>
 
@@ -106,13 +106,13 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ }) => {
           tabIndex={-1}
           role="list"
           aria-label="Dropdown Options"
-          className={`origin-${dropdownPosition}-right absolute ${dropdownPosition === 'top' ? 'bottom-7' : 'top-7'} right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-[-10px] lg:left-[-25px] md:left-0 w-[150px] z-[1] left-[80px] overflow-hidden`}
+          className={`origin-${dropdownPosition}-right absolute ${dropdownPosition === 'top' ? 'bottom-7' : 'top-7'} xl:right-0 lg:right-0 md:right-0 left-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 xl:left-0 lg:left-0 md:left-0 left-[-20px] w-[120px] z-[1] overflow-hidden`}
         >
           {options.map((option) => (
             <div
               key={option}
               onClick={() => handleOptionChange(option)}
-              className="cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-100"
+              className="cursor-pointer select-none relative p-2  hover:bg-gray-100 "
             >
               <div className="flex items-center">
                 <span className="font-normal block truncate">{option}</span>
