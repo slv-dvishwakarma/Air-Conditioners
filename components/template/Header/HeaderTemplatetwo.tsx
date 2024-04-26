@@ -152,14 +152,14 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
                             <div className='bg-primary py-3 px-2 flex justify-between items-center'>
                                 <Link href="/">
                                     <Image
-                                        className='xl:w-[96%] lg:w-full md:w-full w-full'
+                                        className='xl:w-[96%] lg:w-full md:w-full w-9/12'
                                         src={header_data.logo}
                                         alt={header_data.alt}
                                         width={280}
                                         height={44}
                                     />
                                 </Link>
-                                <div className='mr-5'>
+                                <div className='mr-[35px]'>
                                     <LanguageSelector options={header_data.options} />
                                 </div>
                             </div>
