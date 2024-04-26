@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, Control, FieldValues, DeepMap, FieldError } from 'react-hook-form';
 
 interface CheckboxItem {
     label: string;
@@ -24,35 +24,14 @@ interface AccountProps {
     ifsc?: AccountItem;
     button: string;
     upi?: UPIItem;
+    control: Control<FieldValues>;
+    errors: DeepMap<FieldValues, FieldError>;
 }
 
-export const AccountForm: React.FC<AccountProps> = ({ checkbox, account, ifsc, button, upi }) => {
+export const AccountForm: React.FC<AccountProps> = ({ checkbox, account, ifsc, button, upi, control, errors }) => {
 
-    const [verify, setVerify] = useState(button);
-
-    const { handleSubmit, control, formState: { errors }, reset } = useForm();
-
-    const predefinedAccountNumber = "12345678901234";
-    const predefinedIFSCCode = "abin123456";
-    const predefinedUPI = "abcd8989@icicibank";
-
-    const onSubmit = (data: any) => {
-        const accountNumber = data[account?.name || ""];
-        const ifscCode = data[ifsc?.name || ""];
-        const upiid = data[upi?.name || ""];
-        if (accountNumber === predefinedAccountNumber && ifscCode === predefinedIFSCCode) {
-            setVerify("Verified");
-            console.log(data);
-        } else if (upiid === predefinedUPI) {
-            setVerify("Verified");
-            console.log(data);
-        } else {
-            alert("Please Enter Correct Data");
-        }
-
-    };
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className='pl-9'>
+        <div className='pl-9'>
             {checkbox && (
                 <Controller
                     name={checkbox.name}
@@ -138,9 +117,9 @@ export const AccountForm: React.FC<AccountProps> = ({ checkbox, account, ifsc, b
             )}
             {errors[upi?.name || ""] && <span className="text-red-500 text-sm">This field is required.</span>}
 
-            <div className='pt-[24px] pb-[24px]'>
+            {/* <div className='pt-[24px] pb-[24px]'>
                 <button type='button' className={`text-[white] text-sm font-medium leading-[16.24px] px-[57px] py-3 rounded-md ${verify === "Verified" ? "bg-[#319F43]" : "bg-accentColor"}`}>{verify}</button>
-            </div>
-        </form>
+            </div> */}
+        </div>
     )
 }

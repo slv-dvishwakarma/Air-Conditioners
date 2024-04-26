@@ -73,7 +73,7 @@ export const BreadCrumbs: React.FC<BreadCrumbProps> = ({ breadcrumb, delivery, c
         <div className='fixed inset-0 overflow-y-auto z-[999] bg-white'>
           <div className="px-[4%]">
             <div className='flex items-center justify-between px-0 py-5 border-b-[gray] border-b border-solid'>
-              <span>Filters</span>
+              <span>{title}</span>
               <span onClick={handleClose}><SVGIcon className='w-[30px] h-[30px] bg-accentColor text-[white] flex justify-center text-xl p-[5px] rounded-[50%]' name="RxCross2" /></span>
             </div>
             <SideBar delivery={delivery} compressor={compressor} energy={energy} coil={coil} appliances={appliances} price={price} brand={brand} color={color} />

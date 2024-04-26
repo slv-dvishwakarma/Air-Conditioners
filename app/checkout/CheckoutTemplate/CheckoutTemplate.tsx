@@ -67,6 +67,7 @@ interface FormItem {
     house_no: TextItem;
     house_name: TextItem;
     city: TextItem;
+    landmark: TextItem;
     state: TextItem;
     zip: TextItem;
     phone: TextItem;
@@ -112,7 +113,7 @@ export const CheckoutTemplate: React.FC<CheckoutTemplateProps> = ({ checkout_for
                     </div>
                     <div className='shadow-[rgba(149,157,165,0.2)_0px_8px_24px] rounded-3xl p-[30px]'>
                         <h3 className='font-bold text-lg leading-6 text-accentColor'>{static_item.billing_label}</h3>
-                        <DeliveryAddressForm fname={checkout_form.fname} lname={checkout_form.lname} zip={checkout_form.zip} email={checkout_form.email} house_no={checkout_form.house_no} house_name={checkout_form.house_name} city={checkout_form.city} state={checkout_form.state} phone={checkout_form.phone} control={control} errors={errors} />
+                        <DeliveryAddressForm fname={checkout_form.fname} lname={checkout_form.lname} zip={checkout_form.zip} email={checkout_form.email} house_no={checkout_form.house_no} house_name={checkout_form.house_name} city={checkout_form.city} state={checkout_form.state} phone={checkout_form.phone} landmark={checkout_form.landmark} control={control} errors={errors} />
                     </div>
                 </GridBox.GridItem>
                 <GridBox.GridItem colMargeDesktop={1} colMargeLaptop={1} colMargeTablet={1}>
@@ -144,7 +145,7 @@ export const CheckoutTemplate: React.FC<CheckoutTemplateProps> = ({ checkout_for
                         </div>
                         <div className='payment pt-5'>
                             <h3 className='font-bold text-lg leading-6 text-accentColor'>{static_item.payment_method_label}</h3>
-                            <Accordian button={button} bank={bank} />
+                            <Accordian button={button} bank={bank} control={control} errors={errors}/>
                         </div>
                         <button type='submit' className='rounded-lg w-full bg-accentColor px-3 py-1.5 h-[50px] text-white text-sm font-semibold text-center transition-all duration-500 hover:bg-[#131921] mt-5'>{static_item.checkout}</button>
                     </div>

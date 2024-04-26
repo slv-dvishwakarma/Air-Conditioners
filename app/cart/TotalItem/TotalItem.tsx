@@ -33,6 +33,10 @@ export const TotalItem: React.FC<TotalItemProps> = ({ title, coupon, item, items
         reset();
     };
 
+    const handleCheckout = () => {
+        window.location.href = '/checkout';
+    }
+
     return (
         <section className='py-10 shadow-[rgba(149,157,165,0.2)_0px_8px_24px] px-5'>
             <div className='pb-8 border-b border-gray-300'>
@@ -55,7 +59,7 @@ export const TotalItem: React.FC<TotalItemProps> = ({ title, coupon, item, items
                 ))} 
             </div>
             <div className='my-8'>
-                <button type='button' className='w-full text-center bg-accentColor rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700'>{button}</button>
+                <button type='button' onClick={handleCheckout} className='w-full text-center bg-accentColor rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700'>{button}</button>
             </div>
         </section>
 

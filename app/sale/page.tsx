@@ -33,7 +33,7 @@ const Page = () => {
                         <Image src={jsonDataFile.enquiry.image} alt='sale' width={800} height={570} />
                     </GridBox.GridItem>
                     <GridBox.GridItem columnMerge={1}>
-                        <EnquiryForm title={jsonDataFile.enquiry.title} label={jsonDataFile.enquiry.label} enquiry_form={jsonDataFile.enquiry.enquiry_form}/>
+                        <EnquiryForm title={jsonDataFile.enquiry.title} label={jsonDataFile.enquiry.label} enquiry_form={jsonDataFile.enquiry.enquiry_form} button={jsonDataFile.enquiry.button}/>
                     </GridBox.GridItem>
                 </GridBox>
             </ParentContainer>

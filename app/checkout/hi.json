@@ -34,6 +34,10 @@
             "name": "city",
             "placeholder": "शहर/गाँव"
         },
+        "landmark": {
+            "name": "landmark",
+            "placeholder": "प्रमुख चिन्ह"
+        },
         "state": {
             "name": "state",
             "placeholder": "राज्य"

@@ -7,15 +7,15 @@
         },
         {
             "label": "Category",
-            "link": "/category"
+            "link": "/shop"
         },
         {
             "label": "Products",
-            "link": "/products"
+            "link": "/shop"
         },
         {
             "label": "AC",
-            "link": "/shop"
+            "link": "/singleproduct"
         }
     ],
     "price": {

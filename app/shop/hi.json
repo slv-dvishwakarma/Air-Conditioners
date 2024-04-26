@@ -1,5 +1,5 @@
 {
-    "filter": "Filter",
+    "filter": "फ़िल्टर",
     "breadcrumb": [
         {
             "label": "होम",
@@ -7,15 +7,15 @@
         },
         {
             "label": "श्रेणी",
-            "link": "/category"
+            "link": "/shop"
         },
         {
             "label": "उत्पाद",
-            "link": "/products"
+            "link": "/shop"
         },
         {
             "label": "एसी",
-            "link": "/shop"
+            "link": "/singleproduct"
         }
     ],
     "price": {
@@ -97,7 +97,7 @@
           "service": "सेवा: भुगतान की इंस्टालेशन",
           "delivery": "मुफ्त डिलिवरी",
           "currency": "₹",
-          "mrp": "एम.आर.पी.:"
+          "mrp": "M.R.P:"
         },
         {
           "image": "/product/ac2.jpg",
@@ -110,7 +110,7 @@
           "service": "सेवा: भुगतान की इंस्टालेशन",
           "delivery": "मुफ्त डिलिवरी",
           "currency": "₹",
-          "mrp": "एम.आर.पी.:"
+          "mrp": "M.R.P:"
         },
         {
           "image": "/product/ac3.jpg",
@@ -123,7 +123,7 @@
           "service": "सेवा: भुगतान की इंस्टालेशन",
           "delivery": "मुफ्त डिलिवरी",
           "currency": "₹",
-          "mrp": "एम.आर.पी.:"
+          "mrp": "M.R.P:"
         },
         {
           "image": "/product/ac4.jpg",
@@ -136,7 +136,7 @@
           "service": "सेवा: भुगतान की इंस्टालेशन",
           "delivery": "मुफ्त डिलिवरी",
           "currency": "₹",
-          "mrp": "एम.आर.पी.:"
+          "mrp": "M.R.P:"
         },
         {
           "image": "/product/ac5.jpg",
@@ -149,7 +149,7 @@
           "service": "सेवा: भुगतान की इंस्टालेशन",
           "delivery": "मुफ्त डिलिवरी",
           "currency": "₹",
-          "mrp": "एम.आर.पी.:"
+          "mrp": "M.R.P:"
         }
       ]
 }

@@ -23,9 +23,10 @@ interface EnquiryFormProps {
     title: string;
     label: string;
     enquiry_form: EnquiryFormItem;
+    button: string;
 }
 
-export const EnquiryForm: React.FC<EnquiryFormProps> = ({ title, enquiry_form, label }) => {
+export const EnquiryForm: React.FC<EnquiryFormProps> = ({ title, enquiry_form, label, button }) => {
     const { handleSubmit, control, formState: { errors }, reset } = useForm();
 
     const onSubmit = (data: any) => {
@@ -43,7 +44,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({ title, enquiry_form, l
                 <Phone name={enquiry_form.phone.name} placeholder={enquiry_form.phone.placeholder} control={control} errors={errors} />
                 <TextArea name={enquiry_form.message.name} placeholder={enquiry_form.message.placeholder} control={control} errors={errors} />
                 <div className='pt-4'>
-                    <button type='submit' className='w-full text-center bg-accentColor rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700'>Submit</button>
+                    <button type='submit' className='w-full text-center bg-accentColor rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-indigo-700'>{button}</button>
                 </div>
             </form>
         </div>

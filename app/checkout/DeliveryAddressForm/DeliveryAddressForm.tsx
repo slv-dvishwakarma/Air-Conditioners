@@ -16,6 +16,7 @@ interface DeliveryAddressFormProps {
     house_no: TextItem;
     house_name: TextItem;
     city: TextItem;
+    landmark: TextItem;
     state: TextItem;
     zip: TextItem;
     phone: TextItem;
@@ -24,7 +25,7 @@ interface DeliveryAddressFormProps {
     errors: DeepMap<FieldValues, FieldError>;
 }
 
-export const DeliveryAddressForm: React.FC<DeliveryAddressFormProps> = ({ fname, lname, zip, email, house_no, control, errors, house_name, city, state, phone }) => {
+export const DeliveryAddressForm: React.FC<DeliveryAddressFormProps> = ({ fname, lname, zip, email, house_no, control, errors, house_name, city, state, phone, landmark }) => {
     return (
         <>
             <GridBox columns={2} gap={5} className='DeliveryAddressForm sm:grid pt-5'>
@@ -47,7 +48,7 @@ export const DeliveryAddressForm: React.FC<DeliveryAddressFormProps> = ({ fname,
                     <TextSelection name={state.name} placeholder={state.placeholder} control={control} errors={errors} required={true} />
                 </GridBox.GridItem>
                 <GridBox.GridItem columnMerge={1}>
-                    <TextSelection name={state.name} placeholder={state.placeholder} control={control} errors={errors} required={true} />
+                    <TextSelection name={landmark.name} placeholder={landmark.placeholder} control={control} errors={errors} required={true} />
                 </GridBox.GridItem>
                 <GridBox.GridItem columnMerge={1}>
                     <TextSelection name={zip.name} placeholder={zip.placeholder} control={control} errors={errors} required={true} />

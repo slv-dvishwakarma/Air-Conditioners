@@ -39,7 +39,7 @@ export const Product: React.FC<ViewedProps> = ({ title, products, listing_button
                     </Link>
                 )}
             </div>
-            <GridBox desktop={5} laptop={5} tablet={5} mobile={2} className='pt-10 grid-cols-2 grid xl:gap-10 lg:gap-10 md:gap-10 gap-3'>
+            <GridBox desktop={5} laptop={4} tablet={3} mobile={2} className='pt-10 grid-cols-2 grid xl:gap-10 lg:gap-10 md:gap-10 gap-3'>
                 {products?.slice(0, 5).map((item, index) => (
                     <GridBox.GridItem key={index} columnMerge={1} colMargeDesktop={1} colMargeLaptop={1} colMargeTablet={1}>
                         <Image className='border border-solid border-white bg-[#F7F8F8]'

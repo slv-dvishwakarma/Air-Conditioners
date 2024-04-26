@@ -30,11 +30,10 @@ export const FullBanner: React.FC<BannersProps> = ({ banner }) => {
                 <div className="grid-item xl:px-[80px] lg:px-[80px] md:px-8 xl:py-[55px] lg:py-[55px] md:py-8 px-5 py-5 rounded-[20px]  col-span-1" style={{ backgroundImage: `url(${banner?.image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                     <div className='xl:w-[50%] lg:w-full md:w-full w-full'>
                         <h2 className='xl:text-[50px] lg:text-[35px] md:text-[25px] text-[25px] font-semibold text-primary text-balance'>{banner?.title}</h2>
-                        <p className='xl:text-3xl lg:text-3xl md:text-xl text-xl font-medium xl:mt-[30px] lg:mt-[30px] md:mt-[15px] mt-[15px]'>{banner?.from} {banner?.currency}{banner?.price}</p>
-                        <p className='xl:text-xl lg:text-xl md:text-xl text-sm font-medium xl:mt-[30px] lg:mt-[15px] md:mt-[15px] mt-[15px]'>{banner?.label}</p>
-                        <div className='xl:pt-[50px] lg:pt-[20px] md:pt-[20px] pt-[20px] gap-5 flex'>
+                        {banner?.label && ( <p className='xl:text-xl lg:text-xl md:text-xl text-sm font-medium xl:mt-[10px] lg:mt-[15px] md:mt-[15px] mt-[15px]'>{banner?.label}</p> )}
+                        <div className='xl:pt-[20px] lg:pt-[20px] md:pt-[20px] pt-[20px] gap-5 flex'>
                             {banner?.button && banner.button.map((items, index) => (
-                                <Link className={` px-[30px] py-3 rounded-[10px] text-center  border border-solid border-accentColor ${index === 0 ? 'bg-accentColor text-white hover:bg-[transparent] hover:text-accentColor' : 'text-accentColor hover:bg-accentColor hover:text-white'}`} key={index} href={items.url}>{items.label}</Link>
+                                <Link className={` xl:px-[30px] lg:px-[30px] md:px-[30px] px-[15px] xl:py-3 lg:py-3 md:py-3 py-1 rounded-[10px] text-center  border border-solid border-accentColor ${index === 0 ? 'bg-accentColor text-white hover:bg-[transparent] hover:text-accentColor' : 'text-accentColor hover:bg-accentColor hover:text-white'}`} key={index} href={items.url}>{items.label}</Link>
                             ))}
                         </div>
                     </div>

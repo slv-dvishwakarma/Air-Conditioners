@@ -34,6 +34,10 @@
             "name": "city",
             "placeholder": "Town/City"
         },
+        "landmark": {
+            "name": "landmark",
+            "placeholder": "Landmark"
+        },
         "state": {
             "name": "state",
             "placeholder": "State"

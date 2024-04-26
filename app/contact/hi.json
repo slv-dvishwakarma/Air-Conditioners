@@ -5,6 +5,7 @@
         "image": "/hero-home.jpg",
         "title": "पूछताछ फ़ॉर्म",
         "label": "आप हमसे 24*7 संपर्क कर सकते हैं।",
+        "button": "सबमिट करें",
         "enquiry_form": {
             "fname": {
                 "name": "fname",

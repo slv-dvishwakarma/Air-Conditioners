@@ -11,6 +11,7 @@
         "image": "/sale.png",
         "title": "Enquiry Form",
         "label": "You Can Feel Free To Contact Us",
+        "button": "Submit",
         "enquiry_form": {
             "fname": {
                 "name": "fname",

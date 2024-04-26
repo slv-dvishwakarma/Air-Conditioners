@@ -25,7 +25,7 @@ const Page = () => {
     <>
     <PageBanner image={jsonDataFile.image} title={jsonDataFile.title}/>
     <ParentContainer>
-      <Form title={jsonDataFile.enquiry.title} label={jsonDataFile.enquiry.label} enquiry_form={jsonDataFile.enquiry.enquiry_form} image={jsonDataFile.enquiry.image}/>
+      <Form title={jsonDataFile.enquiry.title} label={jsonDataFile.enquiry.label} enquiry_form={jsonDataFile.enquiry.enquiry_form} image={jsonDataFile.enquiry.image} button={jsonDataFile.enquiry.button}/>
     </ParentContainer>
     </>
   )

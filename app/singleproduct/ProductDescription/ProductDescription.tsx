@@ -136,7 +136,7 @@ export const ProductDescription: React.FC<DescriptionProps> = ({ title, rating, 
             {sizeopen && (
                 <div className='fixed inset-0 overflow-y-auto z-[999] bg-[#00000096]'>
                     <div className='flex items-center justify-center min-h-screen'>
-                        <div className='relative bg-white xl:w-2/5 lg:w-2/5 md:w-9/12 w-full mx-auto shadow-lg rounded-[20px] '>
+                        <div className='relative bg-white xl:w-2/5 lg:w-9/12 md:w-9/12 w-full mx-auto shadow-lg rounded-[20px] '>
                             <div className='size-guide p-6 items-center border-b-[#e9ecef] border-b border-solid flex justify-between '>
                                 <span className='xl:text-xl lg:text-xl md:text-xl text-[15px] font-medium text-accentColor'>{size_guide}</span>
                                 <span onClick={handleClose}><SVGIcon className='xl:text-[25px] lg:text-[25px] md:text-[25px] text-[20px] cursor-pointer' name="RxCross2" /></span>

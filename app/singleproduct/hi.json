@@ -7,15 +7,15 @@
         },
         {
             "label": "श्रेणी",
-            "link": "/category"
+            "link": "/shop"
         },
         {
             "label": "उत्पाद",
-            "link": "/products"
+            "link": "/shop"
         },
         {
             "label": "एलजी 1.5 टन 3 स्टार ड्यूल इनवर्टर स्प्लिट एसी",
-            "link": "/shop"
+            "link": "/singleproduct"
         }
     ],
     "products": [
