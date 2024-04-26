@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import { Search } from './Search';
 import { useForm } from 'react-hook-form';
+import { Popup } from '@/components/Popup';
 
 interface NavigationItem {
     label: string;
@@ -78,6 +79,7 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
 
     return (
         <>
+        <Popup />
         <form onSubmit={handleSubmit(onSubmit)}>
             <header className={`main-header  ${isSticky ? 'shadow-[0_13px_35px_-12px_rgba(35,35,35,0.15)] fixed w-full z-[99] top-0 animate-animateSlideInDown bg-primary px-[4%] md:px-[3%] lg:px-[5%] xl:px-[5%] left-0' : ''}`} style={isSticky ? { animationDuration: ".5s", animationFillMode: "both", animationName: "slideInDown", transform: "translate3d(0, -100%, 0)" } : undefined}>
                 <nav className="mx-auto flex items-center justify-between py-3 xl:gap-10 lg:gap-5" aria-label="Global">
