@@ -1,48 +1,71 @@
 {
-    "style": true,
-    "template_2": {
-      "logo": "/logo.png",
-      "alt": "Deal Website",
-      "cart": 2,
-      "options": [
-        "My Account",
-        "Profile",
-        "Help"
-      ],
-      "language": [
-        "English - EN",
-        "Hindi - HI"
-      ],
-      "search": {
-        "name": "search",
-        "placeholder": "Search....",
-        "icon": "Search"
+  "style": true,
+  "template_2": {
+    "logo": "/logo.png",
+    "alt": "Deal Website",
+    "cart": 2,
+    "options": [
+      "My Account",
+      "Profile",
+      "Help"
+    ],
+    "language": [
+      "English - EN",
+      "Hindi - HI"
+    ],
+    "search": {
+      "name": "search",
+      "placeholder": "Search....",
+      "icon": "Search"
+    },
+    "button": {
+      "login_btn": "Login",
+      "signup_button": "Sign Up"
+    },
+    "navigation": [
+      {
+        "label": "Home",
+        "link": "/"
       },
-      "button": {
-        "login_btn": "Login",
-        "signup_button": "Sign Up"
+      {
+        "label": "About Us",
+        "link": "/about-us"
       },
-      "navigation": [
-        {
-            "label": "Home",
-            "link": "/"
-        },
-        {
-            "label": "About Us",
-            "link": "/about-us"
-        },
-        {
-            "label": "Shop",
-            "link": "/shop"
-        },
-        {
-            "label": "Contact Us",
-            "link": "/contact"
-        },
-        {
-            "label": "Sale",
-            "link": "/sale"
-        }
-      ]
+      {
+        "label": "Shop",
+        "link": "/shop"
+      },
+      {
+        "label": "Contact Us",
+        "link": "/contact"
+      },
+      {
+        "label": "Sale",
+        "link": "/sale"
+      }
+    ]
+  },
+  "login_form": {
+    "button": "Login",
+    "password_protection": {
+      "eye": "eye",
+      "eye_off": "eye_off"
+    },
+    "email": {
+      "name": "email",
+      "placeholder": "Email / Username",
+      "label": "Email / Username *",
+      "icon": "enevelop"
+    },
+    "password": {
+      "name": "password",
+      "placeholder": "Password",
+      "label": "Password *",
+      "icon": "password"
+    },
+    "checkbox": {
+      "name": "term & condition",
+      "label": "Accept Terms And Conditions"
     }
   }
+}

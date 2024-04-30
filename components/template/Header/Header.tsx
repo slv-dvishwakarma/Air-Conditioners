@@ -28,7 +28,7 @@ export const Header = () => {
         <HeaderTemplate logo={jsonDataFile.template_1.logo} alt={jsonDataFile.template_1.alt} cart={jsonDataFile.template_1.cart} searchbar={jsonDataFile.template_1.searchbar} option={jsonDataFile.template_1.searchbar.option} language={jsonDataFile.template_1.searchbar.language} options={jsonDataFile.template_1.options} />
       )}
       {jsonFile.style && (
-        <HeaderTemplatetwo header_data={jsonFile.template_2} search={jsonFile.template_2.search} button={jsonFile.template_2.button}/>
+        <HeaderTemplatetwo header_data={jsonFile.template_2} search={jsonFile.template_2.search} button={jsonFile.template_2.button} login_form={jsonFile.login_form}/>
       )}
     </>
   );

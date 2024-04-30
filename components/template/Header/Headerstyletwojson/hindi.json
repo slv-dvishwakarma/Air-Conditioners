@@ -44,5 +44,28 @@
             "link": "/sale"
         }
       ]
+    },
+    "login_form": {
+      "button": "लॉगिन",
+      "password_protection": {
+        "eye": "eye",
+        "eye_off": "eye_off"
+      },
+      "email": {
+        "name": "email",
+        "placeholder": "ईमेल / उपयोगकर्ता नाम",
+        "label": "ईमेल / उपयोगकर्ता नाम *",
+        "icon": "enevelop"
+      },
+      "password": {
+        "name": "password",
+        "placeholder": "पासवर्ड",
+        "label": "पासवर्ड *",
+        "icon": "password"
+      },
+      "checkbox": {
+        "name": "term & condition",
+        "label": "शर्तें और नियम स्वीकार करें"
+      }
     }
   }

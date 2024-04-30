@@ -8,6 +8,11 @@ interface DropdownProps {
 
 export const LanguageSelector: React.FC<DropdownProps> = ({ }) => {
   const options = ['English - EN', 'हिंदी - HI'];
+  const uniqueId = useRef<string | null>(null);
+
+  useEffect(() => {
+    uniqueId.current = `dropdown-${Math.floor(Math.random() * 1000000)}`;
+  }, []);
 
   const [selectedOption, setSelectedOption] = useState<string>(options[0]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -90,7 +95,7 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ }) => {
         <button
           type="button"
           className="flex items-center rounded-md text-sm font-medium text-theme-primary border border-solid border-[transparent] xl:w-[40px] lg:w-[40px] md:w-[40px] w-full xl:p-0 lg:p-0 md:p-0 p-1 xl:text-white lg:text-white md:text-white text-black"
-          id="options-menu"
+          id={uniqueId.current!}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
         >
