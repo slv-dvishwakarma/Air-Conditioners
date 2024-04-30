@@ -28,7 +28,7 @@ interface LoginPopupProps {
     checkbox: checkboxItem;
 }
 
-export const LoginPopup: React.FC<LoginPopupProps> = ({ email, password, button, password_protection, checkbox  }) => {
+export const LoginPopup: React.FC<LoginPopupProps> = ({ email, password, button, password_protection, checkbox }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const { handleSubmit, control, formState: { errors }, reset } = useForm();
@@ -49,14 +49,15 @@ export const LoginPopup: React.FC<LoginPopupProps> = ({ email, password, button,
             console.log('Logged in as:', user.role);
             if (user.role === 'admin') {
                 localStorage.setItem('token', 'admin');
+            } else if (user.role === 'user') {
+                localStorage.setItem('token', 'user');
+            } else {
+                alert('Invalid email or password');
             }
-        } else {
-            alert('Invalid email or password');
-        }
-        reset();
-        window.location.reload();
+            reset();
+            window.location.reload();
+        };
     };
-
     return (
         <form onSubmit={handleSubmit(onSubmit)} className=' mb-5 mt-3 space-y-4'>
             <div className='email_field'>

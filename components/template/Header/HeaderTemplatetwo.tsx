@@ -99,6 +99,8 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
         if (gettoken) {
             if (gettoken === 'admin') {
                 setAccount(true);
+            } else if (gettoken === 'user') {
+                setAccount(true);
             }
         }
     }, []);

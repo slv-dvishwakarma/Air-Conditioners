@@ -3,6 +3,7 @@ import { GridBox } from '@/components/GridBox';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Rating } from '@/app/shop/Rating';
+import { AddItem } from '@/components/AddItem';
 
 interface ListingItem {
     name: string;
@@ -30,6 +31,8 @@ interface ViewedProps {
 export const Product: React.FC<ViewedProps> = ({ title, products, listing_button }) => {
 
     return (
+        <>
+        <AddItem />
         <div className='viewed-items py-[50px]'>
             <div className='flex justify-between items-center'>
                 <label className='xl:text-[21px] lg:text-[21px] md:text-[21px] font-semibold text-[17px] '>{title}</label>
@@ -65,5 +68,6 @@ export const Product: React.FC<ViewedProps> = ({ title, products, listing_button
                 ))}
             </GridBox>
         </div>
+        </>
     );
 };
