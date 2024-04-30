@@ -60,6 +60,15 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
         };
     }, [open]);
 
+
+    useEffect(() => {
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [open]);
+
     const handleOpen = () => {
         setOpen(true);
     }
@@ -142,7 +151,7 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
                     </div>
                 </nav>
             </header>
-            <div className={`${open ? "bg-[rgba(0,0,0,0.8)] fixed inset-0 overflow-y-auto z-[999] " : ""}`}>
+            <div className={`${open ? "bg-[rgba(0,0,0,0.8)] fixed inset-0 overflow-y-auto body-overflow-hidden z-[999] " : ""}`}>
                 <div className={`lg:w-auto lg:order-1 z-50 ${open ? "animate-[slideIn_0.5s_forwards] fixed w-full h-full bg-white transition-[left] duration-[0.3s] ease-[ease] z-[1] left-0 top-0 xl:bg-transparent xl:relative xl:animate-[unset] xl:inset-x-[unset] lg:bg-white lg:relative lg:animate-[slideIn_0.5s_forwards] lg:inset-x-[unset]" : "animate-[slideOut_0.5s_forwards] fixed w-full h-full bg-white transition-[left] duration-[0.3s] ease-[ease] left-0 top-0 xl:bg-transparent xl:relative xl:animate-[slideOut_0.5s_forwards] xl:inset-x-[unset] lg:bg-white lg:relative lg:animate-[unset] lg:inset-x-[unset]"}`}>
                     {open && (
                         <div className='w-4/5 float-right'>
