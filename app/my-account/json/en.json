@@ -1,0 +1,38 @@
+{
+    "menu": [
+        {
+            "name": "Dashboard",
+            "icon": "dashboard",
+            "url": "/my-account"
+        },
+        {
+            "name": "My Profile",
+            "icon": "User",
+            "url": "/my-account/profile"
+        },
+        {
+            "name": "Order",
+            "icon": "order",
+            "url": "/my-account/order"
+        },
+        {
+            "name": "Support",
+            "icon": "helpdesk",
+            "url": "/my-account/support"
+        }
+    ],
+    "profile": {
+        "image": "/user.jpg",
+        "user": "John Doe",
+        "email": "admin@gmail.com"
+    },
+    "logout": {
+        "name": "Log Out",
+        "icon": "log_out"
+    },
+    "logout_data": {
+        "label": "Are You Sure You Want To Log Out",
+        "yes": "Yes",
+        "cancel": "Cancel"
+    }
+}

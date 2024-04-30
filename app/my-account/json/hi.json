@@ -1,0 +1,38 @@
+{
+    "menu": [
+        {
+            "name": "डैशबोर्ड",
+            "icon": "dashboard",
+            "url": "/my-account"
+        },
+        {
+            "name": "मेरी प्रोफ़ाइल",
+            "icon": "User",
+            "url": "/my-account/profile"
+        },
+        {
+            "name": "आदेश",
+            "icon": "order",
+            "url": "/my-account/order"
+        },
+        {
+            "name": "सहायता केंद्र",
+            "icon": "helpdesk",
+            "url": "/my-account/support"
+        }
+    ],
+    "profile": {
+        "image": "/user.jpg",
+        "user": "John Doe",
+        "email": "admin@gmail.com"
+    },
+    "logout": {
+        "name": "लॉग आउट",
+        "icon": "log_out"
+    },
+    "logout_data": {
+        "label": "क्या आप निश्चित हैं कि आप लॉग आउट करना चाहते हैं",
+        "yes": "हाँ",
+        "cancel": "रद्द करें"
+    }
+}
