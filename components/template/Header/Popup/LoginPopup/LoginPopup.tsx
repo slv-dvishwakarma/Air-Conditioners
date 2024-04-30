@@ -56,8 +56,8 @@ export const LoginPopup: React.FC<LoginPopupProps> = ({ email, password, button,
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className=' my-5'>
-            <div className='email_field mt-5'>
+        <form onSubmit={handleSubmit(onSubmit)} className=' mb-5 mt-3 space-y-4'>
+            <div className='email_field'>
                 <Controller
                     name={email.name}
                     control={control}
@@ -67,7 +67,7 @@ export const LoginPopup: React.FC<LoginPopupProps> = ({ email, password, button,
                         <div className='space-y-2'>
                             <label className='text-[#777777] text-[12px] font-medium leading-[21px] tracking-[0px] text-left'>{email.label}</label>
                             <span className='input-border flex items-center border rounded-md border-solid border-[#BEBEBE] px-2.5'>
-                                <SVGIcon className='text-[#7E52FF] text-xl ' name="enevelop" />
+                                <SVGIcon className='text-sm text-[#9D9D9D]' name={email.icon} />
                                 <input
                                     type="email"
                                     className="form-control w-full border-none rounded-md focus:outline-none focus:shadow-none shadow-none h-[50px] placeholder:text-[#9D9D9D] text-[14px] px-3"
@@ -94,7 +94,7 @@ export const LoginPopup: React.FC<LoginPopupProps> = ({ email, password, button,
                         <div className='space-y-2'>
                             <label className='text-[#777777] text-[12px] font-medium leading-[21px] tracking-[0px] text-left'>{password.label}</label>
                             <span className='input-border flex items-center border rounded-md border-solid border-[#BEBEBE] px-2.5'>
-                                <SVGIcon className='text-[#7E52FF] text-xl' name="enevelop" />
+                                <SVGIcon className='text-sm text-[#9D9D9D]' name={password.icon} />
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     className="form-control w-full border-none rounded-md focus:outline-none focus:shadow-none shadow-none h-[50px] placeholder:text-[#9D9D9D] text-[14px] px-3"

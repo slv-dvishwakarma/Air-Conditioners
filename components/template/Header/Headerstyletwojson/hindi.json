@@ -67,5 +67,30 @@
         "name": "term & condition",
         "label": "शर्तें और नियम स्वीकार करें"
       }
+    },
+    "signup_form": {
+      "button": "साइन अप करें",
+      "password_protection": {
+        "eye": "eye",
+        "eye_off": "eye_off"
+      },
+      "username": {
+        "name": "username",
+        "placeholder": "उपयोगकर्ता नाम",
+        "label": "उपयोगकर्ता नाम *",
+        "icon": "User"
+      },
+      "email": {
+        "name": "email",
+        "placeholder": "ईमेल",
+        "label": "ईमेल *",
+        "icon": "enevelop"
+      },
+      "password": {
+        "name": "password",
+        "placeholder": "पासवर्ड",
+        "label": "पासवर्ड *",
+        "icon": "password"
+      }
     }
   }

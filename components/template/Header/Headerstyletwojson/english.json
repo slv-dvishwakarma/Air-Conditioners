@@ -67,5 +67,30 @@
       "name": "term & condition",
       "label": "Accept Terms And Conditions"
     }
+  },
+  "signup_form": {
+    "button": "Sign Up",
+    "password_protection": {
+      "eye": "eye",
+      "eye_off": "eye_off"
+    },
+    "username": {
+      "name": "username",
+      "placeholder": "Username",
+      "label": "Username *",
+      "icon": "User"
+    },
+    "email": {
+      "name": "email",
+      "placeholder": "Email ",
+      "label": "Email*",
+      "icon": "enevelop"
+    },
+    "password": {
+      "name": "password",
+      "placeholder": "Password",
+      "label": "Password *",
+      "icon": "password"
+    }
   }
 }
