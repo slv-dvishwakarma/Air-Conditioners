@@ -22,6 +22,11 @@
         "login_btn": "लॉगिन",
         "signup_button": "साइन अप"
       },
+      "account": {
+        "name": "मेरा खाता",
+        "url": "/my-account"
+      },
+      "logout": "लॉग आउट",
       "navigation": [
         {
             "label": "होम",

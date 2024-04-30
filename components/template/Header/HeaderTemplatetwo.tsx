@@ -16,6 +16,11 @@ interface passwordItem {
     eye_off: string;
 }
 
+interface AccountItem {
+    name: string;
+    url: string;
+}
+
 interface checkboxItem {
     name: string;
     label: string;
@@ -76,14 +81,32 @@ interface HeaderProps {
     button: buttonItem;
     login_form: LoginFormItem;
     signup_form: SignupItem;
+    myaccount: AccountItem;
+    logout: string;
 }
 
-export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, button, login_form, signup_form }) => {
+export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, button, login_form, signup_form, myaccount, logout }) => {
 
     const [isSticky, setIsSticky] = useState(false);
     const [open, setOpen] = useState(false);
     const [login, setLogin] = useState(false);
     const [signup, setSignup] = useState(false);
+    const [account, setAccount] = useState(false);
+
+    useEffect(() => {
+        const gettoken = localStorage.getItem('token');
+
+        if (gettoken) {
+            if (gettoken === 'admin') {
+                setAccount(true);
+            }
+        }
+    }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        window.location.reload();
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -169,8 +192,19 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
                         </div>
                         <div className='flex xl:hidden lg:flex md:flex hidden gap-10 '>
                             <LanguageSelector options={header_data.options} />
-                            <button type='button' className='text-[15px] text-white leading-[0]' onClick={handleLogin}>{button.login_btn}</button>
-                            <button type='button' className='text-[15px] bg-accentColor px-[15px] py-[5px] rounded-[18px] text-white leading-[0]' onClick={handleSignup}>{button.signup_button}</button>
+                            {!account ? (
+                                <div className='login flex gap-4'>
+                                    <button type='button' className='text-[13px] text-white leading-[0]' onClick={handleLogin}>{button.login_btn}</button>
+                                    <button type='button' className='text-[14px] bg-accentColor px-[15px] py-[5px] rounded-[18px] text-white leading-[0]' onClick={handleSignup}>{button.signup_button}</button>
+                                </div>
+                            ) : (
+                                <div className='logedin flex gap-4'>
+                                    <div className='flex items-center'>
+                                        <Link href={myaccount.url} className='text-[13px] text-white'>{myaccount.name}</Link>
+                                    </div>
+                                    <button type='button' className='text-[14px] bg-accentColor px-[15px] py-[5px] rounded-[18px] text-white' onClick={handleLogout}>{logout}</button>
+                                </div>
+                            )}
                             <div className='xl:relative lg:relative md:relative xl:right-0 lg:right-0 md:right-0 top-[4px]'>
                                 <Link href="/cart">
                                     <span className='text-white text-2xl'>
@@ -193,8 +227,19 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
                         <div className="xl:flex hidden lg:hidden lg:flex-1 lg:justify-end gap-5">
                             <Search name={search.name} placeholder={search.placeholder} icon={search.icon} control={control} errors={errors} />
                             <LanguageSelector options={header_data.options} />
-                            <button type='button' className='text-[15px] text-white leading-[0]' onClick={handleLogin}>{button.login_btn}</button>
-                            <button type='button' className='text-[15px] bg-accentColor px-[15px]  py-[5px] rounded-[18px] text-white leading-[0]' onClick={handleSignup}>{button.signup_button}</button>
+                            {!account ? (
+                                <div className='login flex gap-4'>
+                                    <button type='button' className='text-[13px] text-white leading-[0]' onClick={handleLogin}>{button.login_btn}</button>
+                                    <button type='button' className='text-[14px] bg-accentColor px-[15px] py-[5px] rounded-[18px] text-white leading-[0]' onClick={handleSignup}>{button.signup_button}</button>
+                                </div>
+                            ) : (
+                                <div className='logedin flex gap-4'>
+                                    <div className='flex items-center'>
+                                        <Link href={myaccount.url} className='text-[13px] text-white'>{myaccount.name}</Link>
+                                    </div>
+                                    <button type='button' className='text-[14px] bg-accentColor px-[15px] py-[5px] rounded-[18px] text-white' onClick={handleLogout}>{logout}</button>
+                                </div>
+                            )}
                             <div className='xl:relative lg:relative md:relative xl:right-0 lg:right-0 md:right-0 top-[4px]'>
                                 <Link href="/cart">
                                     <span className='text-white text-2xl'>
@@ -238,10 +283,19 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
                                     <h3 className='text-[15px] text-accentColor'>Search Product</h3>
                                     <Search name={search.name} placeholder={search.placeholder} icon={search.icon} control={control} errors={errors} />
                                 </div>
-                                <div className='space-x-3 flex absolute bottom-2.5 w-4/5 float-right p-2.5 border-t-[#BBBFBF] border-t border-solid bg-[#EEF3F9]'>
-                                    <button type='button' className='text-[15px] bg-accentColor p-5 rounded-[18px] text-white leading-[0] w-6/12' onClick={handleLogin}>{button.login_btn}</button>
-                                    <button type='button' className='text-[15px] bg-accentColor p-5 rounded-[18px] text-white leading-[0] w-6/12' onClick={handleSignup}>{button.signup_button}</button>
-                                </div>
+                                {!account ? (
+                                    <div className='space-x-3 flex absolute bottom-0 w-4/5 float-right p-2.5 border-t-[#BBBFBF] border-t border-solid bg-[#EEF3F9]'>
+                                        <button type='button' className='text-[15px] bg-accentColor px-[15px] py-[5px] rounded-[18px] text-white w-full' onClick={handleLogin}>{button.login_btn}</button>
+                                        <button type='button' className='text-[15px] bg-accentColor px-[15px] py-[5px] rounded-[18px] text-white w-full' onClick={handleSignup}>{button.signup_button}</button>
+                                    </div>
+                                ) : (
+                                    <div className='logedin space-x-3 flex absolute bottom-0 w-4/5 float-right p-2.5 border-t-[#BBBFBF] border-t border-solid bg-[#EEF3F9]'>
+                                        <div className='flex items-center w-full px-[15px] py-[5px] text-[15px] bg-accentColor  rounded-[18px] text-white justify-center'>
+                                            <Link href={myaccount.url} className='text-center'>{myaccount.name}</Link>
+                                        </div>
+                                        <button type='button' className='text-[15px] bg-accentColor px-[15px] py-[5px] rounded-[18px] text-white w-full' onClick={handleLogout}>{logout}</button>
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>
@@ -255,7 +309,7 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
                                 <span className='text-[22px] font-semibold text-accentColor'>Login</span>
                                 <button type='button' onClick={handleLoginClose} ><SVGIcon className="text-xl" name="RxCross2" /></button>
                             </div>
-                            <LoginPopup email={login_form.email} password={login_form.password} button={login_form.button} password_protection={login_form.password_protection} checkbox={login_form.checkbox} handleClose={handleLoginClose}/>
+                            <LoginPopup email={login_form.email} password={login_form.password} button={login_form.button} password_protection={login_form.password_protection} checkbox={login_form.checkbox} />
                         </div>
                     </div>
                 </div>
@@ -263,16 +317,16 @@ export const HeaderTemplatetwo: React.FC<HeaderProps> = ({ header_data, search, 
 
             {signup && (
                 <div className={`${signup ? "fixed inset-0 overflow-y-auto z-[999] bg-[#00000096]" : ""}`}>
-                <div className="flex items-center justify-center min-h-screen">
-                    <div className="relative bg-white xl:w-[40%] lg:w-[50%] md:w-[60%] w-[90%] mx-auto shadow-lg rounded-[20px] px-[20px]">
-                        <div className='flex items-center justify-between py-[20px] border-b-[#DADADA] border-b border-solid'>
-                            <span className='text-[22px] font-semibold text-accentColor'>Sign Up</span>
-                            <button type='button' onClick={handlesignupClose} ><SVGIcon className="text-xl" name="RxCross2" /></button>
+                    <div className="flex items-center justify-center min-h-screen">
+                        <div className="relative bg-white xl:w-[40%] lg:w-[50%] md:w-[60%] w-[90%] mx-auto shadow-lg rounded-[20px] px-[20px]">
+                            <div className='flex items-center justify-between py-[20px] border-b-[#DADADA] border-b border-solid'>
+                                <span className='text-[22px] font-semibold text-accentColor'>Sign Up</span>
+                                <button type='button' onClick={handlesignupClose} ><SVGIcon className="text-xl" name="RxCross2" /></button>
+                            </div>
+                            <SignUpPopup username={signup_form.username} email={signup_form.email} password={signup_form.password} button={signup_form.button} password_protection={signup_form.password_protection} handleClose={handlesignupClose} />
                         </div>
-                        <SignUpPopup username={signup_form.username} email={signup_form.email} password={signup_form.password} button={signup_form.button} password_protection={signup_form.password_protection} handleClose={handlesignupClose}/>
                     </div>
                 </div>
-            </div>
             )}
         </>
     )

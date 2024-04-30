@@ -99,7 +99,7 @@ export const LanguageSelector: React.FC<DropdownProps> = ({ }) => {
           aria-expanded={isOpen}
           aria-haspopup="listbox"
         >
-          <span className='text-white'>
+          <span className='text-white text-[13px]'>
             {selectedLanguageAbbreviation}
           </span>
           <SVGIcon className='absolute text-xl xl:right-0 lg:right-0 md:right-0 right-[-20px] text-white' name="ArrowDown" />

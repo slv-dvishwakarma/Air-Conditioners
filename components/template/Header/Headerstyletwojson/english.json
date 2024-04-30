@@ -22,6 +22,11 @@
       "login_btn": "Login",
       "signup_button": "Sign Up"
     },
+    "account": {
+      "name": "My Account",
+      "url": "/my-account"
+    },
+    "logout": "Log Out",
     "navigation": [
       {
         "label": "Home",
