@@ -1,4 +1,65 @@
 {
     "icon": "add_item",
-    "label": "Add Propduct"
+    "label": "Add Propduct",
+    "product_list": {
+        "product_image": {
+            "name": "product-image",
+            "label": "Add Product Image"
+        },
+        "product_gallery": {
+            "name": "product-gallery",
+            "label": "Add Product Gallery"
+        },
+        "product_item": {
+            "product_name": {
+                "name": "product_name",
+                "label": "Product Name",
+                "placeholder": "Product Name",
+                "required": true
+            },
+            "product_sku": {
+                "name": "product_sku",
+                "label": "Product SKU",
+                "placeholder": "Product SKU",
+                "required": true
+            },
+            "product_category": {
+                "name": "product_category",
+                "label": "Product Category",
+                "option": [
+                    "Voltas",
+                    "Godrej",
+                    "General",
+                    "LG",
+                    "Samsung",
+                    "Croma",
+                    "Blue Star"
+                ]
+            },
+            "sale_price": {
+                "name": "sale_price",
+                "label": "Sale Price",
+                "placeholder": "Sale Price",
+                "required": true
+            },
+            "regular_price": {
+                "name": "regular_price",
+                "label": "Regular Price",
+                "placeholder": "Regular Price",
+                "required": false
+            },
+            "stock": {
+                "name": "stock",
+                "label": "Stock",
+                "placeholder": "Stock Quantity",
+                "required": false
+            },
+            "tag": {
+                "name": "tag",
+                "label": "Tag",
+                "placeholder": "Tag",
+                "required": false
+            }
+        }
+    }
 }

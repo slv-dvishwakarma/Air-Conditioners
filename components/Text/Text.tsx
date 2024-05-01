@@ -35,7 +35,7 @@ export const Text: React.FC<InputProps> = ({ name, placeholder, label, icon, con
                 onChange={onChange}
               />
 
-              {icon && typeof icon === 'string' ? (
+              {icon  ? (
                 <SVGIcon className='text-[#7E52FF] text-xl pl-0 pr-5 py-0 absolute right-0' name="Location" />
               ) : null}
             </span>
